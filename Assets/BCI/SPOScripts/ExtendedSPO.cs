@@ -32,4 +32,5 @@ public class ExtendedSPO : SPO
         // Blow Up
         Destroy(transform.gameObject);
     }
+
 }

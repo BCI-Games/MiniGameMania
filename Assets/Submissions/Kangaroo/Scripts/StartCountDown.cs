@@ -19,8 +19,23 @@ public class StartCountDown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Debug.Log("Hey! I am updating!");
+        
+        // if(Input.GetKeyDown(KeyCode.G))
+        // {
+        //     Debug.Log("Hey! I was pressed");
+        //     Debug.Log("Time:" + Time.deltaTime.ToString());
+        //     if(CountDown > 0){
+        //     CountDown -= 0.001f;}
+        //     else{
+        //         gameStart.SetActive(true);
+        //         this.gameObject.SetActive(false);
+        //     }
+        // }
+        Debug.Log("Hey! I was pressed");
+        Debug.Log("Time:" + Time.deltaTime.ToString());
         if(CountDown > 0){
-        CountDown -= Time.deltaTime;}
+        CountDown -= 0.01f;}
         else{
             gameStart.SetActive(true);
             this.gameObject.SetActive(false);
