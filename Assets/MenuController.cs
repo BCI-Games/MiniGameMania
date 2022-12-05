@@ -14,12 +14,15 @@ public class MenuController : MonoBehaviour
             Pause();
         }
     }
+
+
+
     public void Pause()
     {
         if (canvas.gameObject.activeInHierarchy == false)
         {
             canvas.gameObject.SetActive(true);
-            Time.timeScale = 0;
+            Time.timeScale = 1;
         }
         else
         {

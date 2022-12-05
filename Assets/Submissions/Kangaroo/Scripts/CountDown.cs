@@ -5,7 +5,6 @@ using UnityEngine;
 public class CountDown : MonoBehaviour
 {
     public P300Controller P300;
-    public GameObject MenuSelection;
     public TextMesh Ctext;
     public GameObject BG;
     public GameObject haveYouFound;
@@ -34,7 +33,7 @@ public class CountDown : MonoBehaviour
     void Update()
     {
         if (countDown >= 0){
-            countDown -= 0.01f;
+            countDown -= time.deltaTime;
             Ctext.text = string.Format(countDown.ToString("00.0"));
         }
         else{
@@ -45,7 +44,7 @@ public class CountDown : MonoBehaviour
         }
 
         if (stiCountDown >= 0){
-            stiCountDown -= 0.01f;
+            stiCountDown -= time.deltaTime;
 
         }
         else{

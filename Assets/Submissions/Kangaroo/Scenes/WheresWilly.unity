@@ -1013,7 +1013,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4280385885900106466, guid: 7b05171d4afef204b8054af1c0847232, type: 3}
       propertyPath: _myTag
-      value: BCI Menu
+      value: BCI
       objectReference: {fileID: 0}
     - target: {fileID: 4280385885900106466, guid: 7b05171d4afef204b8054af1c0847232, type: 3}
       propertyPath: m_Enabled
@@ -2793,7 +2793,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4583385330471644674, guid: 317673415930e6f46a091fa2637bad56, type: 3}
       propertyPath: m_TagString
-      value: BCI Menu
+      value: BCI
       objectReference: {fileID: 0}
     - target: {fileID: 8111940676922038463, guid: 317673415930e6f46a091fa2637bad56, type: 3}
       propertyPath: m_Color.a
@@ -2950,7 +2950,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4583385330471644674, guid: 317673415930e6f46a091fa2637bad56, type: 3}
       propertyPath: m_TagString
-      value: BCI Menu
+      value: BCI
       objectReference: {fileID: 0}
     - target: {fileID: 8111940676922038463, guid: 317673415930e6f46a091fa2637bad56, type: 3}
       propertyPath: m_Color.a
