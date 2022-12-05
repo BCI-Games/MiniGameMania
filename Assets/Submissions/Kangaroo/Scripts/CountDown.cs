@@ -33,7 +33,7 @@ public class CountDown : MonoBehaviour
     void Update()
     {
         if (countDown >= 0){
-            countDown -= time.deltaTime;
+            countDown -= Time.deltaTime;
             Ctext.text = string.Format(countDown.ToString("00.0"));
         }
         else{
@@ -44,7 +44,7 @@ public class CountDown : MonoBehaviour
         }
 
         if (stiCountDown >= 0){
-            stiCountDown -= time.deltaTime;
+            stiCountDown -= Time.deltaTime;
 
         }
         else{

@@ -24,7 +24,7 @@ public class StartCountDown : MonoBehaviour
     {
         Debug.Log("Time:" + Time.deltaTime.ToString());
         if(CountDown > 0){
-        CountDown -= time.deltaTime;}
+        CountDown -= Time.deltaTime;}
         else{
             gameStart.SetActive(true);
             this.gameObject.SetActive(false);

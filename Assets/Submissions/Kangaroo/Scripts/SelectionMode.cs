@@ -18,7 +18,7 @@ public class SelectionMode : MonoBehaviour
         
         if(canCount == true){
             if(counter > 0){
-                counter -= time.deltaTime;
+                counter -= Time.deltaTime;
             }
             else{
                 P300.StartStopStimulus();
