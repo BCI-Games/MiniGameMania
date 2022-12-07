@@ -9,6 +9,11 @@ public class SelectionMode : MonoBehaviour
     private float countTime = 2f;
     private float counter;
 
+    public void Start()
+    {
+        P300 = GameObject.FindGameObjectWithTag("MasterController").GetComponent<P300Controller>();
+    }
+
     private void OnEnable() {
         counter = countTime;
         canCount = true;

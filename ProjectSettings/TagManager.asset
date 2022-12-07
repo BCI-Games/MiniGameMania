@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - BCI
+  - MasterController
   layers:
   - Default
   - TransparentFX

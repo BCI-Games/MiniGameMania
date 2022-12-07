@@ -22,6 +22,8 @@ public class CountDown : MonoBehaviour
         countDown = countTime;
         stiCountDown = countTime + 5f;
 
+        P300 = GameObject.FindGameObjectWithTag("MasterController").GetComponent<P300Controller>();
+
     }
     private void OnEnable() {
         countDown = countTime;
