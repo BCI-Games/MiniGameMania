@@ -1,4 +1,7 @@
-# BCIEssentials
+#BCI Game Jam 2022 - Minigame Mania Megagame
+This is a collection of the compatible minigames from the BCI Game Jam 2022.
+
+### This work uses BCIEssentials
 A Unity base environment for streamlined development of BCI applications.
 
 Pairs nicely with [bci-essentials-python](https://github.com/kirtonBCIlab/bci-essentials-python)
