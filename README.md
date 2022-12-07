@@ -1,4 +1,4 @@
-#BCI Game Jam 2022 - Minigame Mania Megagame
+# BCI Game Jam 2022 - Minigame Mania Megagame
 This is a collection of the compatible minigames from the BCI Game Jam 2022.
 
 ### This work uses BCIEssentials
