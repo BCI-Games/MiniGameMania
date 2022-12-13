@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/P300Training.unity
     guid: d6b563a047e167c4bb53232e70fc9c47
@@ -23,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Submissions/Kangaroo/Scenes/WheresWilly.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Submissions/BoatRescue/Scenes/BoatRescue.unity
+    guid: a11fa461103fe214abf90589c7c88ee7
   m_configObjects: {}
