@@ -1,33 +1,61 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class MenuController : MonoBehaviour
 {
-    public Transform canvas;
+    [FormerlySerializedAs("canvas")]
+    [SerializeField] private Transform _canvas;
+    [SerializeField] private KeyCode _menuKey = KeyCode.Escape;
+    [SerializeField] private bool _dontDestroy = true;
 
-    // Update is called once per frame
-    void Update()
+    private static MenuController _activeController;
+
+    private void Awake()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (_activeController != null)
         {
-            Pause();
+            enabled = false;
+            Debug.Log("Disabling MenuController. There is already an active instance.");
+        }
+        else if (_dontDestroy)
+        {
+            _activeController = this;
+            DontDestroyOnLoad(this);
         }
     }
 
-
-
-    public void Pause()
+    private void OnDestroy()
     {
-        if (canvas.gameObject.activeInHierarchy == false)
+        if (_activeController == this)
         {
-            canvas.gameObject.SetActive(true);
-            Time.timeScale = 1;
+            _activeController = null;
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(_menuKey))
+        {
+            ShowMenu();
+        }
+    }
+
+    public void ShowMenu()
+    {
+        if (_canvas.gameObject.activeInHierarchy == false)
+        {
+            _canvas.gameObject.SetActive(true);
         }
         else
         {
-            canvas.gameObject.SetActive(false);
-            Time.timeScale = 1;
+            _canvas.gameObject.SetActive(false);
         }
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        _canvas.gameObject.SetActive(false);
+        SceneManager.LoadScene(sceneName);
     }
 }
