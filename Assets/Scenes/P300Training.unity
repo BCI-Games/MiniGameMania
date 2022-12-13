@@ -778,6 +778,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3847597184787666936, guid: bc8d8d24ee7a32e4d86ebed155d4e091, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Mutant Clash
+      objectReference: {fileID: 0}
+    - target: {fileID: 3847597184971837091, guid: bc8d8d24ee7a32e4d86ebed155d4e091, type: 3}
+      propertyPath: m_text
+      value: Where's Willy???
+      objectReference: {fileID: 0}
+    - target: {fileID: 3847597185342213482, guid: bc8d8d24ee7a32e4d86ebed155d4e091, type: 3}
+      propertyPath: m_text
+      value: Mutant Clash
+      objectReference: {fileID: 0}
+    - target: {fileID: 3847597185513968393, guid: bc8d8d24ee7a32e4d86ebed155d4e091, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: WheresWilly
+      objectReference: {fileID: 0}
+    - target: {fileID: 3847597185513968399, guid: bc8d8d24ee7a32e4d86ebed155d4e091, type: 3}
+      propertyPath: m_Name
+      value: WhereIsWilly
+      objectReference: {fileID: 0}
     - target: {fileID: 3847597185749667185, guid: bc8d8d24ee7a32e4d86ebed155d4e091, type: 3}
       propertyPath: m_RootOrder
       value: 3
