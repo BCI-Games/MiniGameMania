@@ -1,0 +1,1499 @@
+fileFormatVersion: 2
+guid: 51c9122c8620e0f4ba211d17f5b15c4c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: House asset Rabbit_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 636
+        width: 64
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4cd51f9e066a06489a9a27a75090b4d
+      internalID: 1508128784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 636
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b6a939d7581c84cb33124f781c09b9
+      internalID: -1553323290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 636
+        width: 29
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55758d7bce1d7d34384c962d9ed2f8f7
+      internalID: 914871483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 636
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdf61e6ef6f93ca42aabbc79a8d3fc0d
+      internalID: -1058559268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_4
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 636
+        width: 29
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1883dab9bea9bc45b595bb8919008ca
+      internalID: -1281508686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_5
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 636
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22358a19ab83ace4b85731b134bd3d86
+      internalID: 1646455500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_6
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 636
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce70203d043029d4f920c2730e47b3f9
+      internalID: -1251624553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_7
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 636
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86028130f4eb542428e296fc45453f2e
+      internalID: 1823413585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_8
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 572
+        width: 64
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14e67226c3274504db15809d0711cd36
+      internalID: -1022653072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_9
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 572
+        width: 48
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ddc1da5fdb0cc448afedce1c2b4e37c
+      internalID: 129001264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_10
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 572
+        width: 48
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aacbd211f9f1f5048bc9737dce111a4b
+      internalID: 311029953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_11
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 572
+        width: 42
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ab194e0797879645907a2c2c3ebe327
+      internalID: -573715757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_12
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 572
+        width: 48
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20380ef29e4fe264ea423f8866b5a831
+      internalID: 1271846595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_13
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 572
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae25e3b19f24d3744865576bf2d3b020
+      internalID: -1982916816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_14
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 508
+        width: 16
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62962f52c975c4f46a4f1aaec90bc772
+      internalID: -906206240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 508
+        width: 48
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6756f4da73136944f995ad93cd40b018
+      internalID: 1395870206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_16
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 508
+        width: 48
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7451226334d29164fb0646034ef37be0
+      internalID: -1316855425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_17
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 508
+        width: 48
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac77f93eb536375468a336d0b03a8889
+      internalID: 1593042412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_18
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 508
+        width: 48
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 963e9fddf3aa1f345acab9b48729431c
+      internalID: -128576157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_19
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 514
+        width: 48
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0c5d6113a56cf542b619291cef0c8a4
+      internalID: -2063069087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_20
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 444
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bcc0b41a1a9ce94c87a82f67df37150
+      internalID: -1101108464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_21
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 444
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a3a2f6e74a0dbb46959b6ef2617fcfe
+      internalID: -948213370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_22
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 444
+        width: 48
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62d07e60562ed0646a8a1ea366503dcb
+      internalID: 17702643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_23
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 444
+        width: 33
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a927731d1343ca4a9c4c080fdbe1753
+      internalID: -1138334896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_24
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 444
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5c2ccce74866234ca10135c4b1d4be7
+      internalID: 1260099053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_25
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 444
+        width: 22
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e4ed0c074b617543835eaa825f3da24
+      internalID: 98330368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_26
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 380
+        width: 22
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f84b68bd69b8b3c4ea8a63d3c83da4b2
+      internalID: -849256833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_27
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 380
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2ffaaf89361865469f22da51e0b3277
+      internalID: 546734928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_28
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 380
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 173186190c1ac9c42b901db46dd3c7de
+      internalID: 1799451577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_29
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 381
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dab0047818f1594c923791159adc752
+      internalID: -855094868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_30
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 380
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: addd8e4a9861d844d9d7c9adfd66d566
+      internalID: -1131031035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_31
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 380
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b2661a62751b24dbe7dc7a5426d166
+      internalID: 1208968233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_32
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 380
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93b4e497bf2b99247a6e7f9d382ad7fb
+      internalID: -811238610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_33
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 380
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c011be8292088b439dc55b2fda65c05
+      internalID: 1620259116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_34
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 380
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e76118cf39796244c84e57e5313c5616
+      internalID: 1854536138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_35
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 322
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39b63701e9a37484c96a9b35c37c340f
+      internalID: -92272119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_36
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 316
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 204991f07268016419a155012245b222
+      internalID: 977837386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_37
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 317
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1665af432c61767419e57ebf8c5574c3
+      internalID: -814631038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_38
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 317
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2244bfc255f33274f93b8e4f54e432da
+      internalID: -1584202423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_39
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 316
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb7d6afa09b2d5d4a968bdbb8fbe4e5c
+      internalID: -1063062228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_40
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 252
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c07603235ddf4f945a0f1b9a176f71da
+      internalID: -471545311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_41
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 252
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61693df14fa6006438751b06d58a3b96
+      internalID: -1486545616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_42
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 252
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57ffee583463b6b4fbe2e7b6feeb7fb0
+      internalID: 1123423710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_43
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 252
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44b8a53c2a626194ab329d20b76617cf
+      internalID: 643089263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_44
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 252
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f9fbb562bee87c4a82a965819ab10fb
+      internalID: -693672642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_45
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 252
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c134eec74f2c9684298634cb426561f0
+      internalID: 779152902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_46
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 188
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 022c1e8b90bdf78479364a348faf62d4
+      internalID: 1771716706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_47
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 188
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae841ae1020d87d4eaefdbe3c1936468
+      internalID: 438858488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_48
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 188
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b53311c17d59bbf488da11715c7399b3
+      internalID: 1456720357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_49
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 188
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 551c271aee070e24e8e8cae43330f5d3
+      internalID: -1658346838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_50
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 188
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58f6ea476d61b354f99284f075240fa0
+      internalID: -1866993293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_51
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 188
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a297bd9eaf477d49bf4ad239e010008
+      internalID: 1228665505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_52
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 124
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d7a04484e55065478103fc4dd9fa1ab
+      internalID: -1416811095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_53
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 124
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe53b2c59003d064ab6efbf2ee2b8021
+      internalID: 399896534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_54
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 124
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b94aa272298e00140b47ea0010d02215
+      internalID: -1201979900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_55
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 124
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f47bbee99072dd94dbf40021e9ac373e
+      internalID: -66686547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_56
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 124
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac1c6e796031740438e77723d24a82de
+      internalID: -1936058586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_57
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 124
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01a9dc0f0ebad7049b47c55837642356
+      internalID: 1233909958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_58
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 60
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e30082a555eaef4a99fd17a74255b76
+      internalID: -202410975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_59
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 60
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8700eaa300650d4dbdeffe656784a22
+      internalID: 89524424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_60
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 60
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecae410a9bce00c468e51495cb2d0a97
+      internalID: -64331523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House asset Rabbit_61
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 60
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3286723150a0986438e565b558d87cd7
+      internalID: 1003542784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      House asset Rabbit_6: -1251624553
+      House asset Rabbit_61: 1003542784
+      House asset Rabbit_17: 1593042412
+      House asset Rabbit_41: -1486545616
+      House asset Rabbit_45: 779152902
+      House asset Rabbit_21: -948213370
+      House asset Rabbit_16: -1316855425
+      House asset Rabbit_34: 1854536138
+      House asset Rabbit_53: 399896534
+      House asset Rabbit_57: 1233909958
+      House asset Rabbit_36: 977837386
+      House asset Rabbit_44: -693672642
+      House asset Rabbit_23: -1138334896
+      House asset Rabbit_26: -849256833
+      House asset Rabbit_54: -1201979900
+      House asset Rabbit_0: 1508128784
+      House asset Rabbit_40: -471545311
+      House asset Rabbit_7: 1823413585
+      House asset Rabbit_49: -1658346838
+      House asset Rabbit_22: 17702643
+      House asset Rabbit_27: 546734928
+      House asset Rabbit_33: 1620259116
+      House asset Rabbit_43: 643089263
+      House asset Rabbit_52: -1416811095
+      House asset Rabbit_3: -1058559268
+      House asset Rabbit_47: 438858488
+      House asset Rabbit_29: -855094868
+      House asset Rabbit_5: 1646455500
+      House asset Rabbit_10: 311029953
+      House asset Rabbit_42: 1123423710
+      House asset Rabbit_37: -814631038
+      House asset Rabbit_28: 1799451577
+      House asset Rabbit_51: 1228665505
+      House asset Rabbit_46: 1771716706
+      House asset Rabbit_2: 914871483
+      House asset Rabbit_35: -92272119
+      House asset Rabbit_15: 1395870206
+      House asset Rabbit_30: -1131031035
+      House asset Rabbit_60: -64331523
+      House asset Rabbit_32: -811238610
+      House asset Rabbit_31: 1208968233
+      House asset Rabbit_13: -1982916816
+      House asset Rabbit_9: 129001264
+      House asset Rabbit_8: -1022653072
+      House asset Rabbit_59: 89524424
+      House asset Rabbit_14: -906206240
+      House asset Rabbit_11: -573715757
+      House asset Rabbit_1: -1553323290
+      House asset Rabbit_38: -1584202423
+      House asset Rabbit_48: 1456720357
+      House asset Rabbit_4: -1281508686
+      House asset Rabbit_20: -1101108464
+      House asset Rabbit_56: -1936058586
+      House asset Rabbit_25: 98330368
+      House asset Rabbit_39: -1063062228
+      House asset Rabbit_50: -1866993293
+      House asset Rabbit_18: -128576157
+      House asset Rabbit_12: 1271846595
+      House asset Rabbit_19: -2063069087
+      House asset Rabbit_58: -202410975
+      House asset Rabbit_55: -66686547
+      House asset Rabbit_24: 1260099053
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

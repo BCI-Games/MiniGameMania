@@ -6,16 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/P300Training.unity
+    path: Assets/Scenes/Training/P300Training.unity
     guid: d6b563a047e167c4bb53232e70fc9c47
   - enabled: 1
     path: Assets/Scenes/GameJamDemo.unity
     guid: 03370cc5af6aa2046a8f2741967b1f44
   - enabled: 1
-    path: Assets/Scenes/MITraining.unity
+    path: Assets/Scenes/Training/MITraining.unity
     guid: 9fe2056da4f5fdb4794b47ac4c913cea
   - enabled: 1
-    path: Assets/Scenes/SSVEPtraining.unity
+    path: Assets/Scenes/Training/SSVEPtraining.unity
     guid: 9095b4ac84eabff4bbd78d8db3a1c32b
   - enabled: 1
     path: Assets/Submissions/Kangaroo/Scenes/WheresWilly.unity
@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Submissions/Mutant Clash/Mutant Clash.unity
     guid: 6ac38e94b24b0e942a6c15e183dfb90d
+  - enabled: 1
+    path: Assets/Submissions/Bci4Kids_Plus/Bci4kids_main.unity
+    guid: 30bd248b7b3bc534281fea5352d42133
   m_configObjects: {}
