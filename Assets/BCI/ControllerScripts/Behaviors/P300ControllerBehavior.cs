@@ -1,13 +1,10 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
 using System;
 using System.Linq;
 
-public class P300Controller : Controller
+public class P300ControllerBehavior : BCIControllerBehavior
 {
-
     public int numFlashesLowerLimit = 9;
     public int numFlashesUpperLimit = 12;
     public System.Random randNumFlashes = new System.Random();
@@ -41,10 +38,10 @@ public class P300Controller : Controller
     public override IEnumerator DoTraining()
     {
         numFlashesPerObjectPerSelection = randNumFlashes.Next(numFlashesLowerLimit, numFlashesUpperLimit);
-        UnityEngine.Debug.Log("Number of flashes is " + numFlashesPerObjectPerSelection.ToString());
+        Debug.Log("Number of flashes is " + numFlashesPerObjectPerSelection.ToString());
 
         // Generate the target list
-        PopulateObjectList("tag");
+        PopulateObjectList();
 
         // Get number of selectable objects by counting the objects in the objectList
         int numOptions = objectList.Count;
@@ -85,7 +82,7 @@ public class P300Controller : Controller
             yield return new WaitForSecondsRealtime(0.5f);
 
             // Calculate the length of the trial
-            float trialTime = (onTime + offTime) * (1f + (10f / refreshRate)) * (float)numFlashesPerObjectPerSelection * (float)objectList.Count;
+            float trialTime = (onTime + offTime) * (1f + (10f / Application.targetFrameRate)) * (float)numFlashesPerObjectPerSelection * (float)objectList.Count;
 
             UnityEngine.Debug.Log("This trial will take ~" + trialTime.ToString() + " seconds");
 
@@ -126,7 +123,7 @@ public class P300Controller : Controller
         blockOutGoingLSL = true;
 
         // Generate the target list
-        PopulateObjectList("tag");
+        PopulateObjectList();
         UnityEngine.Debug.Log("User Training");
 
         // Get a random training target
@@ -148,7 +145,7 @@ public class P300Controller : Controller
 
         // Calculate the length of the trial
 
-        float trialTime = (onTime + offTime) * (1f + (10f / refreshRate)) * (float)numFlashesPerObjectPerSelection * (float)objectList.Count;
+        float trialTime = (onTime + offTime) * (1f + (10f / Application.targetFrameRate)) * (float)numFlashesPerObjectPerSelection * (float)objectList.Count;
 
         UnityEngine.Debug.Log("This trial will take ~" + trialTime.ToString() + " seconds");
 
@@ -199,7 +196,7 @@ public class P300Controller : Controller
             for (int i = 0; i < stimOrder.Length; i++)
             {
                 // 
-                GameObject currentObject = objectList[stimOrder[i]];
+                GameObject currentObject = objectList[stimOrder[i]]?.gameObject;
 
                 /////
                 //This block keeps taking longer and longer... maybe.... try timing it?
@@ -304,17 +301,8 @@ public class P300Controller : Controller
                     int columnIndex = columnStimOrder[i];
                     for (int n = 0; n < numRows; n++)
                     {
-                        GameObject currentObject = objectList[rcMatrix[n, columnIndex]];
-
-
-                        //Add to marker
-                        markerString = markerString + "," + rcMatrix[n, columnIndex].ToString();
-                    }
-
-                    for (int n = 0; n < numRows; n++)
-                    {
-                        GameObject currentObject = objectList[rcMatrix[n, columnIndex]];
-                        currentObject.GetComponent<SPO>().TurnOn();
+                        objectList[rcMatrix[n, columnIndex]]?.TurnOn();
+                        markerString = markerString + "," + rcMatrix[n, columnIndex];
                     }
 
                     //// Add train target to marker
@@ -335,8 +323,7 @@ public class P300Controller : Controller
                     //Turn off column
                     for (int n = 0; n < numRows; n++)
                     {
-                        GameObject currentObject = objectList[rcMatrix[n, columnIndex]];
-                        currentObject.GetComponent<SPO>().TurnOff();
+                        objectList[rcMatrix[n, columnIndex]]?.TurnOff();
                     }
 
                     //Wait
@@ -364,11 +351,10 @@ public class P300Controller : Controller
                         for (int m = 0; m < numColumns; m++)
                         {
                             //Turn on row
-                            GameObject currentObject = objectList[rcMatrix[rowIndex, m]];
-                            currentObject.GetComponent<SPO>().TurnOn();
+                            objectList[rcMatrix[rowIndex, m]]?.TurnOn();
 
                             //Add to marker
-                            markerString1 = markerString1 + "," + rcMatrix[rowIndex, m].ToString();
+                            markerString1 = markerString1 + "," + rcMatrix[rowIndex, m];
                         }
 
                         ////Add train target to marker
@@ -389,9 +375,7 @@ public class P300Controller : Controller
                         //Turn off Row
                         for (int m = 0; m < numColumns; m++)
                         {
-                            //Turn on row
-                            GameObject currentObject = objectList[rcMatrix[rowIndex, m]];
-                            currentObject.GetComponent<SPO>().TurnOff();
+                            objectList[rcMatrix[rowIndex, m]].TurnOff();
                         }
 
 
@@ -544,8 +528,7 @@ public class P300Controller : Controller
                             if (objectsToFlash[fi] != 99)
                             {
                                 //Turn on row
-                                GameObject currentObject = objectList[objectsToFlash[fi]];
-                                currentObject.GetComponent<SPO>().TurnOn();
+                                objectList[objectsToFlash[fi]].TurnOn();
 
                                 //Add to marker
                                 markerString1 = markerString1 + "," + objectsToFlash[fi].ToString();
@@ -567,8 +550,7 @@ public class P300Controller : Controller
                             if (objectsToFlash[fi] != 99)
                             {
                                 //Turn on row
-                                GameObject currentObject = objectList[objectsToFlash[fi]];
-                                currentObject.GetComponent<SPO>().TurnOff();
+                                objectList[objectsToFlash[fi]].TurnOff();
                             }
                         }
 
@@ -606,8 +588,7 @@ public class P300Controller : Controller
                             if (objectsToFlash[fi] != 99)
                             {
                                 //Turn on row
-                                GameObject currentObject = objectList[objectsToFlash[fi]];
-                                currentObject.GetComponent<SPO>().TurnOn();
+                                objectList[objectsToFlash[fi]].TurnOn();
 
                                 //Add to marker
                                 markerString1 = markerString1 + "," + objectsToFlash[fi].ToString();
@@ -629,8 +610,7 @@ public class P300Controller : Controller
                             if (objectsToFlash[fi] != 99)
                             {
                                 //Turn on row
-                                GameObject currentObject = objectList[objectsToFlash[fi]];
-                                currentObject.GetComponent<SPO>().TurnOff();
+                                objectList[objectsToFlash[fi]].TurnOff();
                             }
                         }
 
@@ -667,8 +647,7 @@ public class P300Controller : Controller
                             if (objectsToFlash[fi] != 99)
                             {
                                 //Turn on row
-                                GameObject currentObject = objectList[objectsToFlash[fi]];
-                                currentObject.GetComponent<SPO>().TurnOn();
+                                objectList[objectsToFlash[fi]].TurnOn();
 
                                 //Add to marker
                                 markerString1 = markerString1 + "," + objectsToFlash[fi].ToString();
@@ -690,8 +669,7 @@ public class P300Controller : Controller
                             if (objectsToFlash[fi] != 99)
                             {
                                 //Turn on row
-                                GameObject currentObject = objectList[objectsToFlash[fi]];
-                                currentObject.GetComponent<SPO>().TurnOff();
+                                objectList[objectsToFlash[fi]].TurnOff();
                             }
                         }
 
@@ -728,8 +706,7 @@ public class P300Controller : Controller
                             if (objectsToFlash[fi] != 99)
                             {
                                 //Turn on row
-                                GameObject currentObject = objectList[objectsToFlash[fi]];
-                                currentObject.GetComponent<SPO>().TurnOn();
+                                objectList[objectsToFlash[fi]].TurnOn();
 
                                 //Add to marker
                                 markerString1 = markerString1 + "," + objectsToFlash[fi].ToString();
@@ -751,8 +728,7 @@ public class P300Controller : Controller
                             if (objectsToFlash[fi] != 99)
                             {
                                 //Turn on row
-                                GameObject currentObject = objectList[objectsToFlash[fi]];
-                                currentObject.GetComponent<SPO>().TurnOff();
+                                objectList[objectsToFlash[fi]].TurnOff();
                             }
                         }
 

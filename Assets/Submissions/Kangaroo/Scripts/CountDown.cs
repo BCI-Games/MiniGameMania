@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using BCIEssentials.Controllers;
 using UnityEngine;
 
 public class CountDown : MonoBehaviour
 {
-    public P300Controller P300;
     public TextMesh Ctext;
     public GameObject BG;
     public GameObject haveYouFound;
@@ -17,14 +17,20 @@ public class CountDown : MonoBehaviour
     [SerializeField]
     private float stiCountDown = 0f;
 
+    private BCIControllerBehavior _bciController;
+    
     private void Start()
     {
         countDown = countTime;
         stiCountDown = countTime + 5f;
 
-        P300 = GameObject.FindGameObjectWithTag("MasterController").GetComponent<P300Controller>();
-
+        if (BCIController.Instance == null)
+        {
+            _bciController = GameObject.FindGameObjectWithTag("MasterController")
+                .GetComponent<BCIControllerBehavior>();
+        }
     }
+    
     private void OnEnable() {
         countDown = countTime;
         stiCountDown = countTime + 5f;     
@@ -51,7 +57,15 @@ public class CountDown : MonoBehaviour
         }
         else{
 
-            P300.StartStopStimulus();
+            if (_bciController != null)
+            {
+                _bciController.StartStopStimulus();
+            }
+            else if (BCIController.Instance != null)
+            {
+                BCIController.Instance.StartStopStimulus();
+            }
+            
             this.gameObject.SetActive(false);
 
         }

@@ -1,111 +1,38 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System;
+using BCIEssentials.Controllers;
 
-public class SSVEPController : Controller
+public class SSVEPControllerBehavior : BCIControllerBehavior
 {
-    public float[] setFreqFlash;
-    public float[] realFreqFlash;
+    [SerializeField] private float[] setFreqFlash;
+    [SerializeField] private float[] realFreqFlash;
 
     private int[] frames_on = new int[99];
-    //private int[] frames_off = new int[99];
     private int[] frame_count = new int[99];
     private float period;
     private int[] frame_off_count = new int[99];
     private int[] frame_on_count = new int[99];
 
-
-    public override void PopulateObjectList(string popMethod)
+    public override void PopulateObjectList(SpoPopulationMethod populationMethod = SpoPopulationMethod.Tag)
     {
-        // Remove everything from the existing list
-        objectList.Clear();
-
-        print("populating the list using method " + popMethod);
-        //Collect objects with the BCI tag
-        if (popMethod == "tag")
-        {
-            try
-            {
-                //Add game objects to list by tag "BCI"
-                //GameObject[] objectList = GameObject.FindGameObjectsWithTag("BCI");
-                GameObject[] objectArray = GameObject.FindGameObjectsWithTag("BCI");
-                for (int i = 0; i < objectArray.Length; i++)
-                {
-                    objectList.Add(objectArray[i]);
-                }
-                //objectList.Add(GameObject.FindGameObjectsWithTag("BCI"));
-
-                //The object list exists
-                listExists = true;
-            }
-            catch
-            {
-                //the list does not exist
-                print("Unable to create a list based on 'BCI' object tag");
-                listExists = false;
-            }
-
-        }
-
-        //List is predefined
-        else if (popMethod == "predefined")
-        {
-            if (listExists == true)
-            {
-                print("The predefined list exists");
-            }
-            if (listExists == false)
-            {
-                print("The predefined list doesn't exist, try a different pMethod");
-            }
-        }
-
-        // Collect by children ??
-        else if (popMethod == "children")
-        {
-            Debug.Log("Populute by children is not yet implemented");
-        }
-
-        // Womp womp
-        else
-        {
-            print("No object list exists");
-        }
-
-        // Remove from the list any entries that have includeMe set to false
-        foreach (GameObject thisObject in objectList)
-        {
-            if (thisObject.GetComponent<SPO>().includeMe == false)
-            {
-                objectsToRemove.Add(thisObject);
-            }
-        }
-        foreach (GameObject thisObject in objectsToRemove)
-        {
-            objectList.Remove(thisObject);
-        }
-        objectsToRemove.Clear();
+        base.PopulateObjectList(populationMethod);
 
         realFreqFlash = new float[objectList.Count];
 
-        //int[] frames_on;
-        //int[] frames_off;
-        //int[] frame_count;
-        //float period;
-        //int[] frame_off_count;
-        //int[] frame_on_count;
-
+        var refreshRate = Application.targetFrameRate;
         for (int i = 0; i < objectList.Count; i++)
         {
+            
             frames_on[i] = 0;
             frame_count[i] = 0;
-            period = (float)refreshRate / (float)setFreqFlash[i];
+            period = refreshRate / setFreqFlash[i];
             // could add duty cycle selection here, but for now we will just get a duty cycle as close to 0.5 as possible
             frame_off_count[i] = (int)Math.Ceiling(period / 2);
             frame_on_count[i] = (int)Math.Floor(period / 2);
             realFreqFlash[i] = (refreshRate / (float)(frame_off_count[i] + frame_on_count[i]));
-            print("frequency " + (i + 1).ToString() + " : " + realFreqFlash[i].ToString());
+            
+            Debug.Log($"frequency {i + 1} : { realFreqFlash[i]}");
         }
     }
 
