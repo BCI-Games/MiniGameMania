@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using BCIEssentials.Controllers;
 using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
@@ -28,7 +29,6 @@ public class PlayerInputManager : MonoBehaviour
     UnitSelector unitSelector;
     UnitPlacer unitPlacer;
 
-    P300Controller bciController;
     BattleManager battleManager;
 
     float selectionDelay;
@@ -60,8 +60,6 @@ public class PlayerInputManager : MonoBehaviour
     {
         playerColour = possibleColors[Random.Range(0, possibleColors.Length)];
 
-        //This doesn't work on scene load!!!! Find object of type is broken on scene load. Maybe I will switch how the game manager/controller works....
-        bciController = FindObjectOfType<P300Controller>();
         battleManager = FindObjectOfType<BattleManager>();
 
         unitSelector = GetComponentInChildren<UnitSelector>();
@@ -86,7 +84,6 @@ public class PlayerInputManager : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(bciController.isActiveAndEnabled);
         if(timer > 0)
         {
             timer -= Time.deltaTime;
@@ -192,7 +189,7 @@ public class PlayerInputManager : MonoBehaviour
         if (playerType == PlayerType.Bci)
         {
             selectionManager.TurnOffAll();
-            bciController.StartStopStimulus();
+            BCIController.Instance.StartStopStimulus();
         }
         else if (playerType == PlayerType.AI)
         {

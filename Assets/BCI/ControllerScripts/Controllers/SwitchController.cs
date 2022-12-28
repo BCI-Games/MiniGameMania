@@ -1,4 +1,6 @@
 using System;
+using BCIEssentials.ControllerBehaviors;
+using BCIEssentials.LSL;
 using UnityEngine;
 
 /*An extension of the controller class to add Switch functionality
@@ -18,7 +20,7 @@ public class SwitchController : SwitchControllerBehavior
     protected override void Start()
     {
         // Attach Scripts
-        setup = GetComponent<Matrix_Setup>();
+        setup = GetComponent<Matrix_Setup>().ReplaceWithMatrixSetUp();
         Initialize(GetComponent<LSLMarkerStream>(), GetComponent<LSLResponseStream>());
         
         // Set the target framerate

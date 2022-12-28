@@ -1,5 +1,9 @@
 using UnityEngine;
 using System;
+using BCIEssentials.ControllerBehaviors;
+using BCIEssentials.Controllers;
+using BCIEssentials.LSL;
+
 //using LSLMarkerStreams;
 
 /*SSVEP Controller
@@ -17,6 +21,8 @@ using System;
 
 public class Controller : BCIControllerBehavior
 {
+    public override BehaviorType BehaviorType => BehaviorType.Unset;
+    
     //Display
     public int refreshRate = 60;
     private float currentRefreshRate;
@@ -27,8 +33,6 @@ public class Controller : BCIControllerBehavior
     // Start is called before the first frame update
     protected override void Start()
     {
-        // Attach Scripts
-        setup = GetComponent<Matrix_Setup>();
         Initialize(GetComponent<LSLMarkerStream>(), GetComponent<LSLResponseStream>());
         
         // Set the target framerate
