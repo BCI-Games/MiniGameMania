@@ -1,3 +1,5 @@
+using System;
+using BCIEssentials.Controllers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
@@ -53,6 +55,18 @@ public class MenuController : MonoBehaviour
         }
     }
 
+    public void RequestBCIController(string behaviorType)
+    {
+        if (BCIController.Instance != null && Enum.TryParse(behaviorType, out BehaviorType parsedType))
+        {
+            BCIController.Instance.ChangeBehavior(parsedType);
+        }
+        else
+        {
+            Debug.LogError("Failed to request a bci controller behavior");
+        }
+    }
+    
     public void LoadScene(string sceneName)
     {
         _canvas.gameObject.SetActive(false);
