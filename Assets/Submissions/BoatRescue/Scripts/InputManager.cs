@@ -1,4 +1,5 @@
 ﻿using System;
+using BCIEssentials.Controllers;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -24,24 +25,20 @@ namespace Submissions.BoatRescue
         public UnityEvent<PlayerMoveDirection> OnDirectionTriggered = new();
         public UnityEvent OnConfirmTriggered = new();
         public UnityEvent OnCancelTriggered = new();
-
-        private P300Controller _bciController;
-
         public void Initialize()
         {
             Instance = this;
-            _bciController = FindObjectOfType<P300Controller>();
         }
 
         public void ToggleStimulusInput(bool enable)
         {
-            if (_bciController == null || _bciController.stimOn == enable)
+            if (BCIController.Instance == null)
             {
                 return;
             }
 
             Debug.Log("<b>Starting Stim</b>");
-            _bciController.StartStopStimulus();
+            BCIController.Instance.StartStopStimulus();
         }
 
         private void Update()

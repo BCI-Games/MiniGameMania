@@ -9,7 +9,7 @@ using UnityEngine;
 // All objects are given the tag "BCI" so that they can be collected by the controller script
 
 //This class contains the functions needed to set-up the P300 matrices for flashing.
-public class Matrix_Setup : MatrixSetupBase
+public class Matrix_Setup : MonoBehaviour
 {
     public int numColumns;
     public int numRows;
@@ -25,7 +25,7 @@ public class Matrix_Setup : MatrixSetupBase
 
     // Setup the matrix
     // void SetUpMatrix(List<GameObject> objectList)
-    public override void SetUpMatrix()
+    public void SetUpMatrix()
     {
         //Initial set up
         //object_matrix = new GameObject[numColumns, numRows];
@@ -84,7 +84,7 @@ public class Matrix_Setup : MatrixSetupBase
     }
 
     //Destroy the matrix
-    public override void DestroyMatrix()
+    public void DestroyMatrix()
     {
         //Destroy Parent Objects
         int objectCount = objectList.Count;
@@ -96,6 +96,14 @@ public class Matrix_Setup : MatrixSetupBase
     }
 
 
-
+    public MatrixSetup ReplaceWithMatrixSetUp()
+    {
+        var setup = gameObject.AddComponent<MatrixSetup>();
+        setup.Initialize(myObject.GetComponent<BCIEssentials.StimulusObjects.SPO>(), numColumns, numRows, new Vector2((float)distanceX, (float)distanceY));
+        
+        Destroy(this);
+        
+        return setup;
+    }
 
 }

@@ -16,19 +16,11 @@ public class CountDown : MonoBehaviour
 
     [SerializeField]
     private float stiCountDown = 0f;
-
-    private BCIControllerBehavior _bciController;
     
     private void Start()
     {
         countDown = countTime;
         stiCountDown = countTime + 5f;
-
-        if (BCIController.Instance == null)
-        {
-            _bciController = GameObject.FindGameObjectWithTag("MasterController")
-                .GetComponent<BCIControllerBehavior>();
-        }
     }
     
     private void OnEnable() {
@@ -57,11 +49,7 @@ public class CountDown : MonoBehaviour
         }
         else{
 
-            if (_bciController != null)
-            {
-                _bciController.StartStopStimulus();
-            }
-            else if (BCIController.Instance != null)
+            if (BCIController.Instance != null)
             {
                 BCIController.Instance.StartStopStimulus();
             }
