@@ -1,16 +1,13 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+using BCIEssentials.Controllers;
+using BCIEssentials.Utilities;
 using UnityEngine;
-using UnityEngine.UI;
 
 /*An extension of the controller class to add MI functionality
 
 */
-public class MIController : Controller
+public class MIControllerBehavior : BCIControllerBehavior
 {
-
-
     // Variables related to Iterative training
     public int numSelectionsBeforeTraining = 3;        // How many selections to make before creating the classifier
     public int numSelectionsBetweenTraining = 3;       // How many selections to make before updating the classifier
@@ -19,75 +16,9 @@ public class MIController : Controller
     protected int selectionCounter = 0;
     protected int updateCounter = 0;
 
-    public override void PopulateObjectList(string popMethod)
+    public override void PopulateObjectList(SpoPopulationMethod populationMethod = SpoPopulationMethod.Tag)
     {
-        // Remove everything from the existing list
-        objectList.Clear();
-
-        print("populating the list using method " + popMethod);
-        //Collect objects with the BCI tag
-        if (popMethod == "tag")
-        {
-            try
-            {
-                //Add game objects to list by tag "BCI"
-                //GameObject[] objectList = GameObject.FindGameObjectsWithTag("BCI");
-                GameObject[] objectArray = GameObject.FindGameObjectsWithTag("BCI");
-                for (int i = 0; i < objectArray.Length; i++)
-                {
-                    objectList.Add(objectArray[i]);
-                }
-
-                //The object list exists
-                listExists = true;
-            }
-            catch
-            {
-                //the list does not exist
-                print("Unable to create a list based on 'BCI' object tag");
-                listExists = false;
-            }
-
-        }
-
-        //List is predefined
-        else if (popMethod == "predefined")
-        {
-            if (listExists == true)
-            {
-                print("The predefined list exists");
-            }
-            if (listExists == false)
-            {
-                print("The predefined list doesn't exist, try a different pMethod");
-            }
-        }
-
-        // Collect by children ??
-        else if (popMethod == "children")
-        {
-            Debug.Log("Populute by children is not yet implemented");
-        }
-
-        // Womp womp
-        else
-        {
-            print("No object list exists");
-        }
-
-        // Remove from the list any entries that have includeMe set to false
-        foreach (GameObject thisObject in objectList)
-        {
-            if (thisObject.GetComponent<SPO>().includeMe == false)
-            {
-                objectsToRemove.Add(thisObject);
-            }
-        }
-        foreach (GameObject thisObject in objectsToRemove)
-        {
-            objectList.Remove(thisObject);
-        }
-        objectsToRemove.Clear();
+        base.PopulateObjectList(populationMethod);
 
         // Warn about the number of objects to be selected from, if greater than 2
         if (objectList.Count > 2)
@@ -105,13 +36,13 @@ public class MIController : Controller
     public override IEnumerator DoIterativeTraining()
     {
         // Generate the target list
-        PopulateObjectList("tag");
+        PopulateObjectList();
 
         int numOptions = objectList.Count;
 
         // Create a random non repeating array 
         int[] trainArray = new int[numTrainingSelections];
-        trainArray = MakeRNRA(numTrainingSelections, numOptions);
+        trainArray = ArrayUtilities.GenerateRNRA(numTrainingSelections, numOptions);
         PrintArray(trainArray);
 
         yield return 0;
@@ -126,16 +57,14 @@ public class MIController : Controller
                 if (updateCounter == 0)
                 {
                     // update the classifier
-                    Debug.Log("Updating the classifier after " + selectionCounter.ToString() + " selections");
-
+                    Debug.Log($"Updating the classifier after {selectionCounter} selections");
                     marker.Write("Update Classifier");
                     updateCounter++;
                 }
                 else if (selectionCounter >= numSelectionsBeforeTraining + (updateCounter * numSelectionsBetweenTraining))
                 {
                     // update the classifier
-                    Debug.Log("Updating the classifier after " + selectionCounter.ToString() + " selections");
-
+                    Debug.Log($"Updating the classifier after {selectionCounter} selections");
                     marker.Write("Update Classifier");
                     updateCounter++;
                 }
@@ -145,10 +74,10 @@ public class MIController : Controller
             trainTarget = trainArray[i];
 
             // 
-            Debug.Log("Running training selection " + i.ToString() + " on option " + trainTarget.ToString());
+            Debug.Log($"Running training selection {i} on option {trainTarget}");
 
             // Turn on train target
-            objectList[trainTarget].GetComponent<SPO>().OnTrainTarget();
+            objectList[trainTarget].OnTrainTarget();
 
             // Go through the training sequence
             yield return new WaitForSecondsRealtime(pauseBeforeTraining);
@@ -161,7 +90,7 @@ public class MIController : Controller
 
                 if (shamFeedback)
                 {
-                    objectList[trainTarget].GetComponent<SPO>().OnSelection();
+                    objectList[trainTarget].OnSelection();
                 }
             }
             StimulusOff();
@@ -170,7 +99,7 @@ public class MIController : Controller
             yield return new WaitForSecondsRealtime(trainBreak);
 
             // Turn off train target
-            objectList[trainTarget].GetComponent<SPO>().OffTrainTarget();
+            objectList[trainTarget].OffTrainTarget();
 
             // Reset objects
 
@@ -194,20 +123,10 @@ public class MIController : Controller
         while (stimOn)
         {
             // Desired format is: [mi, number of options, training label (or -1 if n/a), window length] 
-            string trainingString;
-            if (trainingIndex <= objectList.Count)
-            {
-                trainingString = trainingIndex.ToString();
-            }
-            else
-            {
-                trainingString = "-1";
-            }
-
-            string markerString = "mi," + objectList.Count.ToString() + "," + trainingString + "," + windowLength.ToString();
+            string trainingString = trainingIndex <= objectList.Count ? trainingIndex.ToString() : "-1";
 
             // Send the marker
-            marker.Write(markerString);
+            marker.Write($"mi, {objectList.Count}, {trainingString}, {windowLength}");
 
             // Wait the window length + the inter-window interval
             yield return new WaitForSecondsRealtime(windowLength + interWindowInterval);

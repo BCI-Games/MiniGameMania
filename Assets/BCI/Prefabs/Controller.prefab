@@ -51,11 +51,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 224f919cf0092a0479b982cf432628db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  refreshRate: 60
+  _behaviorType: 0
   setupRequired: 0
   listExists: 0
   objectList: []
-  objectsToRemove: []
   windowLength: 1
   interWindowInterval: 0
   stimOn: 0
@@ -67,6 +66,9 @@ MonoBehaviour:
   trainBreak: 1
   shamFeedback: 0
   trainTarget: 99
+  _myTag: BCI
+  setup: {fileID: 4280385885900106473}
+  refreshRate: 60
   _myTag: BCI
   setup: {fileID: 0}
   marker: {fileID: 0}
@@ -83,11 +85,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fec4d8ee2a5b9f34da4c9d9c03be90f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  refreshRate: 60
+  _behaviorType: 0
   setupRequired: 1
   listExists: 0
   objectList: []
-  objectsToRemove: []
   windowLength: 2
   interWindowInterval: 0
   stimOn: 0
@@ -100,11 +101,14 @@ MonoBehaviour:
   shamFeedback: 1
   trainTarget: 99
   _myTag: BCI
+  setup: {fileID: 4280385885900106473}
+  numSelectionsBeforeTraining: 3
+  numSelectionsBetweenTraining: 3
+  refreshRate: 60
+  _myTag: BCI
   setup: {fileID: 0}
   marker: {fileID: 0}
   response: {fileID: 0}
-  numSelectionsBeforeTraining: 3
-  numSelectionsBetweenTraining: 3
 --- !u!114 &4280385885900106466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,11 +121,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aff63d521c6acc42a1acad44a3f44c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  refreshRate: 60
+  _behaviorType: 0
   setupRequired: 0
   listExists: 0
   objectList: []
-  objectsToRemove: []
   windowLength: 1
   interWindowInterval: 0
   stimOn: 0
@@ -134,9 +137,7 @@ MonoBehaviour:
   shamFeedback: 0
   trainTarget: 99
   _myTag: BCI
-  setup: {fileID: 0}
-  marker: {fileID: 0}
-  response: {fileID: 0}
+  setup: {fileID: 4280385885900106473}
   numFlashesLowerLimit: 9
   numFlashesUpperLimit: 12
   onTime: 0.1
@@ -149,6 +150,11 @@ MonoBehaviour:
   checkerBoardCols: 6
   timeDebug: 0
   trainBufferTime: 0
+  refreshRate: 60
+  _myTag: BCI
+  setup: {fileID: 0}
+  marker: {fileID: 0}
+  response: {fileID: 0}
 --- !u!114 &4280385885900106467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,11 +167,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c16368a39ec689f46bd2f36cff7d53f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  refreshRate: 60
+  _behaviorType: 0
   setupRequired: 0
   listExists: 0
   objectList: []
-  objectsToRemove: []
   windowLength: 1
   interWindowInterval: 0
   stimOn: 0
@@ -178,9 +183,7 @@ MonoBehaviour:
   shamFeedback: 0
   trainTarget: 99
   _myTag: BCI
-  setup: {fileID: 0}
-  marker: {fileID: 0}
-  response: {fileID: 0}
+  setup: {fileID: 4280385885900106473}
   setFreqFlash:
   - 6
   - 8
@@ -189,6 +192,11 @@ MonoBehaviour:
   - 15
   - 18
   realFreqFlash: []
+  refreshRate: 60
+  _myTag: BCI
+  setup: {fileID: 0}
+  marker: {fileID: 0}
+  response: {fileID: 0}
 --- !u!114 &4280385885900106473
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -3,38 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using System;
-//using LSLMarkerStreams;
+using BCIEssentials.Controllers;
+using BCIEssentials.Utilities;
 
-/*SSVEP Controller
- * This is the SPO Controller base class for an object-oriented design (OOD) approach to SSVEP BCI
- * Author: Brian Irvine
- * 
- * Attributes
- * 
- * 
- * Methods
- * 
- * 
- * 
- */
-
-public class Controller : MonoBehaviour
+/// <summary>
+/// This is the SPO Controller base class for an object-oriented design (OOD) approach to SSVEP BCI
+/// </summary>
+public class BCIControllerBehavior : MonoBehaviour
 {
-    //Display
-    public int refreshRate = 60;
-    private float currentRefreshRate;
-    private float sumRefreshRate;
-    private float avgRefreshRate;
-    private int refreshCounter = 0;
+    [SerializeField] private BehaviorType _behaviorType = BehaviorType.Unset;
+    public BehaviorType BehaviorType => _behaviorType;
+    
+    [SerializeField] private int targetFrameRate = 60;
 
     //Matrix Setup
     public bool setupRequired;
 
     //PopulateObjectList
     public bool listExists;
+
     //public GameObject[] objectList;
-    public List<GameObject> objectList;
-    [HideInInspector] public List<GameObject> objectsToRemove;
+    [SerializeField] protected List<SPO> objectList = new();
 
     //StimulusOn/Off + sending Markers
     public float windowLength = 1.0f;
@@ -52,8 +41,8 @@ public class Controller : MonoBehaviour
     public int trainTarget = 99;
 
     //Deal with the BCI Tag in a scene with mor flexibility.
-    [SerializeField]
-    private string _myTag = "BCI";
+    [SerializeField] private string _myTag = "BCI";
+
     public string myTag
     {
         get { return _myTag; }
@@ -61,26 +50,37 @@ public class Controller : MonoBehaviour
     }
 
     // Receive markers
-    private bool receivingMarkers = false;
+    protected bool receivingMarkers = false;
 
     // Scripts
-    [HideInInspector] public Matrix_Setup setup;
-    [HideInInspector] public LSLMarkerStream marker;
-    [HideInInspector] public LSLResponseStream response;
+    [SerializeField] protected MatrixSetupBase setup;
 
+    protected LSLMarkerStream marker;
+    protected LSLResponseStream response;
 
-
-    // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
-        // Attach Scripts
-        setup = GetComponent<Matrix_Setup>();
-        marker = GetComponent<LSLMarkerStream>();
-        response = GetComponent<LSLResponseStream>();
+        if (BCIController.Instance != null)
+        {
+            BCIController.Instance.RegisterBehavior(this);
+        }
+    }
 
-        // Set the target framerate
-        Application.targetFrameRate = refreshRate;
+    private void OnDestroy()
+    {
+        if (BCIController.Instance != null)
+        {
+            BCIController.Instance.UnregisterBehavior(this);
+        }
+    }
 
+    public void Initialize(LSLMarkerStream lslMarkerStream, LSLResponseStream lslResponseStream)
+    {
+        Application.targetFrameRate = targetFrameRate;
+        
+        marker = lslMarkerStream;
+        response = lslResponseStream;
+        
         //Setup if required
         if (setupRequired)
         {
@@ -94,198 +94,65 @@ public class Controller : MonoBehaviour
                 Debug.Log(e.Message);
             }
         }
-
-        // settingsMenu = GameObject.FindGameObjectWithTag("Settings");
-        // settingsMenu.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CleanUp()
     {
-        // Check the average framerate every second
-        currentRefreshRate = 1 / Time.deltaTime;
-        refreshCounter += 1;
-        sumRefreshRate += currentRefreshRate;
-        if (refreshCounter >= refreshRate)
-        {
-            avgRefreshRate = sumRefreshRate / (float)refreshCounter;
-            if (avgRefreshRate < 0.95 * (float)refreshRate)
-            {
-                Debug.Log("Refresh rate is below 95% of target, avg refresh rate " + avgRefreshRate.ToString());
-            }
-
-            sumRefreshRate = 0;
-            refreshCounter = 0;
-        }
-
-
-
-        // Check key down
-
-        // Press S to start/stop stimulus
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            StartStopStimulus();
-        }
-
-        // Press T to do automated training
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            // Receive incoming markers
-            if (receivingMarkers == false)
-            {
-                StartCoroutine(ReceiveMarkers());
-            }
-
-            StartCoroutine(DoTraining());
-        }
-
-        // Press I to do Iterative training (MI only)
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            // Receive incoming markers
-            if (receivingMarkers == false)
-            {
-                StartCoroutine(ReceiveMarkers());
-            }
-
-            StartCoroutine(DoIterativeTraining());
-        }
-
-        // Press U to do User training, stimulus without BCI
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            StartCoroutine(DoUserTraining());
-        }
-
-
-        // Check for a selection if stim is on
-        if (stimOn )
-        {
-            if (Input.GetKeyDown(KeyCode.Alpha0))
-            {
-                StartCoroutine(SelectObject(0));
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                StartCoroutine(SelectObject(1));
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha2))
-            {
-                StartCoroutine(SelectObject(2));
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha3))
-            {
-                StartCoroutine(SelectObject(3));
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha4))
-            {
-                StartCoroutine(SelectObject(4));
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha5))
-            {
-                StartCoroutine(SelectObject(5));
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha6))
-            {
-                StartCoroutine(SelectObject(6));
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha7))
-            {
-                StartCoroutine(SelectObject(7));
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha8))
-            {
-                StartCoroutine(SelectObject(8));
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha9))
-            {
-                StartCoroutine(SelectObject(9));
-            }
-        }
+        setup.DestroyMatrix();
+        
+        //TODO: Stop running coroutines
     }
 
     // Populate a list of SPOs
-    public virtual void PopulateObjectList(string popMethod)
+    public virtual void PopulateObjectList(SpoPopulationMethod populationMethod = SpoPopulationMethod.Tag)
     {
         // Remove everything from the existing list
         objectList.Clear();
 
-        //print("populating the list using method " + popMethod);
-        //Collect objects with the BCI tag
-        if (popMethod == "tag")
+        //Populate the selected list
+        switch (populationMethod)
         {
-            try
-            {
-                //Add game objects to list by tag "BCI"
-                //GameObject[] objectList = GameObject.FindGameObjectsWithTag("BCI");
-                //Editing this to be programmable in the editor under myTag
-                GameObject[] objectArray = GameObject.FindGameObjectsWithTag(myTag);
-                for (int i = 0; i < objectArray.Length; i++)
-                {
-                    objectList.Add(objectArray[i]);
-                }
-                //objectList.Add(GameObject.FindGameObjectsWithTag("BCI"));
-
-                //The object list exists
+            case SpoPopulationMethod.Predefined:
                 listExists = true;
-            }
-            catch
-            {
-                //the list does not exist
-                print("Unable to create a list based on 'BCI' object tag");
-                listExists = false;
-            }
+                break;
+            case SpoPopulationMethod.Children:
+                throw new NotImplementedException("Populating by children is not yet implemented");
+            default:
+            case SpoPopulationMethod.Tag:
+                GameObject[] taggedGOs = GameObject.FindGameObjectsWithTag(myTag);
+                foreach (var taggedGO in taggedGOs)
+                {
+                    if (taggedGO.TryGetComponent<SPO>(out var spo) && spo.includeMe)
+                    {
+                        AddSpo(spo);
+                    }
+                }
 
+                listExists = true;
+                break;
         }
 
-        //List is predefined
-        else if (popMethod == "predefined")
+        void AddSpo(SPO spo)
         {
-            if (listExists == true)
-            {
-                print("The predefined list exists");
-            }
-            if (listExists == false)
-            {
-                print("The predefined list doesn't exist, try a different pMethod");
-            }
+            objectList.Add(spo);
+            spo.myIndex = objectList.Count - 1;
         }
+    }
 
-        // Collect by children ??
-        else if (popMethod == "children")
+    /// <summary>
+    /// Obsolete Method. Use enum variation.
+    /// </summary>
+    /// <param name="populationMethod"></param>
+    [Obsolete]
+    public void PopulateObjectList(string populationMethod)
+    {
+        if (!Enum.TryParse(populationMethod, out SpoPopulationMethod method))
         {
-            Debug.Log("Populute by children is not yet implemented");
+            Debug.LogError($"Unable to convert {populationMethod} to a valid method");
+            return;
         }
-
-        // Womp womp
-        else
-        {
-            print("No object list exists");
-        }
-
-        // Remove from the list any entries that have includeMe set to false
-        //print(objectList.Count.ToString());
-
-
-        foreach (GameObject thisObject in objectList)
-        {
-            if (thisObject.GetComponent<SPO>().includeMe == false)
-            {
-                objectsToRemove.Add(thisObject);
-            }
-        }
-        foreach (GameObject thisObject in objectsToRemove)
-        {
-            objectList.Remove(thisObject);
-        }
-        objectsToRemove.Clear();
-
-        for (int i = 0; i < objectList.Count; i++)
-        {
-            GameObject thisObject = objectList[i];
-            thisObject.GetComponent<SPO>().myIndex = i;
-        }
+        
+        PopulateObjectList(method);
     }
 
     public void StartStopStimulus()
@@ -305,7 +172,7 @@ public class Controller : MonoBehaviour
         // Turn on if off
         else
         {
-            PopulateObjectList("tag");
+            PopulateObjectList();
             StimulusOn();
         }
     }
@@ -331,7 +198,7 @@ public class Controller : MonoBehaviour
         }
         catch
         {
-            UnityEngine.Debug.Log("start stimulus coroutine error");
+            Debug.Log("start stimulus coroutine error");
         }
     }
 
@@ -345,7 +212,44 @@ public class Controller : MonoBehaviour
     }
 
     // Select an object from the objectList
-    public IEnumerator SelectObject(int objectIndex)
+    public void SelectObject(int objectIndex)
+    {
+        if (!stimOn)
+        {
+            return;
+        }
+
+        StartCoroutine(SelectObjectAfterRun(objectIndex));
+    }
+
+    public void StartAutomatedTraining()
+    {
+        // Receive incoming markers
+        if (receivingMarkers == false)
+        {
+            StartCoroutine(ReceiveMarkers());
+        }
+
+        StartCoroutine(DoTraining());
+    }
+
+    public void StartIterativeTraining()
+    {
+        // Receive incoming markers
+        if (receivingMarkers == false)
+        {
+            StartCoroutine(ReceiveMarkers());
+        }
+
+        StartCoroutine(DoIterativeTraining());
+    }
+
+    public void StartUserTraining()
+    {
+        StartCoroutine(DoUserTraining());
+    }
+    
+    protected IEnumerator SelectObjectAfterRun(int objectIndex)
     {
         // When a selection is made, turn the stimulus off
         //stimOn = false;
@@ -353,9 +257,9 @@ public class Controller : MonoBehaviour
         Debug.Log("Waiting to select object " + objectIndex.ToString());
 
         // Wait for stimulus to end
-        while(stimOn == true)
+        while (stimOn == true)
         {
-            yield return null; 
+            yield return null;
         }
 
         try
@@ -369,7 +273,6 @@ public class Controller : MonoBehaviour
             Debug.Log("Could not select object " + objectIndex.ToString() + " from list");
             Debug.Log("Object list contains " + objectList.Count.ToString() + " objects");
         }
-
     }
 
     // Setup a matrix if setup is required
@@ -384,7 +287,7 @@ public class Controller : MonoBehaviour
     public virtual IEnumerator DoTraining()
     {
         // Generate the target list
-        PopulateObjectList("tag");
+        PopulateObjectList();
 
         // Get number of selectable objects by counting the objects in the objectList
         int numOptions = objectList.Count;
@@ -509,6 +412,7 @@ public class Controller : MonoBehaviour
                     //print(ind.ToString());
                     array[ind] = shuffledArray[j];
                 }
+
                 lastValue = shuffledArray[numOptions - 1];
             }
 
@@ -521,7 +425,6 @@ public class Controller : MonoBehaviour
                     int ind = (i * (numOptions)) + k;
                     //print(ind.ToString());
                     array[ind] = shuffledArray[k];
-
                 }
             }
         }
@@ -537,6 +440,7 @@ public class Controller : MonoBehaviour
         {
             strings[i] = array[i].ToString();
         }
+
         print(string.Join(" ", strings));
     }
 
@@ -557,7 +461,6 @@ public class Controller : MonoBehaviour
                 {
                     Debug.Log("There is no object " + i.ToString());
                 }
-
             }
 
             //Wait until next frame
@@ -575,7 +478,6 @@ public class Controller : MonoBehaviour
             {
                 Debug.Log("There is no object " + i.ToString());
             }
-
         }
 
         yield return 0;
@@ -584,7 +486,6 @@ public class Controller : MonoBehaviour
     // Send markers
     public virtual IEnumerator SendMarkers(int trainingIndex = 99)
     {
-
         // Make the marker string, this will change based on the paradigm
         while (stimOn)
         {
@@ -602,6 +503,7 @@ public class Controller : MonoBehaviour
             yield return new WaitForSecondsRealtime(windowLength + interWindowInterval);
         }
     }
+
     // Coroutine to continuously receive markers
     public IEnumerator ReceiveMarkers()
     {
@@ -609,14 +511,13 @@ public class Controller : MonoBehaviour
         {
             //Get response stream from Python
             print("Looking for a response stream");
-            response = GetComponent<LSLResponseStream>();
             int diditwork = response.ResolveResponse();
             print(diditwork.ToString());
             receivingMarkers = true;
         }
 
         //Set interval at which to receive markers
-        float receiveInterval = 1 / refreshRate;
+        float receiveInterval = 1 / Application.targetFrameRate;
         float responseTimeout = 0f;
 
         //Ping count
@@ -670,7 +571,4 @@ public class Controller : MonoBehaviour
 
         Debug.Log("Done receiving markers");
     }
-
-
-
 }

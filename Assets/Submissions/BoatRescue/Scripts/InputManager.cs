@@ -41,7 +41,6 @@ namespace Submissions.BoatRescue
             }
 
             Debug.Log("<b>Starting Stim</b>");
-            Debug.Log($"<b>{_bciController.objectList.Count}</b>");
             _bciController.StartStopStimulus();
         }
 
