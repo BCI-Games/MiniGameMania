@@ -7,15 +7,20 @@ TagManager:
   - BCI
   - MasterController
   - food
+  - Win
+  - SpeedBoost
+  - Rough
+  - Wall
+  - GameBounds
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - BackgroundNoLight
   - Water
   - UI
-  - 
-  - 
+  - Ball In Hole
+  - Hole Collider
   - 
   - 
   - 
