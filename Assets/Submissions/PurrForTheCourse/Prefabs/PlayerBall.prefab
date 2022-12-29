@@ -854,6 +854,44 @@ PrefabInstance:
       objectReference: {fileID: 7909789547915751623}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e919421386ff9c4ab73f037b513d1a8, type: 3}
+--- !u!1 &7909789548669289608 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1553945235582853337, guid: 6e919421386ff9c4ab73f037b513d1a8, type: 3}
+  m_PrefabInstance: {fileID: 8670994277231518801}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1893877309930773239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7909789548669289608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c568d33cd875dc4c8f0d23ab32638fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onColour: {r: 0, g: 0, b: 0, a: 0}
+  offColour: {r: 0, g: 0, b: 0, a: 0}
+  includeMe: 1
+  myIndex: 0
+  hasImageChild: 0
+  OnSelectionEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7909789549137436557}
+        m_TargetAssemblyTypeName: Submissions.PurrForTheCourse.PlayerController,
+          Assembly-CSharp
+        m_MethodName: ShootBallTowardsArrow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &7909789548669289609 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1553945235582853336, guid: 6e919421386ff9c4ab73f037b513d1a8, type: 3}
@@ -864,7 +902,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1553945235582853927, guid: 6e919421386ff9c4ab73f037b513d1a8, type: 3}
   m_PrefabInstance: {fileID: 8670994277231518801}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 7909789548669289608}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e721c01fffd4d90418da6485495ea357, type: 3}

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using System.Threading.Tasks;
 using HelloWorld;
+using Submissions.PurrForTheCourse;
 
 public class HitEvent : UnityEvent<float> { }
 
@@ -114,9 +115,8 @@ public class BallContoller : MonoBehaviour
 
 
         // slow down quickly
-        rb.velocity = Vector3.zero;
-        rb.angularVelocity = Vector3.zero;
-
+        
+        Reset();
         isCoRunning = false;
     }
 
@@ -182,5 +182,16 @@ public class BallContoller : MonoBehaviour
         
         //rb.velocity = test;
         rb.AddForce(direction*speed, ForceMode.Acceleration);
+    }
+
+    public void Reset(bool resetPosition = false)
+    {
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+
+        if (resetPosition)
+        {
+            transform.localPosition = Vector3.zero;
+        }
     }
 }

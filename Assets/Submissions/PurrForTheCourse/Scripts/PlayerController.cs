@@ -58,7 +58,6 @@ namespace Submissions.PurrForTheCourse
         {
             // start aiming
             transform.LookAt(FaceTowards);
-
             arrowController.StartRotation();
         }
 
@@ -130,7 +129,7 @@ namespace Submissions.PurrForTheCourse
             isTurnRunning = true;
             // wait until fire is called
             isIdle = true;
-
+            
             SetupAiming();
 
             isIdle = true;
@@ -146,7 +145,7 @@ namespace Submissions.PurrForTheCourse
             arrowController.StartChooseVelocity();
 
             // wait for aiming to be done
-            while (!FireCalled)
+            while (!FireCalled) 
                 yield return null;
 
             arrowController.StopChooseVelocity();
@@ -186,21 +185,20 @@ namespace Submissions.PurrForTheCourse
             if (Input.GetKeyDown("space"))
             {
                 print("space key was pressed");
-                Debug.Log("hehe");
-                if (isIdle)
-                    FireCalled = true;
+                ShootBallTowardsArrow();
             }
         }
 
         public void ShootBallTowardsArrow()
         {
-            //Debug.Log("called by input system");
-            //// Logic on whether or not to fire the ball
-            //if (isIdle)
-            //    FireCalled = true;
+            Debug.Log("hehe");
+            if (isIdle)
+                FireCalled = true;
+        }
 
-
-            // await set new position
+        public void ResetBall(bool resetPosition = false)
+        {
+            ballController.Reset(resetPosition);
         }
     }
 }

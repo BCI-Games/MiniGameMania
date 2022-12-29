@@ -22,8 +22,8 @@ namespace HelloWorld
         private bool wasBoolTrue = false;
         private Coroutine turnCo;
         [SerializeField] private PlayerController playerController;
-        
 
+        public GameManagerLocal GameManager;
 
 
         protected virtual void Awake()
@@ -72,6 +72,7 @@ namespace HelloWorld
         public void SubmitTurnRequest(bool p)
         {
             isTurn.Value = p;
+            playerController.ResetBall(false);
 
             if (isTurn.Value)
             {
@@ -138,10 +139,8 @@ namespace HelloWorld
             Position.Value = lastGoodPosition;
             
             isOutOfBounds = false;
-            SubmitTurnRequest(false);
+            playerController.ResetBall(true);
             Debug.Log("Outofboundsboi");
-       
-
         }
 
 

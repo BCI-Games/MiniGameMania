@@ -57,10 +57,12 @@ public class ArrowController : MonoBehaviour
         return transform.TransformDirection(Vector3.forward);
     }
 
-    private void SetPositionRelativeToBall()
+    public void SetPositionRelativeToBall()
     {
-        transform.position = transformToRotateAround.position + new Vector3(0f, 0f, offsetInFront);
+        transform.position = new Vector3(transformToRotateAround.position.x, transform.position.y,
+            transform.position.z + offsetInFront);
         transform.rotation = initialRotation;
+        
     }
 
     public void stopRotation()
@@ -69,10 +71,10 @@ public class ArrowController : MonoBehaviour
         StopAllCoroutines();
     }
 
-    public void StartRotation()
+    public void StartRotation()  
     {
         canRotate = true;
-        //SetPositionRelativeToBall();
+        SetPositionRelativeToBall();
         arrowRenderer.enabled = true;
         StartRotation(timeToRotateCompletely/2f);
     }
@@ -88,8 +90,8 @@ public class ArrowController : MonoBehaviour
 
 
         Quaternion targetRotation = currentRotation * Quaternion.Euler(0, angleMultiplier * maxDegreeOffset, 0);
-        Debug.Log("Target Rotation: " + targetRotation.eulerAngles);
-        Debug.Log("Current Rotation: " + currentRotation.eulerAngles);
+        //Debug.Log("Target Rotation: " + targetRotation.eulerAngles);
+        //Debug.Log("Current Rotation: " + currentRotation.eulerAngles);
 
 
         rotateCo = StartCoroutine(RotateUntil(targetRotation, angleMultiplier * Quaternion.Angle(targetRotation, currentRotation) / secondsToRotate, StartRotationEvent));

@@ -50,10 +50,12 @@ public class GameManagerLocal : MonoBehaviour
         cinemachineVirtualCamera = GameObject.Find("orbitingIntroCam").GetComponent<Cinemachine.CinemachineVirtualCamera>();
         cinemachineVirtualCamera.Priority = 10;
 
-        mainAudioSource.clip = TitleScreenClip;
-        mainAudioSource.loop = true;
-        mainAudioSource.Play();
-
+        if (mainAudioSource != null)
+        {
+            mainAudioSource.clip = TitleScreenClip;
+            mainAudioSource.loop = true;
+            mainAudioSource.Play();
+        }
     }
 
     public void updateCamPosition()
@@ -104,9 +106,7 @@ public class GameManagerLocal : MonoBehaviour
 
         if (GUILayout.Button("Add a player!"))
         {
-            GameObject p = Instantiate(prefab, new Vector3(players.Count * 4, 0, 0), Quaternion.identity);
-            players.Add(p);
-            playersOriginal.Add(p);
+            AddNewPlayer();
             ButtonClicked.Invoke();
 
         }
@@ -121,9 +121,7 @@ public class GameManagerLocal : MonoBehaviour
             playersOriginal.Clear();
             for (int j = 0; j < playerCount; j++)
             {
-                GameObject p = Instantiate(prefab, new Vector3(players.Count * 4, 0, 0), Quaternion.identity);
-                players.Add(p);
-                playersOriginal.Add(p);
+                AddNewPlayer();
                 ButtonClicked.Invoke();
             }
             mode = 2;
@@ -141,9 +139,7 @@ public class GameManagerLocal : MonoBehaviour
             playersOriginal.Clear();
             for (int j = 0; j < playerCount; j++)
             {
-                GameObject p = Instantiate(prefab, new Vector3(players.Count * 4, 0, 0), Quaternion.identity);
-                players.Add(p);
-                playersOriginal.Add(p);
+                AddNewPlayer();
                 ButtonClicked.Invoke();
             }
             if ( currentHole == 5) 
@@ -185,9 +181,7 @@ public class GameManagerLocal : MonoBehaviour
     {
         if (GUILayout.Button("Add a player!"))
         {
-            GameObject p = Instantiate(prefab, new Vector3(players.Count*4, 0, 0), Quaternion.identity);
-            players.Add(p);
-            playersOriginal.Add(p);
+            AddNewPlayer();
             ButtonClicked.Invoke();
 
         }
@@ -212,7 +206,7 @@ public class GameManagerLocal : MonoBehaviour
         System.String temp2 = "Course" + currentHole;
         GameObject originalGameObject = GameObject.Find("Course" + currentHole);
         TransformToLookAtAfterTurnEnds = GameObject.Find("Hole" + currentHole).transform;
-        Vector3 startPos = GameObject.Find("Course" + currentHole).transform.position;
+        Vector3 startPos = GetHoleStartPosition();
         Vector3 p1Pos = startPos;
 
         foreach (GameObject p in playersOriginal)
@@ -244,6 +238,11 @@ public class GameManagerLocal : MonoBehaviour
 
     }
 
+    public Vector3 GetHoleStartPosition()
+    {
+        return GameObject.Find("Course" + currentHole).transform.position;
+    }
+
 
     public void transitionCamerasAfterTurnEnds(int pIndex)
     {
@@ -266,6 +265,11 @@ public class GameManagerLocal : MonoBehaviour
             turnCounter += 1;
             // It is time to switch turns
             // Set the next player's turn
+            if (players.Count == 0)
+            {
+                AddNewPlayer();
+            }
+            
             if (players.Count == 1)
             {
                 players[0].GetComponent<PlayerMovementLocal>().SubmitTurnRequest(false);
@@ -323,7 +327,6 @@ public class GameManagerLocal : MonoBehaviour
             {//dont give time limit if only 1 player!
                 timeRemaining -= Time.deltaTime;
             }
-            Debug.Log("Time Remaining: " + timeRemaining);
         }
     }
 
@@ -364,5 +367,19 @@ public class GameManagerLocal : MonoBehaviour
             levelDone();
         }
         
+    }
+
+    private void AddNewPlayer()
+    {
+        var newPlayer = SpawnPlayer();
+        newPlayer.GetComponent<PlayerMovementLocal>().GameManager = this;
+        
+        players.Add(newPlayer);
+        playersOriginal.Add(newPlayer);
+    }
+    
+    private GameObject SpawnPlayer()
+    {
+        return Instantiate(prefab, new Vector3(players.Count*4, 0, 0), Quaternion.identity);
     }
 }
