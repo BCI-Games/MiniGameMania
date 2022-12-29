@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Submissions/Bci4Kids_Plus/Bci4kids_main.unity
     guid: 30bd248b7b3bc534281fea5352d42133
+  - enabled: 1
+    path: Assets/Submissions/PurrForTheCourse/Scenes/PurrForTheCourse.unity
+    guid: 83674eb7c00d7a64881cf0970fb30a1d
   m_configObjects: {}
