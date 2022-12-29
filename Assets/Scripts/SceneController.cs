@@ -10,6 +10,7 @@ public class SceneController : MonoBehaviour
     public void SceneSwap(string myScene)
     {
         SceneManager.LoadScene(myScene);
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName(myScene));
     }
 
     public void QuitApp()
