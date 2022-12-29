@@ -3,6 +3,7 @@ using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Recipe))]
 public class GameManager : MonoBehaviour
@@ -181,6 +182,29 @@ public class GameManager : MonoBehaviour
 
     private int gameLoopCounter = 0;
 
+    //EKL Edit
+    /// <summary>
+    /// Update the gameLoopCounter to the present time when the scene gets loaded. 
+    /// This is to fix the bug in the Update Function in GameManager for BCI4Kids + Hardeep submission.
+    /// This is a bad solution....
+    /// </summary>
+    private void OnEnable()
+    {
+        Debug.Log("BCI4Kids Scene Loaded, OnEnable Called");
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+    private void OnSceneLoaded(Scene scene,LoadSceneMode mode)
+    {
+        Debug.Log("Updating the gameLoopCounter to current time");
+        gameLoopCounter = (int)Time.time;
+    }
+
+    private void OnDisable()
+    {
+        Debug.Log("BCI4Kids Scene Unloaded, OnDisable Called");
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -188,6 +212,7 @@ public class GameManager : MonoBehaviour
         // gameLoopCounter++;
 
         if (Time.time > gameLoopCounter) {
+            Debug.Log("This is the time when the game started - " + Time.time);
             spawnIngredientOnBelt();
             gameLoopCounter += 2;
         }
