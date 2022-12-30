@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Submissions/PurrForTheCourse/Scenes/PurrForTheCourse.unity
     guid: 83674eb7c00d7a64881cf0970fb30a1d
+  - enabled: 1
+    path: Assets/Submissions/MusaeLabGames/Scenes/TheProphecy.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
