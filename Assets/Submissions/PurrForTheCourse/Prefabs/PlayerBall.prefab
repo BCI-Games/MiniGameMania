@@ -777,6 +777,7 @@ MonoBehaviour:
   isOutOfBounds: 0
   lastGoodPosition: {x: 0, y: 0, z: 0}
   playerController: {fileID: 7909789549137436557}
+  GameManager: {fileID: 0}
 --- !u!1001 &8670994277231518801
 PrefabInstance:
   m_ObjectHideFlags: 0
