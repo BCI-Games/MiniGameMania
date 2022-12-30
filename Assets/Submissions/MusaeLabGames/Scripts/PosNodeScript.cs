@@ -1,4 +1,5 @@
 using System;
+using Submissions.MusaeLabGames;
 using UnityEngine;
 
 public class PosNodeScript: MonoBehaviour
@@ -26,6 +27,8 @@ public class PosNodeScript: MonoBehaviour
     static public event Action<GameObject> OnHasPlayer;
     static public event Action<GameObject> OnRequestedDisplacement;
 
+    public static PosNodeScript ActiveNode;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +44,7 @@ public class PosNodeScript: MonoBehaviour
 
     public void OnEnable()
     {
+        ActiveNode = this;
         Character.OnReachDestination += CheckNodeActive;
     }
 
@@ -88,6 +92,8 @@ public class PosNodeScript: MonoBehaviour
             newArrow.transform.position = newPos;
 
             list_arrows[ix] = newArrow;
+            
+            newArrow.GetComponent<NodeSPO>().AssignPosNode(this);
         }
 
         // Enable arrows only if player has reached this node
@@ -119,28 +125,57 @@ public class PosNodeScript: MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            Debug.Log(ray);
+            //Debug.Log(ray);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
+            if (!Physics.Raycast(ray, out hit)) return;
+            
+            GameObject target = hit.transform.gameObject;
+            if (!target.CompareTag("BCI")) return;
+                
+            var bciController = FindObjectOfType<SSVEPController>();
+            if (bciController == null) return;
+
+            if (!bciController.stimOn)
             {
-                GameObject target = hit.transform.gameObject;
-                for(int ix=0; ix<list_arrows.Length; ix++)
-                {
-                    GameObject arrow = list_arrows[ix];
-                    if(arrow == target)
-                    {
-                        Debug.Log("Arrow touched");
-                        // Send corresponding node the arrow is pointing to
-                        GameObject node = nodes[ix];
-                        OnRequestedDisplacement?.Invoke(node);
-                    }
-                }
+                SelectTarget(target);
+            }
+            else
+            {
+                var spoIndex = bciController.ObjectList.FindIndex(spo => spo.gameObject == target);
+                if (spoIndex == -1) return;
+
+                bciController.SelectObject(spoIndex);
+            }
+        }
+    }
+
+    public void SelectTarget(GameObject target)
+    {
+        for(int ix=0; ix<list_arrows.Length; ix++)
+        {
+            GameObject arrow = list_arrows[ix];
+            if(arrow == target)
+            {
+                Debug.Log($"<color=pink><b>{gameObject.name}</b>: Arrow touched</color>");
+                // Send corresponding node the arrow is pointing to
+                GameObject node = nodes[ix];
+                OnRequestedDisplacement?.Invoke(node);
             }
         }
     }
 
     public void ActivateFlickering()
     {
+        //Disabled in favor of BCI Essentials workflow
+        Debug.Log($"<color=green><b>{gameObject.name}</b>: Arrow flickering enabled</color>");
+        var ssvpeController = FindObjectOfType<SSVEPController>();
+        if (ssvpeController != null && !ssvpeController.stimOn)
+        {
+            ssvpeController.StartStopStimulus();
+        }
+        
+        return;
+        
         enableEmissionFlickering = true;
         // Modify material to allow flickering (for SSVEP feedback)
         foreach (GameObject arrow in list_arrows)
@@ -152,6 +187,10 @@ public class PosNodeScript: MonoBehaviour
 
     public void DesactivateFlickering()
     {
+        //Disabled in favor of BCI Essentials workflow
+        Debug.Log($"<color=red><b>{gameObject.name}</b>: Arrow flickering disabled</color>");
+        return;
+        
         enableEmissionFlickering = false;
         foreach (GameObject arrow in list_arrows)
         {
@@ -180,6 +219,9 @@ public class PosNodeScript: MonoBehaviour
 
     public void ArrowFlickering()
     {
+        //Disabled in favor of BCI Essentials workflow
+        return;
+        
         // Change emission intensity
         if (enableEmissionFlickering)
         {

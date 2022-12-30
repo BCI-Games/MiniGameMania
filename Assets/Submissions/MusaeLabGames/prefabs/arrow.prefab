@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 8358461145663511376}
   - component: {fileID: 6060665775218061210}
   - component: {fileID: 81797960908815906}
+  - component: {fileID: 1690651854179889384}
   m_Layer: 0
   m_Name: arrow
-  m_TagString: Untagged
+  m_TagString: BCI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,3 +98,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5851038, y: 0.28375575, z: 0.9577492}
   m_Center: {x: 0.00000020861626, y: 0, z: -0.18235871}
+--- !u!114 &1690651854179889384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5700205937387818575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4ca53954c248568fe2064caf2df365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onColour: {r: 1, g: 0, b: 0, a: 1}
+  offColour: {r: 1, g: 1, b: 1, a: 1}
+  includeMe: 1
+  myIndex: 0
+  hasImageChild: 0
