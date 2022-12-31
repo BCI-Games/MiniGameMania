@@ -1,0 +1,180 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!28 &-875654374808774586
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: z__GradientTex{"mode":0,"colorKeys":[{"color":{"r":0.3450980484485626,"g":0.847058892250061,"b":1.0,"a":1.0},"time":0.532158374786377},{"color":{"r":0.3820309638977051,"g":0.5879284143447876,"b":0.9528301954269409,"a":1.0},"time":0.7953155040740967},{"color":{"r":0.37915927171707156,"g":0.6080769300460815,"b":0.956497848033905,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.4470588266849518},{"alpha":1.0,"time":1.0}]}
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 4fabd62e8740a4ec354d58c0ceee9e9a
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 2
+  m_Width: 1024
+  m_Height: 1
+  m_CompleteImageSize: 4096
+  m_MipsStripped: 0
+  m_TextureFormat: 5
+  m_MipCount: 1
+  m_IsReadable: 1
+  m_IsPreProcessed: 0
+  m_IgnoreMasterTextureLimit: 0
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_VTOnly: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_LightmapFormat: 0
+  m_ColorSpace: 1
+  m_PlatformBlob: 
+  image data: 4096
+  _typelessdata: ff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d8ffff58d7ffff58d7ffff58d7ffff58d7ffff58d6ffff58d6ffff58d6ffff58d6ffff58d5ffff58d5feff58d5feff58d5feff59d4feff59d4feff59d4feff59d4feff59d3feff59d3feff59d3feff59d3feff59d2feff59d2feff59d2feff59d2feff59d1feff59d1feff59d1feff59d1feff59d0feff59d0feff59d0feff59d0fdff59d0fdff59cffdff59cffdff59cffdff59cffdff59cefdff59cefdff59cefdff59cefdff5acdfdff5acdfdff5acdfdff5acdfdff5accfdff5accfdff5accfdff5accfdff5acbfdff5acbfdff5acbfdff5acbfdff5acafdff5acafcff5acafcff5acafcff5ac9fcff5ac9fcff5ac9fcff5ac9fcff5ac8fcff5ac8fcff5ac8fcff5ac8fcff5ac7fcff5ac7fcff5ac7fcff5ac7fcff5bc6fcff5bc6fcff5bc6fcff5bc6fcff5bc5fcff5bc5fcff5bc5fcff5bc5fbff5bc4fbff5bc4fbff5bc4fbff5bc4fbff5bc3fbff5bc3fbff5bc3fbff5bc3fbff5bc2fbff5bc2fbff5bc2fbff5bc2fbff5bc2fbff5bc1fbff5bc1fbff5bc1fbff5bc1fbff5bc0fbff5bc0fbff5bc0fbff5bc0fbff5cbffbff5cbffaff5cbffaff5cbffaff5cbefaff5cbefaff5cbefaff5cbefaff5cbdfaff5cbdfaff5cbdfaff5cbdfaff5cbcfaff5cbcfaff5cbcfaff5cbcfaff5cbbfaff5cbbfaff5cbbfaff5cbbfaff5cbafaff5cbafaff5cbafaff5cbaf9ff5cb9f9ff5cb9f9ff5cb9f9ff5cb9f9ff5cb8f9ff5db8f9ff5db8f9ff5db8f9ff5db7f9ff5db7f9ff5db7f9ff5db7f9ff5db6f9ff5db6f9ff5db6f9ff5db6f9ff5db5f9ff5db5f9ff5db5f9ff5db5f9ff5db5f9ff5db4f8ff5db4f8ff5db4f8ff5db4f8ff5db3f8ff5db3f8ff5db3f8ff5db3f8ff5db2f8ff5db2f8ff5db2f8ff5db2f8ff5eb1f8ff5eb1f8ff5eb1f8ff5eb1f8ff5eb0f8ff5eb0f8ff5eb0f8ff5eb0f8ff5eaff8ff5eaff8ff5eaff8ff5eaff7ff5eaef7ff5eaef7ff5eaef7ff5eaef7ff5eadf7ff5eadf7ff5eadf7ff5eadf7ff5eacf7ff5eacf7ff5eacf7ff5eacf7ff5eabf7ff5eabf7ff5eabf7ff5eabf7ff5eaaf7ff5faaf7ff5faaf7ff5faaf7ff5fa9f7ff5fa9f6ff5fa9f6ff5fa9f6ff5fa8f6ff5fa8f6ff5fa8f6ff5fa8f6ff5fa7f6ff5fa7f6ff5fa7f6ff5fa7f6ff5fa7f6ff5fa6f6ff5fa6f6ff5fa6f6ff5fa6f6ff5fa5f6ff5fa5f6ff5fa5f6ff5fa5f6ff5fa4f6ff5fa4f6ff5fa4f6ff5fa4f5ff60a3f5ff60a3f5ff60a3f5ff60a3f5ff60a2f5ff60a2f5ff60a2f5ff60a2f5ff60a1f5ff60a1f5ff60a1f5ff60a1f5ff60a0f5ff60a0f5ff60a0f5ff60a0f5ff609ff5ff609ff5ff609ff5ff609ff5ff609ef5ff609ef4ff609ef4ff609ef4ff609df4ff609df4ff609df4ff609df4ff609cf4ff619cf4ff619cf4ff619cf4ff619bf4ff619bf4ff619bf4ff619bf4ff619af4ff619af4ff619af4ff619af4ff619af4ff6199f4ff6199f4ff6199f3ff6199f3ff6198f3ff6198f3ff6198f3ff6198f3ff6197f3ff6197f3ff6197f3ff6197f3ff6196f3ff6196f3ff6196f3ff6196f3ff6196f3ff6196f3ff6196f3ff6196f3ff6196f3ff6196f3ff6196f3ff6196f3ff6196f3ff6196f3ff6196f3ff6196f3ff6196f3ff6196f3ff6196f3ff6196f3ff6196f3ff6196f3ff6196f3ff6196f3ff6196f3ff6196f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6197f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6198f3ff6199f3ff6199f3ff6199f3ff6199f3ff6199f3ff6199f3ff6199f3ff6199f3ff6199f3ff6199f3ff6199f3ff6199f3ff6199f3ff6199f4ff6199f4ff6199f4ff6199f4ff6199f4ff6199f4ff6199f4ff6199f4ff6199f4ff6199f4ff6199f4ff6199f4ff6199f4ff6199f4ff6199f4ff6199f4ff6199f4ff6199f4ff6199f4ff6199f4ff6199f4ff6199f4ff6199f4ff6199f4ff6199f4ff6199f4ff6199f4ff6199f4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619af4ff619bf4ff619bf4ff619bf4ff619bf4ff619bf4ff619bf4ff619bf4ff619bf4ff619bf4ff619bf4ff619bf4ff619bf4ff619bf4ff619bf4ff619bf4ff619bf4ff619bf4ff619bf4ff619bf4ff619bf4ff619bf4ff619bf4ff619bf4
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: skybox 1
+  m_Shader: {fileID: 4800000, guid: e32cae2a5bbfb41888ef2ba8391ababa, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Gradient:
+        m_Texture: {fileID: -875654374808774586}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaClip: 0
+    - _Blend: 0
+    - _BumpScale: 1
+    - _ClearCoatMask: 0
+    - _ClearCoatSmoothness: 0
+    - _Cull: 2
+    - _Cutoff: 0.5
+    - _DetailAlbedoMapScale: 1
+    - _DetailNormalMapScale: 1
+    - _DirectionPitch: 0
+    - _DirectionYaw: 0
+    - _DstBlend: 0
+    - _EnvironmentReflections: 1
+    - _Exponent: 0.3
+    - _GlossMapScale: 0
+    - _Glossiness: 0
+    - _GlossyReflections: 0
+    - _Intensity: 1.75
+    - _Metallic: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.005
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _Smoothness: 0.5
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _Surface: 0
+    - _WorkflowMode: 1
+    - _ZWrite: 1
+    m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+  m_BuildTextureStacks: []
+--- !u!114 &8595109830106294829
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5

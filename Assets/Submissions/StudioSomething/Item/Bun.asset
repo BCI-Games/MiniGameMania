@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39120ce68b802634c94e906f4c8ca7b0, type: 3}
+  m_Name: Bun
+  m_EditorClassIdentifier: 
+  itemName: Bun
+  icon: {fileID: 21300000, guid: cefb153f87252ad4981c1890f5005a6c, type: 3}
+  prefab: {fileID: 6658307437414843160, guid: f7578e291b4fca04b8c9ef84ac286570, type: 3}
+  recipes:
+  - Items:
+    - {fileID: 11400000, guid: 8b1cb607e034d4340a0ffbfc9a8b9bdc, type: 2}
+    - {fileID: 11400000, guid: aab1fa8f21a252d4c9d06c62410906d2, type: 2}
+  - Items:
+    - {fileID: 11400000, guid: 361dbf425160a854393dc5a5e258724c, type: 2}
+    - {fileID: 11400000, guid: a387fcc07c353bc41a21d9ec6d592548, type: 2}

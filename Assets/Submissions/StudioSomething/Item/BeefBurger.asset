@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39120ce68b802634c94e906f4c8ca7b0, type: 3}
+  m_Name: BeefBurger
+  m_EditorClassIdentifier: 
+  itemName: Beef Burger
+  icon: {fileID: 21300000, guid: d1193a5117b266242916f03c5ca42408, type: 3}
+  prefab: {fileID: 4383287434217554285, guid: ffb45c6fbb95ae24e9ce75e54ba55259, type: 3}
+  recipes: []
