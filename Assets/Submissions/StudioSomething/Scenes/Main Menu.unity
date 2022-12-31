@@ -23,9 +23,9 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 0.7
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SubtractiveShadowColor: {r: 0.45631897, g: 0.5087313, b: 0.6415094, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 628f69bd1f15f054094d0db3112bc009, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.19870567, g: 0.7150624, b: 1.620387, a: 1}
+  m_IndirectSpecularColor: {r: 0.55504584, g: 0.9265833, b: 1.4568508, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8959,6 +8959,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Controller
       objectReference: {fileID: 0}
+    - target: {fileID: 4280385885900106474, guid: 7b05171d4afef204b8054af1c0847232, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4280385885900106476, guid: 7b05171d4afef204b8054af1c0847232, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -17433,6 +17437,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: room
       objectReference: {fileID: 0}
+    - target: {fileID: 2557264209463868597, guid: e27145bc75117d546859ade09a139539, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2897761329410057743, guid: e27145bc75117d546859ade09a139539, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -17476,6 +17484,10 @@ PrefabInstance:
     - target: {fileID: 2897761329410057743, guid: e27145bc75117d546859ade09a139539, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4158031766387788425, guid: e27145bc75117d546859ade09a139539, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6841233776875045996, guid: e27145bc75117d546859ade09a139539, type: 3}
       propertyPath: m_NavMeshLayer
@@ -17843,6 +17855,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2015851420}
     m_Modifications:
+    - target: {fileID: 558392238651989309, guid: d28c7e58c2dc0c746a09fec13e15a8fb, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6098658415161135277, guid: d28c7e58c2dc0c746a09fec13e15a8fb, type: 3}
       propertyPath: m_RootOrder
       value: 7

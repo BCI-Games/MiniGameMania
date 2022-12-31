@@ -1,36 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
+using BCIEssentials.Controllers;
 using UnityEngine;
 
-public class BCIManager : MonoBehaviour
+namespace Submissions.StudioSomething
 {
-    public static BCIManager Instance;
-
-    public SSVEPController Controller;
-    public IEnumerator BCICoroutine;
-    void Awake()
+    public class BCIManager : MonoBehaviour
     {
-        if (Instance != null)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            Instance = this;
-        }
-    }
+        public static BCIManager Instance;
 
-    void Start()
-    {
-        if (Controller == null)
-        {
-            Controller = GameObject.FindObjectOfType<SSVEPController>();
-        }
-    }
+        public IEnumerator BCICoroutine;
 
-    public IEnumerator BCICoFunction()
-    {
-        yield return new WaitForSeconds(4f);
-        Controller.StartStopStimulus();
+        void Awake()
+        {
+            if (Instance != null)
+            {
+                Destroy(this.gameObject);
+            }
+            else
+            {
+                Instance = this;
+            }
+        }
+
+        void Start()
+        {
+            if (BCIController.Instance == null)
+            {
+                Debug.LogError("Couldn't find an instance of the BCI Controller");
+                enabled = false;
+            }
+            else
+            {
+                BCIController.Instance.ChangeBehavior(BehaviorType.SSVEP);
+            }
+        }
+
+        public IEnumerator BCICoFunction()
+        {
+            yield return new WaitForSeconds(4f);
+            BCIController.Instance.StartStopStimulus();
+        }
     }
 }
