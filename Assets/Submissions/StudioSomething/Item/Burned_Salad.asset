@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39120ce68b802634c94e906f4c8ca7b0, type: 3}
+  m_Name: Burned_Salad
+  m_EditorClassIdentifier: 
+  itemName: Burnt_Salad
+  icon: {fileID: 21300000, guid: fc80f250614e52e4392e34d92e937db8, type: 3}
+  cookable: 0
+  prefab: {fileID: 4383287434217554285, guid: 9e2d28844712db7438cabf8dea85eb2c, type: 3}
+  recipes: []
