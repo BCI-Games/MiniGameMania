@@ -66,6 +66,11 @@ public class MenuController : MonoBehaviour
             Debug.LogError("Failed to request a bci controller behavior");
         }
     }
+
+    public void ToggleSetupBehavior(bool setupBool)
+    {
+        BCIController.Instance.ActiveBehavior.setupRequired = setupBool;
+    }
     
     public void LoadScene(string sceneName)
     {

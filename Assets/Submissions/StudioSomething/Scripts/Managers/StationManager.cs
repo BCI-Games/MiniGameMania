@@ -37,8 +37,10 @@ public class StationManager : MonoBehaviour
     {
 
         Stations = GameObject.FindGameObjectsWithTag("BCI");
+        Debug.Log("Number of stations found: " + Stations.Length);
         for (int i = 0; i < Stations.Length; i++)
         {
+            Debug.Log("Current Int iteration of stations: " + i);
             Stations[i].GetComponent<Renderer>().material.color = Colors[i];
             StationSPO spo = Stations[i].GetComponent<StationSPO>();
             spo.onColour = Colors[i];
