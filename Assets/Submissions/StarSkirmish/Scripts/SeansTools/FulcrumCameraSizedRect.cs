@@ -33,9 +33,9 @@ public class FulcrumCameraSizedRect : MonoBehaviour {
 		UpdateScaling();
 	}
 
-	void OnValidate() {
-		UpdateScaling();
-	}
+	//void OnValidate() {
+	//	UpdateScaling();
+	//}
 
 	public void UpdateScaling() {
 #if UNITY_EDITOR

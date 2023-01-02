@@ -27,7 +27,7 @@ RectTransform:
   m_GameObject: {fileID: 701792990583398294}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1200, y: 1200, z: 1}
+  m_LocalScale: {x: 782.83923, y: 782.83923, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1583005509266059623}
@@ -168,7 +168,7 @@ RectTransform:
   m_GameObject: {fileID: 1276524472384413363}
   m_LocalRotation: {x: 0, y: 0, z: 0.17519486, w: 0.98453385}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1200, y: 1200, z: 1}
+  m_LocalScale: {x: 782.83923, y: 782.83923, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5043376156174439415}
@@ -579,7 +579,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1989333859
-  m_SortingLayer: -1
+  m_SortingLayer: 0
   m_SortingOrder: 1000
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!95 &8576657244623655173
@@ -1006,9 +1006,9 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1893048857
-  m_SortingLayer: 1
-  m_SortingOrder: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 30
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1583005509617721189
 GameObject:
@@ -1144,9 +1144,9 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1893048857
-  m_SortingLayer: 1
-  m_SortingOrder: 2
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 30
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1665564062110057093
 GameObject:
@@ -1278,7 +1278,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1893048857
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1685523840358039452
@@ -1447,7 +1447,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1893048857
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 10000
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &2390977581986762907
@@ -1838,9 +1838,9 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1893048857
-  m_SortingLayer: 1
-  m_SortingOrder: 3
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 30
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &3779833980273505128
 GameObject:
@@ -2123,7 +2123,7 @@ RectTransform:
   m_GameObject: {fileID: 4590009116328613978}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1200, y: 1200, z: 1}
+  m_LocalScale: {x: 782.83923, y: 782.83923, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7028665229807116433}
@@ -2818,7 +2818,7 @@ RectTransform:
   m_GameObject: {fileID: 8844847372390851037}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1200, y: 1200, z: 1}
+  m_LocalScale: {x: 782.83923, y: 782.83923, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1583005509266059623}
@@ -3013,11 +3013,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8339255886945752328, guid: 3c8d4cafe01e17044ae3b59a8180c629, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.118
+      value: -0.118011475
       objectReference: {fileID: 0}
     - target: {fileID: 8339255886945752328, guid: 3c8d4cafe01e17044ae3b59a8180c629, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.048
+      value: -0.047973633
       objectReference: {fileID: 0}
     - target: {fileID: 8339255886945752328, guid: 3c8d4cafe01e17044ae3b59a8180c629, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3115,11 +3115,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8339255886945752328, guid: 3c8d4cafe01e17044ae3b59a8180c629, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.101
+      value: 0.10101318
       objectReference: {fileID: 0}
     - target: {fileID: 8339255886945752328, guid: 3c8d4cafe01e17044ae3b59a8180c629, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.048
+      value: -0.047973633
       objectReference: {fileID: 0}
     - target: {fileID: 8339255886945752328, guid: 3c8d4cafe01e17044ae3b59a8180c629, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

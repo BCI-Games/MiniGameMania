@@ -195,6 +195,7 @@ MonoBehaviour:
   affectBoxCollider: 1
   affectCircleCollider: 0
   affectSpriteRenderer: 0
+  affectParticleSystem: 0
   polygonOriginIsCorner: 1
   polyPoints: []
   affectShapesRectangleGradient: 0
@@ -213,6 +214,7 @@ MonoBehaviour:
   pixelOffsetX: 0
   pixelOffsetY: 0
   preserveSpriteAspect: 0
+  particleScale: 1
   controlDiscRadius: 0
   controlDiscThickness: 0
   discThicknessScale: 0
@@ -368,9 +370,9 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1788295829
-  m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 20
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &6204130249317908164
 MonoBehaviour:
@@ -396,6 +398,7 @@ MonoBehaviour:
   affectBoxCollider: 0
   affectCircleCollider: 0
   affectSpriteRenderer: 0
+  affectParticleSystem: 0
   polygonOriginIsCorner: 1
   polyPoints: []
   affectShapesRectangleGradient: 0
@@ -414,6 +417,7 @@ MonoBehaviour:
   pixelOffsetX: 0
   pixelOffsetY: 0
   preserveSpriteAspect: 0
+  particleScale: 1
   controlDiscRadius: 0
   controlDiscThickness: 0
   discThicknessScale: 0
@@ -484,6 +488,7 @@ MonoBehaviour:
   affectBoxCollider: 0
   affectCircleCollider: 0
   affectSpriteRenderer: 0
+  affectParticleSystem: 0
   polygonOriginIsCorner: 1
   polyPoints: []
   affectShapesRectangleGradient: 0
@@ -502,6 +507,7 @@ MonoBehaviour:
   pixelOffsetX: 0
   pixelOffsetY: 0
   preserveSpriteAspect: 0
+  particleScale: 1
   controlDiscRadius: 0
   controlDiscThickness: 0
   discThicknessScale: 0
@@ -601,9 +607,9 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1788295829
-  m_SortingLayer: 2
-  m_SortingOrder: 2
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 29
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &1957289886262883328
 MonoBehaviour:
@@ -836,9 +842,9 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1788295829
-  m_SortingLayer: 2
-  m_SortingOrder: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 21
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &2877590334003154983
 MonoBehaviour:
@@ -864,6 +870,7 @@ MonoBehaviour:
   affectBoxCollider: 0
   affectCircleCollider: 0
   affectSpriteRenderer: 0
+  affectParticleSystem: 0
   polygonOriginIsCorner: 1
   polyPoints: []
   affectShapesRectangleGradient: 0
@@ -882,6 +889,7 @@ MonoBehaviour:
   pixelOffsetX: 0
   pixelOffsetY: 0
   preserveSpriteAspect: 0
+  particleScale: 1
   controlDiscRadius: 0
   controlDiscThickness: 0
   discThicknessScale: 0
@@ -951,8 +959,8 @@ MonoBehaviour:
   stencilReadMask: 255
   stencilWriteMask: 255
   pivot: 1
-  width: 236
-  height: 236
+  width: 256
+  height: 256
   type: 1
   cornerRadiusMode: 0
   cornerRadii: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
@@ -1024,9 +1032,9 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1788295829
-  m_SortingLayer: 2
-  m_SortingOrder: 5
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 23
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &2946259766857587892
 MonoBehaviour:
@@ -1052,6 +1060,7 @@ MonoBehaviour:
   affectBoxCollider: 0
   affectCircleCollider: 0
   affectSpriteRenderer: 0
+  affectParticleSystem: 0
   polygonOriginIsCorner: 1
   polyPoints: []
   affectShapesRectangleGradient: 0
@@ -1070,6 +1079,7 @@ MonoBehaviour:
   pixelOffsetX: 0
   pixelOffsetY: 0
   preserveSpriteAspect: 0
+  particleScale: 1
   controlDiscRadius: 0
   controlDiscThickness: 0
   discThicknessScale: 0

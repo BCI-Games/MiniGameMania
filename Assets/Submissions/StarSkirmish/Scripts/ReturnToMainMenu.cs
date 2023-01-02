@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class ReturnToMainMenu : MonoBehaviour {
@@ -8,8 +7,11 @@ public class ReturnToMainMenu : MonoBehaviour {
 
 	public bool countdownActivated = true;
 
+    public UnityEvent OnMenuRequested;
+    
 	public void TriggerReturnToMainMenu() {
-		SceneManager.LoadScene("MainMenu");
+        OnMenuRequested?.Invoke();
+		//SceneManager.LoadScene("MainMenu");
 	}
 
 	public void FixedUpdate() {
