@@ -24,6 +24,7 @@ public class BCIControllerBehavior : MonoBehaviour
 
     //public GameObject[] objectList;
     [SerializeField] protected List<SPO> objectList = new();
+    public List<SPO> ObjectList => objectList;
 
     //StimulusOn/Off + sending Markers
     public float windowLength = 1.0f;
