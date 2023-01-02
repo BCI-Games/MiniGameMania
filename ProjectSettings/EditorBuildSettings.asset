@@ -44,7 +44,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Submissions/StarSkirmish/Scenes/StarSkirmish.unity
     guid: 6c71c27145982c74e8c3733894e15ebf
-  - enabled: 1
-    path: Assets/Submissions/StarSkirmish/Scenes/StarSkirmish_MainMenu.unity
-    guid: 07f45a2a3bdb7424cb304f0182b3674a
   m_configObjects: {}
