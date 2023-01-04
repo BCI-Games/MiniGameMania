@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Submissions/MusaeLabGames/Scenes/TheProphecy.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Submissions/StarSkirmish/Scenes/StarSkirmish.unity
+    guid: 6c71c27145982c74e8c3733894e15ebf
   m_configObjects: {}
