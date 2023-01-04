@@ -28,6 +28,8 @@ public class PlayerShip : MonoBehaviour {
 	[ReadOnly] public bool shieldsOnline = false;
 	[ReadOnly] public bool reloading = false;
 	[ReadOnly] public bool shipDestroyed = false;
+    //EKL Edit
+    [ReadOnly] public bool cannonFired = false;
 
 	public StatusBarUI healthBarUI;
 	public StatusBarUI shieldsBarUI;
@@ -87,9 +89,12 @@ public class PlayerShip : MonoBehaviour {
 		aimedSection = ShipSection.NONE;
 		turretRotationGoal = 90.0f;
 		chargingCannon = false;
+        cannonFired = false;
 	}
 
 	public void CannonFiredSuccessfully() {
+        Debug.Log("Cannon Fired Successfully!");
+        cannonFired = true;
 		reloadProgress = 0.0f;
 		enemyShip.GotHit(DAMAGE_PER_SHOT, aimedSection);
 	}
