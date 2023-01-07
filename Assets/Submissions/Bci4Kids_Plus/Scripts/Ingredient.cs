@@ -1,14 +1,24 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(AudioSource))]
 public class Ingredient : MonoBehaviour
 {
 
     // public GameObject gameManager;
 
+    private Rigidbody2D _rigidbody;
+    private AudioSource _audioSource;
     private bool sendDown = false;
 
+    private void Awake()
+    {
+        _rigidbody = GetComponent<Rigidbody2D>();
+        _audioSource = GetComponent<AudioSource>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +32,7 @@ public class Ingredient : MonoBehaviour
         {
             FallDown();
         }
-        if (transform.position.x > 6&& transform.position.y > 6) {
+        if (transform.position is { x: > 6, y: > 6 }) {
             Destroy(gameObject);
         }
     }
@@ -31,26 +41,25 @@ public class Ingredient : MonoBehaviour
     {
         if (transform.position.y > 7 && transform.position.x > -6.5 && transform.position.x < 5)
         {
-            gameObject.GetComponent<AudioSource>().Play();
             sendDown = true;
-            gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
+            _audioSource.Play();
+            _rigidbody.gravityScale = 1;
 
             // Delete path child
-            Destroy(gameObject.transform.GetChild(0).gameObject);
+            Destroy(transform.GetChild(0).gameObject);
 
             // gameObject.AddComponent<Rigidbody2D>();
         }
     }
     private void FallDown()
     {     
-        if (gameObject.transform.position.y < -5)
+        if (transform.position.y < -5)
         {
-            gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-            gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
-
+            _rigidbody.velocity = Vector3.zero;
+            _rigidbody.gravityScale = 0;
+            _rigidbody.isKinematic = true;
+            
             sendDown = false;
-
-            gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
 
             // Remove the ridigbody component
             // Destroy(gameObject.GetComponent<Rigidbody2D>());
