@@ -46,11 +46,15 @@ public class SelectionManager : MonoBehaviour
     {
         if (Input.GetKey("down") && _itemDropped == null)
         {
-            Debug.Log("Pressed left");
-            _itemDropped = StartCoroutine(Drop());
+            SetDropped();
         }
     }
 
+    public void SetDropped()
+    {
+        Debug.Log("Pressed left");
+        _itemDropped = StartCoroutine(Drop());
+    }
 
 
     public void SetCorrectSelection(int selection)
@@ -66,7 +70,7 @@ public class SelectionManager : MonoBehaviour
         }
         else
         {
-            BCIController.Instance.StartStopStimulus();
+            gameManager.StartDelayedBCISelection();
         }
         
     }

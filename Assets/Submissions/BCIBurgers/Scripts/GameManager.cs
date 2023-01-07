@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
         //string test = PlayerPrefs.GetString("order");
         //Debug.Log(test);
 
-
+        StartDelayedBCISelection(6);
     }
 
     public void SetState(GameState newState)
@@ -159,8 +159,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        yield return new WaitForSeconds(1);
-        BCIController.Instance.StartStopStimulus();
+        StartDelayedBCISelection();
     }
 
 
@@ -180,5 +179,16 @@ public class GameManager : MonoBehaviour
         LeftArrow.gameObject.SetActive(gameNum == GameNum.one);
         RightArrow.gameObject.SetActive(gameNum == GameNum.one);
         DownArrow.gameObject.SetActive(gameNum == GameNum.two);
+    }
+
+    public void StartDelayedBCISelection(float seconds = 1)
+    {
+        StartCoroutine(DelayedBCISelection(seconds));
+    }
+    
+    private IEnumerator DelayedBCISelection(float seconds = 1)
+    {
+        yield return new WaitForSeconds(seconds);
+        BCIController.Instance.StartStopStimulus();
     }
 }
