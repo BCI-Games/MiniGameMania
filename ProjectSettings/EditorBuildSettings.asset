@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Submissions/StarSkirmish/Scenes/StarSkirmish.unity
     guid: 6c71c27145982c74e8c3733894e15ebf
+  - enabled: 1
+    path: Assets/Submissions/BCIBurgers/Scenes/BCIBurgers.unity
+    guid: cf054c9e9e890e246b4a1b5576d6ef40
   m_configObjects: {}

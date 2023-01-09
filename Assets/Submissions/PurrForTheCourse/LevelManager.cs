@@ -2,34 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelManager : MonoBehaviour
+namespace Submissions.PurrForTheCourse
 {
-    // Start is called before the first frame update
-    void Start()
+    public class LevelManager : MonoBehaviour
     {
-        SpawnLevel();
-    }
+        // Start is called before the first frame update
+        void Start()
+        {
+            SpawnLevel();
+        }
 
-    public GameObject[] Levels;
-    int levelIndex;
-    GameObject currLevel;
+        public GameObject[] Levels;
+        int levelIndex;
+        GameObject currLevel;
 
-    void DespawnLevel()
-    {
-        Destroy(currLevel);
-    }
+        void DespawnLevel()
+        {
+            Destroy(currLevel);
+        }
 
-    void SpawnLevel()
-    {
-        currLevel = GameObject.Instantiate(Levels[levelIndex]);
+        void SpawnLevel()
+        {
+            currLevel = Instantiate(Levels[levelIndex]);
 
-        // TODO: Reset Ball Position
-    }
+            // TODO: Reset Ball Position
+        }
 
-    public void LevelComplete()
-    {
-        DespawnLevel();
-        levelIndex++;
-        SpawnLevel();
+        public void LevelComplete()
+        {
+            DespawnLevel();
+            levelIndex++;
+            SpawnLevel();
+        }
     }
 }
