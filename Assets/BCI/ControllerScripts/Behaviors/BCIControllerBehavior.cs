@@ -369,6 +369,11 @@ public class BCIControllerBehavior : MonoBehaviour
     // 
     public int[] MakeRNRA(int arrayLength, int numOptions)
     {
+        if (numOptions < 2)
+        {
+            return new [] { 0 };
+        }
+        
         // Make random object
         //Debug.Log("Random seed is 42");
         System.Random trainRandom = new System.Random();

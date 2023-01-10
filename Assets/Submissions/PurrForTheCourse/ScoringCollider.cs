@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Submissions.PurrForTheCourse;
 using UnityEngine;
 
 public class ScoringCollider : MonoBehaviour
