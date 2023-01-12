@@ -36,8 +36,8 @@ public class StationSPO : SPO
 
     public override void OnSelection()
     {
-        BCIManager.Instance.BCICoroutine = BCIManager.Instance.BCICoFunction();
-        StartCoroutine(BCIManager.Instance.BCICoroutine);
+        BCIManagerSub.Instance.BCICoroutine = BCIManagerSub.Instance.BCICoFunction();
+        StartCoroutine(BCIManagerSub.Instance.BCICoroutine);
         PlayerController.BCI.MoveCharacter(Zone.transform.position);
         StationManager.Instance.RemoveOutlines();
         GetComponent<Outline>().enabled = true;

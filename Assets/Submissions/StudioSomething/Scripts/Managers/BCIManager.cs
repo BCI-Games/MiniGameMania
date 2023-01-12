@@ -5,9 +5,10 @@ using UnityEngine;
 
 namespace Submissions.StudioSomething
 {
-    public class BCIManager : MonoBehaviour
+    // I had to change the name of this, as a .dll from BrainBuddy broke the BCIManager name. Will fix implementations elsewhere.
+    public class BCIManagerSub : MonoBehaviour
     {
-        public static BCIManager Instance;
+        public static BCIManagerSub Instance;
 
         public IEnumerator BCICoroutine;
 

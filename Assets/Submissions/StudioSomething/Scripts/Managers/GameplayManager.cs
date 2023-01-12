@@ -135,8 +135,8 @@ public class GameplayManager : MonoBehaviour
         LightingManager.TimeOfDay = 6;
         CustomerManager.Instance.IsRunning = true;
         LightingManager.IsRunning = true;
-        BCIManager.Instance.BCICoroutine = BCIManager.Instance.BCICoFunction();
-        StartCoroutine(BCIManager.Instance.BCICoroutine);
+        BCIManagerSub.Instance.BCICoroutine = BCIManagerSub.Instance.BCICoFunction();
+        StartCoroutine(BCIManagerSub.Instance.BCICoroutine);
         GameHasStart = true;
     }
 
@@ -156,7 +156,7 @@ public class GameplayManager : MonoBehaviour
         LoseCanvas.SetActive(false);
         if (PlayerController.BCI != null) Destroy(PlayerController.BCI.gameObject);
         if (PlayerController.Keyboard != null) Destroy(PlayerController.Keyboard.gameObject);
-        StopCoroutine(BCIManager.Instance.BCICoroutine);
+        StopCoroutine(BCIManagerSub.Instance.BCICoroutine);
         SixCheck = false;
         EightCheck = false;
         GameHasStart = false;

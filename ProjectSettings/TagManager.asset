@@ -13,6 +13,8 @@ TagManager:
   - Wall
   - GameBounds
   - Character
+  - Fruit
+  - Finished
   layers:
   - Default
   - TransparentFX
@@ -58,4 +60,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 2934152951
+    locked: 0
+  - name: Terrain
+    uniqueID: 3398012605
     locked: 0
