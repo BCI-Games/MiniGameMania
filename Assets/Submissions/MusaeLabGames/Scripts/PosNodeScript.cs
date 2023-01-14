@@ -1,4 +1,5 @@
 using System;
+using BCIEssentials.Controllers;
 using Submissions.MusaeLabGames;
 using UnityEngine;
 
@@ -168,10 +169,9 @@ public class PosNodeScript: MonoBehaviour
     {
         //Disabled in favor of BCI Essentials workflow
         Debug.Log($"<color=green><b>{gameObject.name}</b>: Arrow flickering enabled</color>");
-        var ssvpeController = FindObjectOfType<SSVEPController>();
-        if (ssvpeController != null && !ssvpeController.stimOn)
+        if (!BCIController.Instance.ActiveBehavior.stimOn)
         {
-            ssvpeController.StartStopStimulus();
+            BCIController.Instance.StartStopStimulus();
         }
         
         return;
