@@ -100,8 +100,7 @@ public class BCIControllerBehavior : MonoBehaviour
     public void CleanUp()
     {
         setup.DestroyMatrix();
-        
-        //TODO: Stop running coroutines
+        StopAllCoroutines();
     }
 
     // Populate a list of SPOs
