@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _behaviorType: 2
   targetFrameRate: 60
-  setupRequired: 1
+  setupRequired: 0
   listExists: 0
   objectList: []
   windowLength: 2
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _behaviorType: 3
   targetFrameRate: 165
-  setupRequired: 1
+  setupRequired: 0
   listExists: 0
   objectList: []
   windowLength: 1
@@ -297,7 +297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _behaviorType: 1
   targetFrameRate: 60
-  setupRequired: 1
+  setupRequired: 0
   listExists: 0
   objectList: []
   windowLength: 1
