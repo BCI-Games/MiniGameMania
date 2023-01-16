@@ -5,6 +5,7 @@ using System;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Reflection;
+using BCIEssentials.Controllers;
 using UnityEngine.SceneManagement;
 using static UnityEditor.FilePathAttribute;
 
@@ -24,8 +25,6 @@ namespace Submissions.StarDefense
         public int turnNumber = 0;
         public int turnsToDo;
         public bool readyToProcess = true;
-
-        public P300Controller controller;
 
         public Vector2 direction = Vector2.zero;
         public float power;
@@ -87,15 +86,6 @@ namespace Submissions.StarDefense
 
                 audioSource = GetComponent<AudioSource>();
                 Instance = this;
-
-                if (controller == null)
-                {
-                    while (controller == null)
-                    {
-                        controller = FindObjectOfType<P300Controller>();
-                    }
-                }
-
 
                 nextTurn();
             }
@@ -170,7 +160,7 @@ namespace Submissions.StarDefense
                 yield return new WaitForSeconds(1);
                 CanvasReference.Instance.prepare.SetActive(false);
                 onGoingSimulation = false;
-                controller.StartStopStimulus();
+                BCIController.Instance.StartStopStimulus();
                 processingResult = true;
             }
         }
@@ -191,14 +181,7 @@ namespace Submissions.StarDefense
                 CanvasReference.Instance.prepare.SetActive(false);
                 yield return new WaitForSeconds(1);
                 onGoingSimulation = false;
-                if (controller == null)
-                {
-                    while (controller == null)
-                    {
-                        controller = FindObjectOfType<P300Controller>();
-                    }
-                }
-                controller.StartStopStimulus();
+                BCIController.Instance.StartStopStimulus();
                 processingResult = true;
             }
 
@@ -572,9 +555,9 @@ namespace Submissions.StarDefense
         public void EndGame(bool playerWins)
         {
             gameEnded = true;
-            if (controller.stimOn)
+            if (BCIController.Instance.ActiveBehavior.stimOn)
             {
-                controller.StartStopStimulus();
+                BCIController.Instance.StartStopStimulus();
             }
             foreach (GameObject control in selections)
             {
@@ -602,7 +585,7 @@ namespace Submissions.StarDefense
         {
             currentMenuTime = menuReselectTime;
             yield return new WaitForSeconds(3);
-            controller.StartStopStimulus();
+            BCIController.Instance.StartStopStimulus();
 
         }
 

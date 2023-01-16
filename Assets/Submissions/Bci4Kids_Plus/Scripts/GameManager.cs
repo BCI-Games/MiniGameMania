@@ -201,48 +201,16 @@ namespace Submissions.Bci4KidsPlus
 
             }
 
+            StartCoroutine(SpawnIngredients());
         }
 
-        private int gameLoopCounter = 0;
-
-        //EKL Edit
-        /// <summary>
-        /// Update the gameLoopCounter to the present time when the scene gets loaded. 
-        /// This is to fix the bug in the Update Function in GameManager for BCI4Kids + Hardeep submission.
-        /// This is a bad solution....
-        /// </summary>
-        private void OnEnable()
+        private IEnumerator SpawnIngredients()
         {
-            Debug.Log("BCI4Kids Scene Loaded, OnEnable Called");
-            SceneManager.sceneLoaded += OnSceneLoaded;
-        }
-
-        private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-        {
-            Debug.Log("Updating the gameLoopCounter to current time");
-            gameLoopCounter = (int)Time.time;
-        }
-
-        private void OnDisable()
-        {
-            Debug.Log("BCI4Kids Scene Unloaded, OnDisable Called");
-            SceneManager.sceneLoaded -= OnSceneLoaded;
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-            // gameLoopCounter++;
-
-            if (Time.time > gameLoopCounter)
+            while (true)
             {
-                Debug.Log("This is the time when the game started - " + Time.time);
                 spawnIngredientOnBelt();
-                gameLoopCounter += 2;
+                yield return new WaitForSeconds(2);
             }
-
-
         }
 
         // Generate random integer
@@ -298,20 +266,25 @@ namespace Submissions.Bci4KidsPlus
 
             Sprite ingredientSprite = Resources.Load<Sprite>($"Sprites/menu/{randIngredient}");
 
-            ingredient.GetComponent<SpriteRenderer>().sprite = ingredientSprite;
-            ingredient.GetComponent<SpriteRenderer>().sortingLayerName = "Foreground";
-            ingredient.GetComponent<SpriteRenderer>().sortingOrder = 0;
+            var spriteRenderer = ingredient.GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = ingredientSprite;
+            spriteRenderer.sortingLayerName = "Foreground";
+            spriteRenderer.sortingOrder = 0;
             ingredient.transform.parent = ingredient.transform;
             ingredient.transform.localScale = new Vector3(5f, 5f, 5f);
             ingredient.AddComponent<BoxCollider2D>();
 
-            GameObject np = new GameObject();
-            np.AddComponent<BorderPathMovement>().name = "path";
-            np.GetComponent<BorderPathMovement>().obj = ingredient;
-            np.GetComponent<BorderPathMovement>().pathPoints = setPathPoints;
-            np.GetComponent<BorderPathMovement>().numPoints = 4;
-            np.GetComponent<BorderPathMovement>().speed = 6;
-            np.transform.parent = ingredient.transform;
+            GameObject np = new GameObject ()
+            {
+                name = "path",
+                transform = { parent = ingredient.transform},
+            };
+            
+            var path = np.AddComponent<BorderPathMovement>();
+            path.obj = ingredient;
+            path.pathPoints = setPathPoints;
+            path.numPoints = 4;
+            path.speed = 6;
 
         }
 

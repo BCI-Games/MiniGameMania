@@ -85,7 +85,6 @@ public class PlayerInputManager : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(bciController.isActiveAndEnabled);
         if(timer > 0)
         {
             timer -= Time.deltaTime;

@@ -6,11 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Training/P300Training.unity
-    guid: d6b563a047e167c4bb53232e70fc9c47
+    path: Assets/Scenes/Initialize.unity
+    guid: bb6c676165bb5934597a305b08515cda
   - enabled: 1
     path: Assets/Scenes/MainMenu_Minigames.unity
     guid: d93ed211ccbb6914c886377e5e916baa
+  - enabled: 1
+    path: Assets/Scenes/Training/P300Training.unity
+    guid: d6b563a047e167c4bb53232e70fc9c47
   - enabled: 1
     path: Assets/Scenes/GameJamDemo.unity
     guid: 03370cc5af6aa2046a8f2741967b1f44
