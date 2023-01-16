@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using BCIEssentials.Controllers;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -17,7 +18,7 @@ namespace Submissions.StarDefense
 
         public GameObject[] displayRolls;
 
-        public P300Controller controller;
+        public BCIController controller;
 
         public bool menuChosen = false;
         public float maxReselectTime = 5;
@@ -34,7 +35,7 @@ namespace Submissions.StarDefense
             {
                 Time.timeScale = 1;
                 audioSource = GetComponent<AudioSource>();
-                controller = FindObjectOfType<P300Controller>();
+                controller = BCIController.Instance;
                 allowedToRefresh = true;
                 RefreshChoices();
                 allowedToRefresh = false;
@@ -86,13 +87,6 @@ namespace Submissions.StarDefense
             Debug.Log("Reselecting::::::");
             menuChosen = false;
             yield return new WaitForSeconds(2);
-            if (controller == null)
-            {
-                while (controller == null)
-                {
-                    controller = FindObjectOfType<P300Controller>();
-                }
-            }
             currentSelectTime = maxReselectTime;
             controller.StartStopStimulus();
             processingResult = true;
@@ -156,7 +150,7 @@ namespace Submissions.StarDefense
             allowedToRefresh = false;
             if (type.Equals("title"))
             {
-                if (controller.stimOn)
+                if (controller.ActiveBehavior.stimOn)
                 {
                     controller.StartStopStimulus();
                 }
