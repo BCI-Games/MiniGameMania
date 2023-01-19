@@ -20,7 +20,9 @@ public class MenuGameTile : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     System.Action onLoadGame;
 
-    public void Init(MenuGameTileAttributes attributes, System.Action loadAction)
+    public void Init(MenuGameTileAttributes attributes,
+        int renderTextureWidth, int renderTextureHeight,int renderTextureDepth,
+        System.Action loadAction)
     {
         titleText.text = attributes.gameTitle;
 
@@ -29,7 +31,8 @@ public class MenuGameTile : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         onLoadGame= loadAction;
 
         previewStill = attributes.previewStill;
-        previewVideoTexture = attributes.previewVideoTexture;
+
+        previewVideoTexture = new RenderTexture(renderTextureWidth, renderTextureHeight, renderTextureDepth);
 
         previewImage = GetComponentInChildren<RawImage>(true);
         previewImage.texture = previewStill;
@@ -80,6 +83,5 @@ public struct MenuGameTileAttributes
     public string targetScene;
 
     public Texture previewStill;
-    public RenderTexture previewVideoTexture;
     public VideoClip previewClip;
 }
