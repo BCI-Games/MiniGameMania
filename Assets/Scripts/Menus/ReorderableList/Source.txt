@@ -1,0 +1,3 @@
+Sources from Unity UI Extensions:
+
+https://github.com/Unity-UI-Extensions/com.unity.uiextensions

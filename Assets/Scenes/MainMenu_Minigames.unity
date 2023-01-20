@@ -13308,6 +13308,7 @@ GameObject:
   - component: {fileID: 1433612378}
   - component: {fileID: 1433612379}
   - component: {fileID: 1433612380}
+  - component: {fileID: 1433612381}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -13389,6 +13390,18 @@ MonoBehaviour:
     previewClip: {fileID: 32900000, guid: b9f334ff0fb131e4c83b288ef49ed9ea, type: 3}
   previewTextureSizeMultiplier: 2
   previewTextureDepth: 16
+--- !u!114 &1433612381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433612377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76af7166d7f10114bbc069713b36dba6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1447194590
 GameObject:
   m_ObjectHideFlags: 0
@@ -16479,6 +16492,7 @@ GameObject:
   - component: {fileID: 1732992612}
   - component: {fileID: 1732992611}
   - component: {fileID: 1732992610}
+  - component: {fileID: 1732992613}
   m_Layer: 5
   m_Name: Game Panel
   m_TagString: Untagged
@@ -16576,6 +16590,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1732992608}
   m_CullTransparentMesh: 1
+--- !u!114 &1732992613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732992608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db43985245dd29e42a0a7749e33d12c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ContentLayout: {fileID: 1433612379}
+  DraggableArea: {fileID: 632234543}
+  IsDraggable: 1
+  CloneDraggedObject: 0
+  IsDropable: 1
+  IsDisplacable: 1
+  EqualizeSizesOnDrag: 0
+  maxItems: 2147483647
+  OnElementDropped:
+    m_PersistentCalls:
+      m_Calls: []
+  OnElementGrabbed:
+    m_PersistentCalls:
+      m_Calls: []
+  OnElementRemoved:
+    m_PersistentCalls:
+      m_Calls: []
+  OnElementAdded:
+    m_PersistentCalls:
+      m_Calls: []
+  OnElementDisplacedFrom:
+    m_PersistentCalls:
+      m_Calls: []
+  OnElementDisplacedTo:
+    m_PersistentCalls:
+      m_Calls: []
+  OnElementDisplacedFromReturned:
+    m_PersistentCalls:
+      m_Calls: []
+  OnElementDisplacedToReturned:
+    m_PersistentCalls:
+      m_Calls: []
+  OnElementDroppedWithMaxItems:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1736721773
 GameObject:
   m_ObjectHideFlags: 0
@@ -19440,6 +19501,8 @@ GameObject:
   - component: {fileID: 2013277418}
   - component: {fileID: 2013277417}
   - component: {fileID: 2013277420}
+  - component: {fileID: 2013277422}
+  - component: {fileID: 2013277421}
   m_Layer: 5
   m_Name: Game Tile
   m_TagString: Untagged
@@ -19536,6 +19599,41 @@ MonoBehaviour:
   playButton: {fileID: 718628433}
   previewImage: {fileID: 1330772209}
   previewVideoPlayer: {fileID: 1330772211}
+--- !u!114 &2013277421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013277415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b533adbf4521c44cac66f4a87718cd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsGrabbable: 1
+  _isTransferable: 0
+  isDroppableInSpace: 1
+--- !u!114 &2013277422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013277415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: -1
+  m_PreferredHeight: -1
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!1 &2013347737
 GameObject:
   m_ObjectHideFlags: 0
