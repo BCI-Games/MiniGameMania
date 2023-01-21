@@ -1,4 +1,3 @@
-using Sirenix.OdinInspector.Editor.Examples;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -12,6 +11,9 @@ public class MenuGameTile : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public Button playButton;
     public RawImage previewImage;
     public VideoPlayer previewVideoPlayer;
+
+    [HideInInspector]
+    public int tileIndex;
 
     string targetScene;
 

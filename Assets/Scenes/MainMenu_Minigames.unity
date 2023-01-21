@@ -13373,6 +13373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e87350b1978c6e4aa618f9edafe4d27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  categoryName: P300 game tile order
   prototype: {fileID: 2013277415}
   bciBehaviorType: 1
   tileInfo:
@@ -16612,7 +16613,19 @@ MonoBehaviour:
   maxItems: 2147483647
   OnElementDropped:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1433612380}
+        m_TargetAssemblyTypeName: MenuGameTileFactory, Assembly-CSharp
+        m_MethodName: SaveTileOrder
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnElementGrabbed:
     m_PersistentCalls:
       m_Calls: []
@@ -19599,6 +19612,7 @@ MonoBehaviour:
   playButton: {fileID: 718628433}
   previewImage: {fileID: 1330772209}
   previewVideoPlayer: {fileID: 1330772211}
+  tileIndex: 0
 --- !u!114 &2013277421
 MonoBehaviour:
   m_ObjectHideFlags: 0
