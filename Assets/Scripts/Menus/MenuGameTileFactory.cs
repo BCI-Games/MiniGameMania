@@ -92,4 +92,16 @@ public class MenuGameTileFactory : MonoBehaviour
 
         PlayerPrefs.SetString(categoryName, string.Join(',', tileOrder));
     }
+
+    public void OnTileGrabbed(ReorderableList.ReorderableListEventStruct eventArgs)
+    {
+        MenuGameTile grabbedTile = eventArgs.SourceObject.GetComponent<MenuGameTile>();
+        grabbedTile?.OnGrab();
+    }
+
+    public void OnTileDropped(ReorderableList.ReorderableListEventStruct eventArgs)
+    {
+        MenuGameTile droppedTile = eventArgs.DroppedObject.GetComponent<MenuGameTile>();
+        droppedTile?.OnDrop();
+    }
 }

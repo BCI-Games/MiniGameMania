@@ -11,11 +11,13 @@ public class MenuGameTile : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public Button playButton;
     public RawImage previewImage;
     public VideoPlayer previewVideoPlayer;
+    public GameObject hoverIcon;
 
     [HideInInspector]
     public int tileIndex;
 
     string targetScene;
+    bool grabbed = false;
 
     Texture previewStill;
     RenderTexture previewVideoTexture;
@@ -42,6 +44,8 @@ public class MenuGameTile : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         previewVideoPlayer = GetComponentInChildren<VideoPlayer>(true);
         previewVideoPlayer.targetTexture = previewVideoTexture;
         previewVideoPlayer.clip = attributes.previewClip;
+
+        hoverIcon.SetActive(false);
     }
 
     void LoadGame()
@@ -67,14 +71,34 @@ public class MenuGameTile : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     void StartPreview()
     {
+        if (grabbed)
+            return;
+
         previewImage.texture = previewVideoTexture;
         previewVideoPlayer.Play();
+
+        hoverIcon.SetActive(true);
     }
 
     void ResetPreview()
     {
+        if (grabbed)
+            return;
+
         previewImage.texture = previewStill;
         previewVideoPlayer.Stop();
+
+        hoverIcon.SetActive(false);
+    }
+
+    public void OnGrab()
+    {
+        grabbed = true;
+    }
+
+    public void OnDrop()
+    {
+        grabbed = false;
     }
 }
 
