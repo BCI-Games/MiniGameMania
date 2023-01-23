@@ -57,8 +57,9 @@ public class MenuGameTileFactory : MonoBehaviour
             string[] savedTileOrderStrings = savedTileOrderString.Split(',');
 
             int[] savedTileOrder = savedTileOrderStrings.Select(s => int.Parse(s)).ToArray();
-            // check that saved tile order doesn't contain duplicates
-            if (savedTileOrder.Length == savedTileOrder.Distinct().Count())
+            // basic checks for save validity
+            if (savedTileOrder.Length == tileOrder.Length &&
+                savedTileOrder.Length == savedTileOrder.Distinct().Count())
                 tileOrder = savedTileOrder;
         }
 

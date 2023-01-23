@@ -42,6 +42,9 @@ namespace UnityEngine.UI.Extensions
 
         private IEnumerator RefreshChildren()
         {
+            if (!_rect)
+                yield break;
+
             //Handle new children
             for (int i = 0; i < _rect.childCount; i++)
             {
