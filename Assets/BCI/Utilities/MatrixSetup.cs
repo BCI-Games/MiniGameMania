@@ -16,10 +16,11 @@ namespace BCIEssentials.Utilities
         [SerializeField] private int _numRows;
         [SerializeField] private Vector2 _startDistance;
 
-        public readonly List<SPO> MatrixObjects = new();
+        public readonly List<SPO> MatrixObjects = new ();
 
         public override void SetUpMatrix()
         {
+            Debug.Log("Setting up matrix from SetUpMatrix Script");
             InstantiateMatrixObjects();
             CenterCameraToMatrix();
         }
@@ -45,6 +46,7 @@ namespace BCIEssentials.Utilities
                 {
                     //Instantiating prefabs
                     var spo = Instantiate(_spoPrefab);
+                    Debug.Log("Did the SPO instantiate? " + spo.isActiveAndEnabled + "My name is: "  + spo.name);
 
                     //Setup SPO
                     MatrixObjects.Add(spo);

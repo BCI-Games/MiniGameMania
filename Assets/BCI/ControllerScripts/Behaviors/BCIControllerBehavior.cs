@@ -85,8 +85,10 @@ public class BCIControllerBehavior : MonoBehaviour
         //Setup if required
         if (setupRequired)
         {
+            Debug.Log("Set-up needed. Setting up defaults now...");
             try
             {
+                Debug.Log("Setting up the matrix");
                 setup.SetUpMatrix();
             }
             catch (Exception e)
@@ -94,6 +96,10 @@ public class BCIControllerBehavior : MonoBehaviour
                 Debug.Log("Setup failed, make sure that the fields in setup matrix are filled");
                 Debug.Log(e.Message);
             }
+        }
+        else
+        {
+            Debug.Log("No set-up required");
         }
     }
 

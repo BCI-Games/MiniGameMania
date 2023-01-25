@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _behaviorType: 2
   targetFrameRate: 60
-  setupRequired: 0
+  setupRequired: 1
   listExists: 0
   objectList: []
   windowLength: 2
@@ -77,7 +77,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e12c3fe7a0561449d9b3ed76699a70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spoPrefab: {fileID: 7639228323464969584, guid: 9528763d6dd0d014bacd23d4f049dfc4, type: 3}
+  _spoPrefab: {fileID: 4757011488852594583, guid: 67439048b3073564cba4a428fe86d411, type: 3}
   _numColumns: 2
   _numRows: 1
   _startDistance: {x: 4, y: 0}
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _behaviorType: 3
   targetFrameRate: 165
-  setupRequired: 0
+  setupRequired: 1
   listExists: 0
   objectList: []
   windowLength: 1
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e12c3fe7a0561449d9b3ed76699a70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spoPrefab: {fileID: 7639228323464969584, guid: 9528763d6dd0d014bacd23d4f049dfc4, type: 3}
+  _spoPrefab: {fileID: 4757011488852594583, guid: 67439048b3073564cba4a428fe86d411, type: 3}
   _numColumns: 3
   _numRows: 2
   _startDistance: {x: 2, y: 2}
@@ -297,7 +297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _behaviorType: 1
   targetFrameRate: 60
-  setupRequired: 0
+  setupRequired: 1
   listExists: 0
   objectList: []
   windowLength: 1
@@ -337,7 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e12c3fe7a0561449d9b3ed76699a70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spoPrefab: {fileID: 7639228323464969584, guid: 9528763d6dd0d014bacd23d4f049dfc4, type: 3}
+  _spoPrefab: {fileID: 4757011488852594583, guid: 67439048b3073564cba4a428fe86d411, type: 3}
   _numColumns: 3
   _numRows: 3
   _startDistance: {x: 2, y: 2}

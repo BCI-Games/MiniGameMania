@@ -19,7 +19,9 @@ public class EnterPlayModeSceneLoader
 
         if (state == PlayModeStateChange.EnteredPlayMode)
         {
+            //This was broken not letting me move to the next scene due to how we are handling loading.
             SceneManager.LoadScene("Initialize");
+            //SceneManager.LoadScene("MainMenu_Minigames");
         }
     }
 }

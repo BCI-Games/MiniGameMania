@@ -18,6 +18,7 @@ public class MenuController : MonoBehaviour
         if (_activeController != null)
         {
             Debug.Log("Disabling MenuController. There is already an active instance.");
+            Debug.Log("I am the duplicate coming from this scene: " + gameObject.scene);
             Destroy(gameObject);
         }
         else if (_dontDestroy)
