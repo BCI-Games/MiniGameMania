@@ -77,7 +77,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e12c3fe7a0561449d9b3ed76699a70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spoPrefab: {fileID: 7639228323464969584, guid: 9528763d6dd0d014bacd23d4f049dfc4, type: 3}
+  _spoPrefab: {fileID: 4757011488852594583, guid: 67439048b3073564cba4a428fe86d411, type: 3}
   _numColumns: 2
   _numRows: 1
   _startDistance: {x: 4, y: 0}
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e12c3fe7a0561449d9b3ed76699a70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spoPrefab: {fileID: 7639228323464969584, guid: 9528763d6dd0d014bacd23d4f049dfc4, type: 3}
+  _spoPrefab: {fileID: 4757011488852594583, guid: 67439048b3073564cba4a428fe86d411, type: 3}
   _numColumns: 3
   _numRows: 2
   _startDistance: {x: 2, y: 2}
@@ -180,6 +180,8 @@ GameObject:
   - component: {fileID: 835624895021258471}
   - component: {fileID: 1649985292535673240}
   - component: {fileID: 1649985292535673241}
+  - component: {fileID: 4710965795943656498}
+  - component: {fileID: 3009987756557343064}
   m_Layer: 0
   m_Name: ControllerManager
   m_TagString: Untagged
@@ -250,6 +252,30 @@ MonoBehaviour:
   responsePredicate: name='PythonResponse'
   value: PythonResponse
   pyRespIndex: 0
+--- !u!114 &4710965795943656498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649985292535673242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80983b63743a5ca448c67493a62de03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3009987756557343064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649985292535673242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c13c77429e45454188a378621472bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1649985293060537292
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,7 +363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e12c3fe7a0561449d9b3ed76699a70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spoPrefab: {fileID: 7639228323464969584, guid: 9528763d6dd0d014bacd23d4f049dfc4, type: 3}
+  _spoPrefab: {fileID: 4757011488852594583, guid: 67439048b3073564cba4a428fe86d411, type: 3}
   _numColumns: 3
   _numRows: 3
   _startDistance: {x: 2, y: 2}

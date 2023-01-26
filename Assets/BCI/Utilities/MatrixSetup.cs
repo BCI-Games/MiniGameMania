@@ -16,10 +16,11 @@ namespace BCIEssentials.Utilities
         [SerializeField] private int _numRows;
         [SerializeField] private Vector2 _startDistance;
 
-        public readonly List<SPO> MatrixObjects = new();
+        public readonly List<SPO> MatrixObjects = new ();
 
         public override void SetUpMatrix()
         {
+            Debug.Log("Setting up matrix from SetUpMatrix Script");
             InstantiateMatrixObjects();
             CenterCameraToMatrix();
         }
@@ -39,21 +40,23 @@ namespace BCIEssentials.Utilities
 
         private void InstantiateMatrixObjects()
         {
+            DestroyMatrix();
             for (int rowIndex = _numRows - 1; rowIndex > -1; rowIndex--)
             {
                 for (int columnIndex = 0; columnIndex < _numColumns; columnIndex++)
                 {
                     //Instantiating prefabs
-                    var spo = Instantiate(_spoPrefab);
-
-                    //Setup SPO
-                    MatrixObjects.Add(spo);
-                    spo.TurnOff();
+                    var spoGameObject = Instantiate(_spoPrefab.gameObject);
+                    Debug.Log("Did the SPO instantiate? " + spoGameObject.activeSelf + "My name is: "  + spoGameObject.name);
 
                     //Setup GameObject
-                    var spoGameObject = spo.gameObject;
                     spoGameObject.name = $"Object {MatrixObjects.Count}";
                     spoGameObject.tag = "BCI";
+                    
+                    //Setup SPO
+                    var spo = spoGameObject.GetComponent<SPO>();
+                    spo.TurnOff();
+                    MatrixObjects.Add(spo);
 
                     //Setting position of object
                     var startingPosition = Vector3.zero;
