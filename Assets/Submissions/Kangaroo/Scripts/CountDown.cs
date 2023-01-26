@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using BCIEssentials.Controllers;
 using UnityEngine;
+using TMPro;
 
 public class CountDown : MonoBehaviour
 {
-    public TextMesh Ctext;
+    public TextMeshProUGUI Ctext;
     public GameObject BG;
     public GameObject haveYouFound;
 
