@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using BCIEssentials.Networking;
 
 /*An extension of the controller class to add MI functionality
 

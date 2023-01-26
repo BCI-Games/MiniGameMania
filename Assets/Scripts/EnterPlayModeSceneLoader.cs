@@ -1,6 +1,7 @@
 ﻿using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine.SceneManagement;
+using BCIEssentials.Controllers;
 
 [InitializeOnLoad]
 public class EnterPlayModeSceneLoader
