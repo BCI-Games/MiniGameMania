@@ -86,16 +86,7 @@ public class BCIControllerBehavior : MonoBehaviour
         if (setupRequired)
         {
             Debug.Log("Set-up needed. Setting up defaults now...");
-            try
-            {
-                Debug.Log("Setting up the matrix");
-                setup.SetUpMatrix();
-            }
-            catch (Exception e)
-            {
-                Debug.Log("Setup failed, make sure that the fields in setup matrix are filled");
-                Debug.Log(e.Message);
-            }
+            SetupMatrix();
         }
         else
         {
@@ -281,14 +272,37 @@ public class BCIControllerBehavior : MonoBehaviour
         }
     }
 
-    // Setup a matrix if setup is required
-    // Could add this in or leave as a seperate script
-    //public void setupMatrix()
-    //{
-
-
-    //}
-
+    public void SetupMatrix()
+    {
+        if (setup == null)
+        {
+            Debug.LogError("No Setup Matrix assigned.");
+            return;
+        }
+        
+        try
+        {
+            Debug.Log("Setting up the matrix");
+            setup.SetUpMatrix();
+        }
+        catch (Exception e)
+        {
+            Debug.Log("Setup failed, make sure that the fields in setup matrix are filled");
+            Debug.Log(e.Message);
+        }
+    }
+    
+    public void CleanUpMatrix()
+    {
+        if (setup == null)
+        {
+            Debug.LogError("No Setup Matrix assigned.");
+            return;
+        }
+        
+        setup.DestroyMatrix();;
+    }
+    
     // Do training
     public virtual IEnumerator DoTraining()
     {

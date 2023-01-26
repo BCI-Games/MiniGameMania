@@ -40,22 +40,23 @@ namespace BCIEssentials.Utilities
 
         private void InstantiateMatrixObjects()
         {
+            DestroyMatrix();
             for (int rowIndex = _numRows - 1; rowIndex > -1; rowIndex--)
             {
                 for (int columnIndex = 0; columnIndex < _numColumns; columnIndex++)
                 {
                     //Instantiating prefabs
-                    var spo = Instantiate(_spoPrefab);
-                    Debug.Log("Did the SPO instantiate? " + spo.isActiveAndEnabled + "My name is: "  + spo.name);
-
-                    //Setup SPO
-                    MatrixObjects.Add(spo);
-                    spo.TurnOff();
+                    var spoGameObject = Instantiate(_spoPrefab.gameObject);
+                    Debug.Log("Did the SPO instantiate? " + spoGameObject.activeSelf + "My name is: "  + spoGameObject.name);
 
                     //Setup GameObject
-                    var spoGameObject = spo.gameObject;
                     spoGameObject.name = $"Object {MatrixObjects.Count}";
                     spoGameObject.tag = "BCI";
+                    
+                    //Setup SPO
+                    var spo = spoGameObject.GetComponent<SPO>();
+                    spo.TurnOff();
+                    MatrixObjects.Add(spo);
 
                     //Setting position of object
                     var startingPosition = Vector3.zero;
