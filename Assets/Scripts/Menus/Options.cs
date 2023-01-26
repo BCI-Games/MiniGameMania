@@ -12,7 +12,7 @@ public class Options : MonoBehaviour
 
     int resolutionIndex;
 
-    public void Awake()
+    public void Init()
     {
         float volume = 0.5f;
         if (PlayerPrefs.HasKey(OptionKeys.Volume))
