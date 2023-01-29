@@ -133,3 +133,29 @@ public class ToggleSetting : GenericSetting<bool>
 
     public static implicit operator bool(ToggleSetting setting) => setting.value;
 }
+
+[System.Serializable]
+public class StringSetting: SettingBase
+{
+    public string defaultValue;
+    public string value;
+
+    public StringSetting(string name, string defaultValue)
+    {
+        this.name = name;
+        this.defaultValue = defaultValue;
+    }
+
+    public override void SetValueFromString(string source)
+    {
+        value = source;
+    }
+    public override string GetValueString() => value;
+    public override SettingRange GetRange()
+    {
+        return new SettingRange(defaultValue.ToString(), "", "");
+    }
+    public override void SetDefault() => value = defaultValue;
+
+    public static implicit operator string(StringSetting setting) => setting.value;
+}
