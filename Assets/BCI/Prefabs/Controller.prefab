@@ -52,6 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _behaviorType: 0
+  targetFrameRate: 60
   setupRequired: 0
   listExists: 0
   objectList: []
@@ -69,10 +70,6 @@ MonoBehaviour:
   _myTag: BCI
   setup: {fileID: 4280385885900106473}
   refreshRate: 60
-  _myTag: BCI
-  setup: {fileID: 0}
-  marker: {fileID: 0}
-  response: {fileID: 0}
 --- !u!114 &4280385885900106476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,6 +83,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _behaviorType: 0
+  targetFrameRate: 60
   setupRequired: 1
   listExists: 0
   objectList: []
@@ -105,10 +103,6 @@ MonoBehaviour:
   numSelectionsBeforeTraining: 3
   numSelectionsBetweenTraining: 3
   refreshRate: 60
-  _myTag: BCI
-  setup: {fileID: 0}
-  marker: {fileID: 0}
-  response: {fileID: 0}
 --- !u!114 &4280385885900106466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,6 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _behaviorType: 0
+  targetFrameRate: 60
   setupRequired: 0
   listExists: 0
   objectList: []
@@ -151,10 +146,6 @@ MonoBehaviour:
   timeDebug: 0
   trainBufferTime: 0
   refreshRate: 60
-  _myTag: BCI
-  setup: {fileID: 0}
-  marker: {fileID: 0}
-  response: {fileID: 0}
 --- !u!114 &4280385885900106467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,6 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _behaviorType: 0
+  targetFrameRate: 60
   setupRequired: 0
   listExists: 0
   objectList: []
@@ -193,10 +185,6 @@ MonoBehaviour:
   - 18
   realFreqFlash: []
   refreshRate: 60
-  _myTag: BCI
-  setup: {fileID: 0}
-  marker: {fileID: 0}
-  response: {fileID: 0}
 --- !u!114 &4280385885900106473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,7 +199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numColumns: 2
   numRows: 1
-  myObject: {fileID: 1048484350530938663, guid: 9528763d6dd0d014bacd23d4f049dfc4, type: 3}
+  myObject: {fileID: 619438510485942440, guid: 67439048b3073564cba4a428fe86d411, type: 3}
   distanceX: 4
   distanceY: 0
 --- !u!114 &4280385885900106479

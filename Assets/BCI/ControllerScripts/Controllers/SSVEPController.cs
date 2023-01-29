@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using BCIEssentials.Networking;
 
 public class SSVEPController : SSVEPControllerBehavior
 {

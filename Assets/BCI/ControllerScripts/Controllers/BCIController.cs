@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using BCIEssentials.Networking;
 
 namespace BCIEssentials.Controllers
 {
@@ -145,6 +146,44 @@ namespace BCIEssentials.Controllers
             }
         }
 
+        //EKL additions
+        public void OpenLSLMarkerStream()
+        {
+            //Todo
+        }
+
+        public void CloseLSLMarkerStream()
+        {
+            //Stop all coroutines?
+            //_lslResponseStream.StopAllCoroutines();
+            if (_lslMarkerStream == null)
+            {
+                Debug.Log("No active marker stream to close");
+            }
+            else
+            {
+                _lslMarkerStream.CloseMarkerStream();
+            }
+        }
+
+        public void OpenLSLResponseStream()
+        {
+
+        }
+
+        public void CloseLSLResponseStream()
+        {
+            //Stop all coroutines?
+            //_lslResponseStream.StopAllCoroutines();
+            if (_lslResponseStream == null)
+            {
+                Debug.Log("No active response stream to close");
+            }
+            else
+            {
+                _lslResponseStream.CloseResponseStream();
+            }
+        }
 
         #region Behavior Passthroughs
 

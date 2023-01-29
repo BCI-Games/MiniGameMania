@@ -5,6 +5,7 @@ using UnityEngine;
 using System;
 using BCIEssentials.Controllers;
 using BCIEssentials.Utilities;
+using BCIEssentials.Networking;
 
 /// <summary>
 /// This is the SPO Controller base class for an object-oriented design (OOD) approach to SSVEP BCI
@@ -13,7 +14,7 @@ public class BCIControllerBehavior : MonoBehaviour
 {
     [SerializeField] private BehaviorType _behaviorType = BehaviorType.Unset;
     public BehaviorType BehaviorType => _behaviorType;
-    
+
     [SerializeField] private int targetFrameRate = 60;
 
     //Matrix Setup
@@ -23,7 +24,7 @@ public class BCIControllerBehavior : MonoBehaviour
     public bool listExists;
 
     //public GameObject[] objectList;
-    [SerializeField] protected List<SPO> objectList = new();
+    [SerializeField] protected List<SPO> objectList = new ();
     public List<SPO> ObjectList => objectList;
 
     //StimulusOn/Off + sending Markers
@@ -78,23 +79,21 @@ public class BCIControllerBehavior : MonoBehaviour
     public void Initialize(LSLMarkerStream lslMarkerStream, LSLResponseStream lslResponseStream)
     {
         Application.targetFrameRate = targetFrameRate;
-        
+
         marker = lslMarkerStream;
         response = lslResponseStream;
-        
+
         //Setup if required
         if (setupRequired)
         {
-            try
-            {
-                setup.SetUpMatrix();
-            }
-            catch (Exception e)
-            {
-                Debug.Log("Setup failed, make sure that the fields in setup matrix are filled");
-                Debug.Log(e.Message);
-            }
+            Debug.Log("Set-up needed. Setting up defaults now...");
+            SetupMatrix();
         }
+        else
+        {
+            Debug.Log("No set-up required");
+        }
+        Debug.Log("Response stream info: " + response.isActiveAndEnabled);
     }
 
     public void CleanUp()
@@ -151,7 +150,7 @@ public class BCIControllerBehavior : MonoBehaviour
             Debug.LogError($"Unable to convert {populationMethod} to a valid method");
             return;
         }
-        
+
         PopulateObjectList(method);
     }
 
@@ -248,7 +247,7 @@ public class BCIControllerBehavior : MonoBehaviour
     {
         StartCoroutine(DoUserTraining());
     }
-    
+
     protected IEnumerator SelectObjectAfterRun(int objectIndex)
     {
         // When a selection is made, turn the stimulus off
@@ -275,13 +274,36 @@ public class BCIControllerBehavior : MonoBehaviour
         }
     }
 
-    // Setup a matrix if setup is required
-    // Could add this in or leave as a seperate script
-    //public void setupMatrix()
-    //{
+    public void SetupMatrix()
+    {
+        if (setup == null)
+        {
+            Debug.LogError("No Setup Matrix assigned.");
+            return;
+        }
 
+        try
+        {
+            Debug.Log("Setting up the matrix");
+            setup.SetUpMatrix();
+        }
+        catch (Exception e)
+        {
+            Debug.Log("Setup failed, make sure that the fields in setup matrix are filled");
+            Debug.Log(e.Message);
+        }
+    }
 
-    //}
+    public void CleanUpMatrix()
+    {
+        if (setup == null)
+        {
+            Debug.LogError("No Setup Matrix assigned.");
+            return;
+        }
+
+        setup.DestroyMatrix(); ;
+    }
 
     // Do training
     public virtual IEnumerator DoTraining()
@@ -370,9 +392,9 @@ public class BCIControllerBehavior : MonoBehaviour
     {
         if (numOptions < 2)
         {
-            return new [] { 0 };
+            return new[] { 0 };
         }
-        
+
         // Make random object
         //Debug.Log("Random seed is 42");
         System.Random trainRandom = new System.Random();
@@ -576,4 +598,45 @@ public class BCIControllerBehavior : MonoBehaviour
 
         Debug.Log("Done receiving markers");
     }
+
+
+    //EKL's graveyard of makeshift things.
+
+    //Added this for the moment, about initializing and turning on the Receive marker function. 
+
+    public void TurnOnResponseStream()
+    {
+        StartCoroutine("ReceiveMarkers");
+    }
+
+    //Close the response stream.
+    public void CleanUpResponseStream()
+    {
+        //do soemthing.
+        response.CloseResponseStream();
+    }
+
+    //Query if the ResponseStream is still alive.
+    public int QueryResponseStream()
+    {
+
+        if(response.isActiveAndEnabled)
+        {
+            Debug.Log("Looks like response stream is set-up!");
+            return 1;
+        }
+        else
+        {
+            Debug.Log("No response stream found on query");
+            return 0;
+        }
+
+    }
+
+    public bool QueryReceivingMarkers()
+    {
+        //Just return the bool.
+        return receivingMarkers;
+    }
+
 }

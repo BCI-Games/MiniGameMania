@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 //using LSLMarkerStreams;
+using BCIEssentials.Networking;
 
 /*SSVEP Controller
  * This is the SPO Controller base class for an object-oriented design (OOD) approach to SSVEP BCI
