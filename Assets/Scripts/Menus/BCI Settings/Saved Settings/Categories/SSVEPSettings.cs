@@ -9,12 +9,5 @@ public class SSVEPSettings : BCIControllerSettings<SSVEPControllerBehavior>
 
     // TODO: add members (may not be any unique members)
 
-    // Add overriden GetEnumerator if members are added
-
-    public override void ApplyToController(SSVEPControllerBehavior target)
-    {
-        base.ApplyToController(target);
-
-        // TODO: apply members to target
-    }
+    // Add overriden GetEnumerator and ApplyToController if members are added
 }
