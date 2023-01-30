@@ -25,10 +25,10 @@ public class P300Settings : BCIControllerSettings<P300ControllerBehavior>
 
     public override IEnumerator<SettingBase> GetEnumerator()
     {
-        using (IEnumerator<SettingBase> ie = base.GetEnumerator())
-        while (ie.MoveNext())
+        IEnumerator<SettingBase> baseIE = base.GetEnumerator();
+        while (baseIE.MoveNext())
         {
-            yield return ie.Current;
+            yield return baseIE.Current;
         }
 
         yield return numFlashesLowerLimit;

@@ -7,18 +7,26 @@ public class MotorImagerySettings : BCIControllerSettings<MIControllerBehavior>
 {
     new public const string Name = "Motor Imagery Settings";
 
-    // TODO: add members
-
+    public IntegerSetting numSelectionsBeforeTraining = new("selections before training", 3, 2, 5);
+    public IntegerSetting numSelectionsBetweenTraining = new("selections between training", 3, 2, 5);
 
     public override IEnumerator<SettingBase> GetEnumerator()
     {
-        yield return null;
+        IEnumerator<SettingBase> baseIE = base.GetEnumerator();
+        while (baseIE.MoveNext())
+        {
+            yield return baseIE.Current;
+        }
+
+        yield return numSelectionsBeforeTraining;
+        yield return numSelectionsBetweenTraining;
     }
 
     public override void ApplyToController(MIControllerBehavior target)
     {
         base.ApplyToController(target);
 
-        // TODO: apply members to target
+        target.numSelectionsBeforeTraining = numSelectionsBeforeTraining;
+        target.numSelectionsBetweenTraining = numSelectionsBetweenTraining;
     }
 }

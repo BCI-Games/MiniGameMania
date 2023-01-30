@@ -7,18 +7,14 @@ public class SSVEPSettings : BCIControllerSettings<SSVEPControllerBehavior>
 {
     new public const string Name = "SSVEP Settings";
 
-    // TODO: add members
+    // TODO: add members (may not be any unique members)
 
-
-    public override IEnumerator<SettingBase> GetEnumerator()
-    {
-        yield return null;
-    }
+    // Add overriden GetEnumerator if members are added
 
     public override void ApplyToController(SSVEPControllerBehavior target)
     {
         base.ApplyToController(target);
 
-        // TODO: apply membets to target
+        // TODO: apply members to target
     }
 }
