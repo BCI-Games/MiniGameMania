@@ -15,14 +15,18 @@ public abstract class SettingBase
 public struct SettingRange
 {
     public string def;
-    public string min;
-    public string max;
+    public string range;
 
     public SettingRange(string Def, string Min, string Max)
     {
         def = Def;
-        min = Min;
-        max = Max;
+        range = $"{Min} - {Max}";
+    }
+
+    public SettingRange(string Def, string Range)
+    {
+        def = Def;
+        range = Range;
     }
 }
 
@@ -151,10 +155,7 @@ public class StringSetting: SettingBase
         value = source;
     }
     public override string GetValueString() => value;
-    public override SettingRange GetRange()
-    {
-        return new SettingRange(defaultValue.ToString(), "", "");
-    }
+    public override SettingRange GetRange() => new SettingRange(defaultValue, "N/A");
     public override void SetDefault() => value = defaultValue;
 
     public static implicit operator string(StringSetting setting) => setting.value;

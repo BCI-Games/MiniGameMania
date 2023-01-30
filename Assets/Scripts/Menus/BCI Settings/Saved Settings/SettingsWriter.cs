@@ -27,7 +27,7 @@ public class SettingsWriter
 
                 SettingRange range = setting.GetRange();
                 outFile.Write($"\nDefault Value: {range.def}");
-                outFile.Write($"\nSuggested Range: {range.min} - {range.max}");
+                outFile.Write($"\nSuggested Range: {range.range}");
                 outFile.Write($"\n---\nValue: {setting.GetValueString()}\n");
             }
             outFile.Write("\n>>>>      <<<<");
