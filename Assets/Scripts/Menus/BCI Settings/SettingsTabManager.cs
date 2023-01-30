@@ -24,9 +24,10 @@ public class SettingsTabManager: MonoBehaviour
 
     void Start()
     {
-        // clear children
+        DestroyAllChildren();
 
-        // generate content for starting tab
+        activeTab = tabs[startingTabIndex];
+        GenerateActiveTabContent();
     }
 
     private void OnDisable()
@@ -37,11 +38,18 @@ public class SettingsTabManager: MonoBehaviour
 
     public void SelectTab(int tabIndex)
     {
-        // apply settings for previous tab
+        activeTab.ApplySettings();
 
-        // clear children
+        DestroyAllChildren();
 
-        // generate content for new tab
+        activeTab = tabs[tabIndex];
+        GenerateActiveTabContent();
+    }
+
+    public void DestroyAllChildren()
+    {
+        foreach (Transform child in transform)
+            Destroy(child.gameObject);
     }
 
     public void GenerateActiveTabContent()

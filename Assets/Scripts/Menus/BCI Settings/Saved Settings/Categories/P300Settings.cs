@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[System.Serializable, CreateAssetMenu(fileName = "P300 Settings", menuName = "Settings/P300 Settings")]
+[System.Serializable, CreateAssetMenu(fileName = "P300 Settings", menuName = "BCI Settings/P300 Settings")]
 public class P300Settings : BCIControllerSettings<P300ControllerBehavior>
 {
     new public const string Name = "P300 Settings";

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[System.Serializable, CreateAssetMenu(fileName = "Motor Imagery Settings", menuName = "Settings/Motor Imagery Settings")]
+[System.Serializable, CreateAssetMenu(fileName = "Motor Imagery Settings", menuName = "BCI Settings/Motor Imagery Settings")]
 public class MotorImagerySettings : BCIControllerSettings<MIControllerBehavior>
 {
     new public const string Name = "Motor Imagery Settings";

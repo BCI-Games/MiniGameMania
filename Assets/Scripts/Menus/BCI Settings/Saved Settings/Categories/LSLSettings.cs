@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[System.Serializable, CreateAssetMenu(fileName = "LSL Settings", menuName = "Settings/LSL Settings")]
+[System.Serializable, CreateAssetMenu(fileName = "LSL Settings", menuName = "BCI Settings/LSL Settings")]
 public class LSLSettings : SettingsBlock
 {
     new public const string Name = "LSL Settings";

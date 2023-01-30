@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[System.Serializable, CreateAssetMenu(fileName = "SSVEP Settings", menuName = "Settings/SSVEP Settings")]
+[System.Serializable, CreateAssetMenu(fileName = "SSVEP Settings", menuName = "BCI Settings/SSVEP Settings")]
 public class SSVEPSettings : BCIControllerSettings<SSVEPControllerBehavior>
 {
     new public const string Name = "SSVEP Settings";
