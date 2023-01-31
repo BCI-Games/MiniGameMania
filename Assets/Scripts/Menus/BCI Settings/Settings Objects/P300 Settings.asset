@@ -18,14 +18,14 @@ MonoBehaviour:
     defaultValue: 9
     minimumValue: 6
     maximumValue: 12
-    value: 0
+    value: 9
   numTrainWindows:
     name: training window count
     description: 
     defaultValue: 3
     minimumValue: 2
     maximumValue: 5
-    value: 0
+    value: 3
   trainTargetPersistant:
     name: train target persistant
     description: 
@@ -39,63 +39,63 @@ MonoBehaviour:
     defaultValue: 2
     minimumValue: 1
     maximumValue: 5
-    value: 0
+    value: 2
   trainTargetPresentationTime:
     name: training target presentation time
     description: 
     defaultValue: 3
     minimumValue: 2
     maximumValue: 5
-    value: 0
+    value: 3
   trainBreak:
     name: training break
     description: 
     defaultValue: 1
     minimumValue: 0
     maximumValue: 3
-    value: 0
+    value: 2
   trainTarget:
     name: training target
     description: 
     defaultValue: 99
     minimumValue: 8
     maximumValue: 99
-    value: 0
+    value: 99
   numFlashesLowerLimit:
     name: flash count lower limit
     description: 
     defaultValue: 9
     minimumValue: 6
     maximumValue: 12
-    value: 0
+    value: 9
   numFlashesUpperLimit:
     name: flash count upper limit
     description: 
     defaultValue: 12
     minimumValue: 9
     maximumValue: 15
-    value: 0
+    value: 12
   flashOnTime:
     name: flash on time
     description: 
     defaultValue: 0.2
     minimumValue: 0.1
     maximumValue: 0.5
-    value: 0
+    value: 0.2
   flashOffTime:
     name: flash off time
     description: 
     defaultValue: 0.3
     minimumValue: 0.1
     maximumValue: 0.5
-    value: 0
+    value: 0.3
   singleFlash:
     name: single flash
     description: 
     defaultValue: 1
     minimumValue: 0
     maximumValue: 1
-    value: 0
+    value: 1
   multiFlash:
     name: multi-flash
     description: 
@@ -116,7 +116,7 @@ MonoBehaviour:
     defaultValue: 1
     minimumValue: 0
     maximumValue: 1
-    value: 0
+    value: 1
   trainBufferTime:
     name: train buffer time
     description: 

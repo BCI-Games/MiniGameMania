@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class SettingsProxy: Object, IEnumerable
 {
-    public abstract void ApplySettings();
+    public abstract bool ApplySettings();
 
     public abstract IEnumerator<SettingBase> GetEnumerator();
     IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();

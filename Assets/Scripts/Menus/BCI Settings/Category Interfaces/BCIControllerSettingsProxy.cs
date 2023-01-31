@@ -7,8 +7,15 @@ using UnityEngine.Events;
 public class BCIControllerSettingsProxy<SettingsType, ControllerType> : GenericSettingsProxy<SettingsType, ControllerType>
     where SettingsType : BCIControllerSettings<ControllerType> where ControllerType : BCIControllerBehavior
 {
-    public override void ApplySettings()
+    public override bool ApplySettings()
     {
-        Settings.ApplyToController(Target);
+        if (Target)
+        {
+            Settings.ApplyToController(Target);
+            return true;
+        }
+
+        Debug.LogWarning("Attempted to apply BCI Settings To null target");
+        return false;
     }
 }

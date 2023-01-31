@@ -5,8 +5,9 @@ using BCIEssentials.Networking;
 public class LSLSettingsProxy : GenericSettingsProxy<LSLSettings, LSLMarkerStream>
 {
     // TODO: figure out what to put here
-    public override void ApplySettings()
+    public override bool ApplySettings()
     {
         Debug.LogWarning("Unimplemented");
+        return true;
     }
 }
