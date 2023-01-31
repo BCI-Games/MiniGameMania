@@ -19,14 +19,17 @@ public class SettingsTabManager: MonoBehaviour
     [Header("references")]
     public TextMeshProUGUI descriptionText;
     public TextMeshProUGUI resetCategoryHeader;
+    public Transform tabParent;
 
     [Header("ui prefabs")]
     public GameObject inputFieldPrefab;
     public GameObject toggleFieldPrefab;
+    public GameObject tabPrefab;
 
     SettingsProxy activeCategory;
 
     List<SettingField> activeFields;
+    List<SettingsTab> tabs;
     bool hasBeenActive;
 
 
@@ -36,22 +39,42 @@ public class SettingsTabManager: MonoBehaviour
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode loadMode)
     {
-        print(scene.name + ", " + scene.buildIndex + ", " + scene);
         if (scene.name == "Initialize")
-        {
             ApplySettings();
-        }
     }
 
     void Start()
     {
-        activeFields = new();
-        SelectTab(0);
         SettingsManager.SettingsFileChanged += OnSettingsFileChanged;
         hasBeenActive = true;
+
+        activeFields = new();
+        tabs = new();
+
+        GenerateTabs();
+        SelectTab(0);
     }
 
-    private void OnDisable()
+    void GenerateTabs()
+    {
+        foreach (Transform child in tabParent)
+            Destroy(child.gameObject);
+
+        for (int i = 0; i < categories.Length; i++)
+            CreateTab(categories[i].Name, i);
+    }
+
+    void CreateTab(string title, int tabIndex)
+    {
+        GameObject tabInstance = Instantiate(tabPrefab);
+        tabInstance.transform.SetParent(tabParent, false);
+
+        SettingsTab newTab = tabInstance.GetComponent<SettingsTab>();
+        newTab.Init(title, () => SelectTab(tabIndex));
+        tabs.Add(newTab);
+    }
+
+    void OnDisable()
     {
         if (hasBeenActive)
         {
@@ -74,7 +97,9 @@ public class SettingsTabManager: MonoBehaviour
 
     public void SelectTab(int tabIndex)
     {
-        activeCategory?.ApplySettings();
+        foreach (SettingsTab tab in tabs)
+            tab.Deselect();
+        tabs[tabIndex].Select();
 
         DestroyAllChildren();
 
