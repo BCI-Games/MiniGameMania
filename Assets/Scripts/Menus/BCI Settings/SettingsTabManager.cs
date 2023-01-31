@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using TMPro;
 
 public class SettingsTabManager: MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class SettingsTabManager: MonoBehaviour
         new LSLSettingsProxy()
     };
     public int startingTabIndex = 0;
+
+    [Header("references")]
+    TextMeshProUGUI descriptionText;
 
     [Header("ui prefabs")]
     public GameObject inputFieldPrefab;
@@ -57,40 +61,25 @@ public class SettingsTabManager: MonoBehaviour
         foreach (SettingBase setting in activeTab)
         {
             if (setting is ToggleSetting)
-                CreateToggleField(setting as ToggleSetting);
+                CreateSettingField(toggleFieldPrefab, setting);
             else
-                CreateInputField(setting);
+                CreateSettingField(inputFieldPrefab, setting);
         }
     }
 
-    void CreateInputField(SettingBase setting)
+    void CreateSettingField(GameObject prefab, SettingBase setting)
     {
-        UnityAction<string> SetValue = (string valueString) =>
-        {
-            setting.SetValueFromString(valueString);
-        };
-
-        // TODO: clean up and move mroe advanced functions to script on prefab
-        GameObject inputFieldInstance = Instantiate(inputFieldPrefab);
-        inputFieldInstance.name = setting.name;
-
-        inputFieldInstance.GetComponent<InputField>().onSubmit.AddListener(SetValue);
+        GameObject inputFieldInstance = Instantiate(prefab);
+        inputFieldInstance.GetComponent<SettingField>().Init(setting, SetDescription);
     }
-    void CreateToggleField(ToggleSetting setting)
-    {
-        UnityAction<bool> SetValue = (bool value) =>
-        {
-            setting.value = value;
-        };
 
-        // TODO: clean up and move mroe advanced functions to script on prefab
-        GameObject toggleFieldInstance = Instantiate(toggleFieldPrefab);
-        toggleFieldInstance.name = setting.name;
-
-        toggleFieldInstance.GetComponent<Toggle>().onValueChanged.AddListener(SetValue);
-    }
     protected void SaveSettings()
     {
         SettingsManager.instance.SaveSettingsToFile();
+    }
+
+    void SetDescription(string description)
+    {
+        descriptionText.text = description;
     }
 }
