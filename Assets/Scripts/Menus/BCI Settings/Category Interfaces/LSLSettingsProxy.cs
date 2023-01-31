@@ -7,6 +7,6 @@ public class LSLSettingsProxy : GenericSettingsProxy<LSLSettings, LSLMarkerStrea
     // TODO: figure out what to put here
     public override void ApplySettings()
     {
-        throw new System.NotImplementedException();
+        Debug.LogWarning("Unimplemented");
     }
 }

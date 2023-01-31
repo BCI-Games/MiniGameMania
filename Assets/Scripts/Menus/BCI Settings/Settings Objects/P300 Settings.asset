@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c83edbcd74c8ca34db52ce71876b7d3e, type: 3}
+  m_Name: P300 Settings
+  m_EditorClassIdentifier: 
+  numTrainingSelections:
+    name: training selection count
+    description: 
+    defaultValue: 9
+    minimumValue: 6
+    maximumValue: 12
+    value: 0
+  numTrainWindows:
+    name: training window count
+    description: 
+    defaultValue: 3
+    minimumValue: 2
+    maximumValue: 5
+    value: 0
+  trainTargetPersistant:
+    name: train target persistant
+    description: 
+    defaultValue: 0
+    minimumValue: 0
+    maximumValue: 1
+    value: 0
+  pauseBeforeTraining:
+    name: pause before training
+    description: 
+    defaultValue: 2
+    minimumValue: 1
+    maximumValue: 5
+    value: 0
+  trainTargetPresentationTime:
+    name: training target presentation time
+    description: 
+    defaultValue: 3
+    minimumValue: 2
+    maximumValue: 5
+    value: 0
+  trainBreak:
+    name: training break
+    description: 
+    defaultValue: 1
+    minimumValue: 0
+    maximumValue: 3
+    value: 0
+  trainTarget:
+    name: training target
+    description: 
+    defaultValue: 99
+    minimumValue: 8
+    maximumValue: 99
+    value: 0
+  numFlashesLowerLimit:
+    name: flash count lower limit
+    description: 
+    defaultValue: 9
+    minimumValue: 6
+    maximumValue: 12
+    value: 0
+  numFlashesUpperLimit:
+    name: flash count upper limit
+    description: 
+    defaultValue: 12
+    minimumValue: 9
+    maximumValue: 15
+    value: 0
+  flashOnTime:
+    name: flash on time
+    description: 
+    defaultValue: 0.2
+    minimumValue: 0.1
+    maximumValue: 0.5
+    value: 0
+  flashOffTime:
+    name: flash off time
+    description: 
+    defaultValue: 0.3
+    minimumValue: 0.1
+    maximumValue: 0.5
+    value: 0
+  singleFlash:
+    name: single flash
+    description: 
+    defaultValue: 1
+    minimumValue: 0
+    maximumValue: 1
+    value: 0
+  multiFlash:
+    name: multi-flash
+    description: 
+    defaultValue: 0
+    minimumValue: 0
+    maximumValue: 1
+    value: 0
+  rowColumn:
+    name: row-column
+    description: 
+    defaultValue: 0
+    minimumValue: 0
+    maximumValue: 1
+    value: 0
+  checkerboard:
+    name: checkerboard
+    description: 
+    defaultValue: 1
+    minimumValue: 0
+    maximumValue: 1
+    value: 0
+  trainBufferTime:
+    name: train buffer time
+    description: 
+    defaultValue: 0
+    minimumValue: 0
+    maximumValue: 1
+    value: 0

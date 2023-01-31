@@ -7,7 +7,7 @@ using TMPro;
 
 public class SettingInputField : SettingField
 {
-    public InputField inputField;
+    public TMP_InputField inputField;
     public TextMeshProUGUI rangeLabel;
 
     public override void InitializeField(SettingBase setting)

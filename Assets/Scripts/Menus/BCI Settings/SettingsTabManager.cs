@@ -8,17 +8,17 @@ using TMPro;
 public class SettingsTabManager: MonoBehaviour
 {
     [Header("tabs")]
-    public SettingsProxy[] tabs = new SettingsProxy[]
+    SettingsProxy[] tabs = new SettingsProxy[]
     {
         new BCIControllerSettingsProxy<P300Settings, P300ControllerBehavior>(),
-        new BCIControllerSettingsProxy<SSVEPSettings, SSVEPControllerBehavior>(),
         new BCIControllerSettingsProxy<MotorImagerySettings, MIControllerBehavior>(),
+        new BCIControllerSettingsProxy<SSVEPSettings, SSVEPControllerBehavior>(),
         new LSLSettingsProxy()
     };
     public int startingTabIndex = 0;
 
     [Header("references")]
-    TextMeshProUGUI descriptionText;
+    public TextMeshProUGUI descriptionText;
 
     [Header("ui prefabs")]
     public GameObject inputFieldPrefab;
@@ -70,6 +70,7 @@ public class SettingsTabManager: MonoBehaviour
     void CreateSettingField(GameObject prefab, SettingBase setting)
     {
         GameObject inputFieldInstance = Instantiate(prefab);
+        inputFieldInstance.transform.SetParent(transform, false);
         inputFieldInstance.GetComponent<SettingField>().Init(setting, SetDescription);
     }
 
@@ -81,5 +82,15 @@ public class SettingsTabManager: MonoBehaviour
     void SetDescription(string description)
     {
         descriptionText.text = description;
+    }
+
+    public void OpenSettingsFile()
+    {
+        SettingsManager.instance.OpenSettingsFileInExplorer();
+    }
+
+    public void ResetActiveTabToDefault()
+    {
+        // TODO: add default functionality for each category proxy
     }
 }
