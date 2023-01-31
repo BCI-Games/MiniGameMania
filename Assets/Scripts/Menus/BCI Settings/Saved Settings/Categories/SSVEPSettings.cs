@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable, CreateAssetMenu(fileName = "SSVEP Settings", menuName = "BCI Settings/SSVEP Settings")]
 public class SSVEPSettings : BCIControllerSettings<SSVEPControllerBehavior>
 {
-    new public const string Name = "SSVEP Settings";
+    public override string Name => "SSVEP Settings";
 
     // TODO: add members (may not be any unique members)
 

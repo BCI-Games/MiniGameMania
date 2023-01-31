@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public abstract class SettingsBlock : ScriptableObject, IEnumerable
 {
-    public const string Name = "Settings";
+    public virtual string Name => "Settings";
 
     public abstract IEnumerator<SettingBase> GetEnumerator();
 

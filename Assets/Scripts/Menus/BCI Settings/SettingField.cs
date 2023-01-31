@@ -11,7 +11,7 @@ public class SettingField : MonoBehaviour, IPointerEnterHandler
     public TextMeshProUGUI label;
 
     UnityAction<string> OnHighlight;
-    SettingBase targetSetting;
+    protected SettingBase targetSetting;
 
     public virtual void Init(SettingBase setting, UnityAction<string> SetDescription)
     {
@@ -21,6 +21,7 @@ public class SettingField : MonoBehaviour, IPointerEnterHandler
         name = setting.name;
         label.text = setting.name;
 
+        UpdateFromSetting();
         InitializeField(setting);
     }
 
@@ -30,4 +31,15 @@ public class SettingField : MonoBehaviour, IPointerEnterHandler
     {
         OnHighlight(targetSetting.description);
     }
+
+    public void ResetToDefault(bool saveToFile = true)
+    {
+        targetSetting.SetDefault();
+        UpdateFromSetting();
+
+        if (saveToFile)
+            SettingsManager.Save();
+    }
+
+    public virtual void UpdateFromSetting() {}
 }

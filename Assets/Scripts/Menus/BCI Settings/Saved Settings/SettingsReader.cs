@@ -83,7 +83,7 @@ public class SettingsReader
             return;
         }
 
-        match = Regex.Match(line, @"---([\w ]+)---");
+        match = Regex.Match(line, @"---([\w ][\w-' ]*)---"); // old regex: ---([\w ]+)---
         if (match.Success)
         {
             settingName = match.Groups[1].Value;

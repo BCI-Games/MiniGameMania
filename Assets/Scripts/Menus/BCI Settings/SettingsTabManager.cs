@@ -19,6 +19,7 @@ public class SettingsTabManager: MonoBehaviour
 
     [Header("references")]
     public TextMeshProUGUI descriptionText;
+    public TextMeshProUGUI resetCategoryHeader;
 
     [Header("ui prefabs")]
     public GameObject inputFieldPrefab;
@@ -26,28 +27,25 @@ public class SettingsTabManager: MonoBehaviour
 
     SettingsProxy activeTab;
 
+    List<SettingField> activeFields;
+
     void Start()
     {
-        DestroyAllChildren();
-
-        activeTab = tabs[startingTabIndex];
-        GenerateActiveTabContent();
-    }
-
-    private void OnDisable()
-    {
-        // save settings to file when closing menu
-        SettingsManager.instance.SaveSettingsToFile();
+        activeFields = new();
+        SelectTab(startingTabIndex);
+        SettingsManager.SettingsFileChanged += OnSettingsFileChanged;
     }
 
     public void SelectTab(int tabIndex)
     {
-        activeTab.ApplySettings();
+        activeTab?.ApplySettings();
 
         DestroyAllChildren();
 
         activeTab = tabs[tabIndex];
         GenerateActiveTabContent();
+
+        resetCategoryHeader.text = $"Reset {activeTab.Name}?";
     }
 
     public void DestroyAllChildren()
@@ -58,6 +56,7 @@ public class SettingsTabManager: MonoBehaviour
 
     public void GenerateActiveTabContent()
     {
+        activeFields.Clear();
         foreach (SettingBase setting in activeTab)
         {
             if (setting is ToggleSetting)
@@ -71,12 +70,10 @@ public class SettingsTabManager: MonoBehaviour
     {
         GameObject inputFieldInstance = Instantiate(prefab);
         inputFieldInstance.transform.SetParent(transform, false);
-        inputFieldInstance.GetComponent<SettingField>().Init(setting, SetDescription);
-    }
 
-    protected void SaveSettings()
-    {
-        SettingsManager.instance.SaveSettingsToFile();
+        SettingField newField = inputFieldInstance.GetComponent<SettingField>();
+        newField.Init(setting, SetDescription);
+        activeFields.Add(newField);
     }
 
     void SetDescription(string description)
@@ -91,6 +88,15 @@ public class SettingsTabManager: MonoBehaviour
 
     public void ResetActiveTabToDefault()
     {
-        // TODO: add default functionality for each category proxy
+        foreach (SettingField s in activeFields)
+            s.ResetToDefault(false);
+
+        SettingsManager.Save();
+    }
+
+    void OnSettingsFileChanged(object sender, System.EventArgs args)
+    {
+        foreach (SettingField s in activeFields)
+            s.UpdateFromSetting();
     }
 }

@@ -8,11 +8,15 @@ public abstract class SettingsProxy: Object, IEnumerable
 
     public abstract IEnumerator<SettingBase> GetEnumerator();
     IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
+    public virtual string Name => "Settings";
 }
 
 public abstract class GenericSettingsProxy<SettingsType, SettingsTargetType>: SettingsProxy
     where SettingsType: SettingsBlock where SettingsTargetType : Object
 {
+    public override string Name => Settings.Name;
+
     protected SettingsType Settings
     {
         get

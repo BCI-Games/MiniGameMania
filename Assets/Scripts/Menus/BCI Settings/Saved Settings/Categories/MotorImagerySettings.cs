@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable, CreateAssetMenu(fileName = "Motor Imagery Settings", menuName = "BCI Settings/Motor Imagery Settings")]
 public class MotorImagerySettings : BCIControllerSettings<MIControllerBehavior>
 {
-    new public const string Name = "Motor Imagery Settings";
+    public override string Name => "Motor Imagery Settings";
 
     public IntegerSetting numSelectionsBeforeTraining = new("selections before training", 3, 2, 5);
     public IntegerSetting numSelectionsBetweenTraining = new("selections between training", 3, 2, 5);

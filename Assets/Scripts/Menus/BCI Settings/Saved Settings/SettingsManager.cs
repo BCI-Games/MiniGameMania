@@ -8,7 +8,7 @@ using UnityEngine;
 public class SettingsManager : MonoBehaviour
 {
     public static SettingsManager instance;
-    public static EventHandler SettingsChanged;
+    public static EventHandler SettingsFileChanged;
 
     public SettingsBlock[] categories;
 
@@ -48,11 +48,13 @@ public class SettingsManager : MonoBehaviour
         writer = new SettingsWriter(filepath);
 
         print($"Attempting to read Settings save file from {filepath}");
-        reader.Read(categories);
-        print("Saving freshly read settings to file to fill out any differences");
-        writer.Save(categories);
-
-        ResetPeriodicDiffCheck();
+        if (reader.Read(categories))
+        {
+            print("Saving freshly read settings to file to fill out any differences");
+            SaveSettingsToFile();
+        }
+        else
+            ResetToDefault();
     }
 
     public static SettingsBlock GetCategory(string categoryName)
@@ -87,6 +89,7 @@ public class SettingsManager : MonoBehaviour
         }
     }
 
+    public static void Save() => instance?.SaveSettingsToFile();
     public void SaveSettingsToFile()
     {
         print($"Saving settings to file...");
@@ -118,8 +121,8 @@ public class SettingsManager : MonoBehaviour
             reader.Read(categories);
             ResetPeriodicDiffCheck();
 
-            if (SettingsChanged != null)
-                SettingsChanged(this, new EventArgs());
+            if (SettingsFileChanged != null)
+                SettingsFileChanged(this, new EventArgs());
         }
     }
 

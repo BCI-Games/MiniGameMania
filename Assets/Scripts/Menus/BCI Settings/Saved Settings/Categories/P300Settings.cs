@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable, CreateAssetMenu(fileName = "P300 Settings", menuName = "BCI Settings/P300 Settings")]
 public class P300Settings : BCIControllerSettings<P300ControllerBehavior>
 {
-    new public const string Name = "P300 Settings";
+    public override string Name => "P300 Settings";
 
 
     public IntegerSetting numFlashesLowerLimit = new("flash count lower limit", 9, 6, 12);

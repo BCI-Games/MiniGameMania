@@ -7,7 +7,7 @@ using UnityEngine;
 /// </summary>
 public class BCIControllerSettings<ControllerType> : SettingsBlock where ControllerType: BCIControllerBehavior
 {
-    new public const string Name = "BCI Controller Settings";
+    public override string Name => "BCI Controller Settings";
 
     public IntegerSetting numTrainingSelections = new("training selection count", 9, 6, 12);
     public IntegerSetting numTrainWindows = new("training window count", 3, 2, 5);

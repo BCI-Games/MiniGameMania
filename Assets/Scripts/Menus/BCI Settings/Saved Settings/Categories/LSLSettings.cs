@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable, CreateAssetMenu(fileName = "LSL Settings", menuName = "BCI Settings/LSL Settings")]
 public class LSLSettings : SettingsBlock
 {
-    new public const string Name = "LSL Settings";
+    public override string Name => "Lab Streaming Layer Settings";
 
 
     public StringSetting profileName = new StringSetting("profile name", "profile-name");
