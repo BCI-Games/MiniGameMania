@@ -856,6 +856,9 @@ MonoBehaviour:
   label: {fileID: 8704288062809460372}
   inputField: {fileID: 8704288061901957255}
   rangeLabel: {fileID: 1607057280446668013}
+  errorColour: {r: 0.99, g: 0.1287, b: 0.1287, a: 1}
+  flashLength: 0.3
+  flashCount: 4
 --- !u!1 &8704288063387196261
 GameObject:
   m_ObjectHideFlags: 0

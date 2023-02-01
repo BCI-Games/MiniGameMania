@@ -7,7 +7,7 @@ public abstract class SettingBase
     public string description;
 
     public abstract string GetValueString();
-    public abstract void SetValueFromString(string source);
+    public abstract bool SetValueFromString(string source);
     public abstract SettingRange GetRange();
     public abstract void SetDefault();
 }
@@ -57,13 +57,19 @@ public class IntegerSetting : GenericSetting<int>
         this.maximumValue = maximumValue;
     }
 
-    public override void SetValueFromString(string source)
+    public override bool SetValueFromString(string source)
     {
         int parseResult;
         if (int.TryParse(source, out parseResult))
+        {
             value = parseResult;
+            return true;
+        }
         else
+        {
             Debug.LogError("Error parsing integer setting");
+            return false;
+        }
     }
 
     public static implicit operator int(IntegerSetting setting) => setting.value;
@@ -80,13 +86,19 @@ public class FloatSetting : GenericSetting<float>
         this.maximumValue = maximumValue;
     }
 
-    public override void SetValueFromString(string source)
+    public override bool SetValueFromString(string source)
     {
         float parseResult;
         if (float.TryParse(source, out parseResult))
+        {
             value = parseResult;
+            return true;
+        }
         else
+        {
             Debug.LogError("Error parsing float setting");
+            return false;
+        }
     }
 
     public static implicit operator float(FloatSetting setting) => setting.value;
@@ -103,7 +115,7 @@ public class ToggleSetting : GenericSetting<bool>
         maximumValue = true;
     }
 
-    public override void SetValueFromString(string source)
+    public override bool SetValueFromString(string source)
     {
         if (source.ToLower() == "f")
             value = false;
@@ -120,9 +132,13 @@ public class ToggleSetting : GenericSetting<bool>
                 if (int.TryParse(source, out integerParseResult))
                     value = integerParseResult > 0;
                 else
+                {
                     Debug.LogError("Error parsing toggle setting");
+                    return false;
+                }
             }
         }
+        return true;
     }
 
     public override string GetValueString()
@@ -150,9 +166,10 @@ public class StringSetting: SettingBase
         this.defaultValue = defaultValue;
     }
 
-    public override void SetValueFromString(string source)
+    public override bool SetValueFromString(string source)
     {
         value = source;
+        return true;
     }
     public override string GetValueString() => value;
     public override SettingRange GetRange() => new SettingRange(defaultValue, "N/A");
