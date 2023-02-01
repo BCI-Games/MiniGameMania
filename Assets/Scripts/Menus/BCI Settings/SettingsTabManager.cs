@@ -78,15 +78,15 @@ public class SettingsTabManager: MonoBehaviour, IRequiresInit
 
     public void ApplySettings()
     {
+        if (!BCIController.Instance)
+            return;
+
         bool success = true;
         foreach (SettingsProxy tab in categories)
             success &= tab.ApplySettings();
 
         if (!success)
-        {
             Debug.LogWarning("There was an issue applying BCI Settings");
-            Debug.Log(FindObjectOfType<P300ControllerBehavior>());
-        }
     }
 
     public void SelectTab(int tabIndex)
