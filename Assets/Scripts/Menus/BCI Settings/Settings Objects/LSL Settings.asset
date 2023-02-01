@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   profileName:
     name: profile name
-    description: 
+    description: The name under which the desired training profie is saved
     defaultValue: profile-name
-    value: 
+    value: profile-name

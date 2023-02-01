@@ -14,64 +14,71 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numTrainingSelections:
     name: training selection count
-    description: 
+    description: How many selections must be made during a motor imagery training
+      window
     defaultValue: 9
     minimumValue: 6
     maximumValue: 12
-    value: 0
+    value: 9
   numTrainWindows:
     name: training window count
-    description: 
+    description: How many training windows must be completed to finish motor imagery
+      training
     defaultValue: 3
     minimumValue: 2
     maximumValue: 5
-    value: 0
+    value: 3
   trainTargetPersistant:
     name: train target persistant
-    description: 
+    description: Should the motor imagery training target be persistant (might want
+      to remove this one)
     defaultValue: 0
     minimumValue: 0
     maximumValue: 1
     value: 0
   pauseBeforeTraining:
     name: pause before training
-    description: 
+    description: How long to pause before starting motor imagery training (seconds)
     defaultValue: 2
     minimumValue: 1
     maximumValue: 5
-    value: 0
+    value: 2
   trainTargetPresentationTime:
     name: training target presentation time
-    description: 
+    description: How long to present the desired training target before motor imagery
+      training starts (seconds)
     defaultValue: 3
     minimumValue: 2
     maximumValue: 5
-    value: 0
+    value: 3
   trainBreak:
     name: training break
-    description: 
+    description: Length of the rest period between motor imagery training windows
+      (seconds)
     defaultValue: 1
     minimumValue: 0
     maximumValue: 3
-    value: 0
+    value: 1
   trainTarget:
     name: training target
-    description: 
+    description: The target number of motor imagery training selections for a responsive
+      model
     defaultValue: 99
     minimumValue: 8
     maximumValue: 99
-    value: 0
+    value: 99
   numSelectionsBeforeTraining:
     name: selections before training
-    description: 
+    description: The number of selections made before motor imagery training starts
     defaultValue: 3
     minimumValue: 2
     maximumValue: 5
-    value: 0
+    value: 3
   numSelectionsBetweenTraining:
     name: selections between training
-    description: 
+    description: The number of selections made between each active motor imagery
+      training window
     defaultValue: 3
     minimumValue: 2
     maximumValue: 5
-    value: 0
+    value: 3
