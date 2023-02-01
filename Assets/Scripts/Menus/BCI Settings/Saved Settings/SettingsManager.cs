@@ -47,12 +47,9 @@ public class SettingsManager : MonoBehaviour
         reader = new SettingsReader(filepath);
         writer = new SettingsWriter(filepath);
 
-        print($"Attempting to read Settings save file from {filepath}");
+        //print($"Attempting to read Settings save file from {filepath}");
         if (reader.Read(categories))
-        {
-            print("Saving freshly read settings to file to fill out any differences");
             SaveSettingsToFile();
-        }
         else
             ResetToDefault();
     }
@@ -92,7 +89,7 @@ public class SettingsManager : MonoBehaviour
     public static void Save() => instance?.SaveSettingsToFile();
     public void SaveSettingsToFile()
     {
-        print($"Saving settings to file...");
+        //print($"Saving settings to file...");
         writer.Save(categories);
         ResetPeriodicDiffCheck();
     }
