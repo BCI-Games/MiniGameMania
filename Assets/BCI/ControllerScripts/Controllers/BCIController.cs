@@ -16,6 +16,12 @@ namespace BCIEssentials.Controllers
         public static BCIController Instance { get; private set; }
         public BCIControllerBehavior ActiveBehavior { get; private set; }
 
+        [Header("Keybinds")]
+        public KeyCode startStopStimulusKeyCode = KeyCode.S;
+        public KeyCode startAutomatedTrainingKeyCode = KeyCode.T;
+        public KeyCode startIterativeTrainingKeyCode = KeyCode.I;
+        public KeyCode startUserTrainingKeyCode = KeyCode.U;
+
         private Dictionary<KeyCode, UnityAction> _keyBindings = new();
         private Dictionary<BehaviorType, BCIControllerBehavior> _registeredBehaviors = new();
 
@@ -58,6 +64,15 @@ namespace BCIEssentials.Controllers
                     action?.Invoke();
                 }
             }
+
+            if (Input.GetKeyDown(startStopStimulusKeyCode))
+                Instance.StartStopStimulus();
+            if(Input.GetKeyDown(startAutomatedTrainingKeyCode))
+                Instance.StartAutomatedTraining();
+            if(Input.GetKeyDown(startIterativeTrainingKeyCode))
+                Instance.StartIterativeTraining();
+            if(Input.GetKeyDown(startUserTrainingKeyCode))
+                Instance.StartUserTraining();
         }
 
         public void ChangeBehavior(BehaviorType behaviorType)
@@ -81,13 +96,6 @@ namespace BCIEssentials.Controllers
 
         private void RegisterKeyBindings()
         {
-            _keyBindings.TryAdd(KeyCode.S, Instance.StartStopStimulus);
-
-            //TODO: Refactor out training
-            _keyBindings.TryAdd(KeyCode.T, Instance.StartAutomatedTraining);
-            _keyBindings.TryAdd(KeyCode.I, Instance.StartIterativeTraining);
-            _keyBindings.TryAdd(KeyCode.U, Instance.StartUserTraining);
-
             //Register Object Selection
             _keyBindings.TryAdd(KeyCode.Alpha0, () => { Instance.SelectObject(0); });
             _keyBindings.TryAdd(KeyCode.Alpha1, () => { Instance.SelectObject(1); });

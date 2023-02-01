@@ -26,6 +26,7 @@ public class MenuStateBehavior : MonoBehaviour
         transitionRaycastBlocker.SetActive(false);
 
         GetComponentInChildren<Options>(true).Init();
+        GetComponentInChildren<BCIKeybindsMenu>(true).Init();
     }
 
     void Update()
