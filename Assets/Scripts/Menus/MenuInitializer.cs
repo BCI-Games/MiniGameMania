@@ -6,7 +6,13 @@ public class MenuInitializer : MonoBehaviour
 {
     void Start()
     {
-        GetComponentInChildren<SettingsTabManager>(true).Init();
+        foreach (var submenu in GetComponentsInChildren<IRequiresInit>(true))
+            submenu.Init();
         // TODO: add Option menu init call
     }
+}
+
+public interface IRequiresInit
+{
+    public void Init();
 }

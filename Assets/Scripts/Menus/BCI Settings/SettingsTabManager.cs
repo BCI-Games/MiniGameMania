@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using BCIEssentials.Controllers;
 
-public class SettingsTabManager: MonoBehaviour
+public class SettingsTabManager: MonoBehaviour, IRequiresInit
 {
     SettingsProxy[] categories = new SettingsProxy[]
     {
