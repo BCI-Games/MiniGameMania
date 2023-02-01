@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Options : MonoBehaviour
+public class Options : MonoBehaviour, IRequiresInit
 {
     public Slider volumeSlider;
     public TextMeshProUGUI resolutionDisplay;

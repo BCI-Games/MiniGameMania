@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MenuInitializer : MonoBehaviour
+public class SubmenuInitializer : MonoBehaviour
 {
     void Start()
     {
         foreach (var submenu in GetComponentsInChildren<IRequiresInit>(true))
             submenu.Init();
-        // TODO: add Option menu init call
+        // TODO: add BCI Keybind menu call
     }
 }
 
