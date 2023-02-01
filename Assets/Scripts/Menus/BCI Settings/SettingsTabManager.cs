@@ -1,10 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using TMPro;
+using BCIEssentials.Controllers;
 
 public class SettingsTabManager: MonoBehaviour
 {
@@ -35,11 +33,7 @@ public class SettingsTabManager: MonoBehaviour
 
     public void Init()
     {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-    void OnSceneLoaded(Scene scene, LoadSceneMode loadMode)
-    {
-        if (scene.name == "Initialize")
+        if (BCIController.Instance)
             ApplySettings();
     }
 
