@@ -24,6 +24,8 @@ public class MenuStateBehavior : MonoBehaviour
         currentMenu.SetActive(true);
 
         transitionRaycastBlocker.SetActive(false);
+
+        GetComponentInChildren<Options>(true).Init();
     }
 
     void Update()
