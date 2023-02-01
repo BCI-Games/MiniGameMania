@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BCIKeybindsMenu : MonoBehaviour
+public class BCIKeybindsMenu : MonoBehaviour, IRequiresInit
 {
 
     public GameObject keybindEditPopup;
