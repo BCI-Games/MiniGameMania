@@ -3,6 +3,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UI.Extensions;
+using TMPro;
 
 public class MenuGameTileFactory : MonoBehaviour
 {
@@ -11,6 +12,12 @@ public class MenuGameTileFactory : MonoBehaviour
     public BehaviorType bciBehaviorType;
     public MenuGameTileAttributes[] tileInfo;
 
+    [Header("game info references")]
+    public GameObject gameInfoObject;
+    public TextMeshProUGUI gameInfoTitle;
+    public TextMeshProUGUI gameInfoBody;
+
+    [Header("preview texture attributes")]
     public int previewTextureSizeMultiplier = 2;
     public int previewTextureDepth = 16;
 
@@ -43,6 +50,12 @@ public class MenuGameTileFactory : MonoBehaviour
         }
 
         SaveTileOrder();
+        gameInfoObject.SetActive(false);
+    }
+
+    void OnDisable()
+    {
+        gameInfoObject.SetActive(false);
     }
 
     int[] GetTileOrder()
@@ -68,12 +81,21 @@ public class MenuGameTileFactory : MonoBehaviour
 
     void SetBCIControllerBehavior() => BCIController.Instance.ChangeBehavior(bciBehaviorType);
 
+    void ShowGameInfo(string title, string gameInfo)
+    {
+        gameInfoObject.SetActive(true);
+        gameInfoTitle.text = "How to play " + title;
+        gameInfoBody.text = gameInfo;
+    }
+    public void HideGameInfo() => gameInfoObject.SetActive(false);
+
     void InitializeGameTile(GameObject tileObject, MenuGameTileAttributes tileInfo, int tileIndex)
     {
         tileObject.name = tileInfo.gameTitle;
 
         MenuGameTile tile = tileObject.GetComponent<MenuGameTile>();
-        tile.Init(tileInfo, previewWidth, previewHeight, previewTextureDepth, SetBCIControllerBehavior);
+        tile.Init(tileInfo, previewWidth, previewHeight, previewTextureDepth,
+            SetBCIControllerBehavior, ShowGameInfo);
         tile.tileIndex = tileIndex;
     }
 
