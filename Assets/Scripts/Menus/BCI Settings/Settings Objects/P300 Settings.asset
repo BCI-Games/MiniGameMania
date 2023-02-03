@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c83edbcd74c8ca34db52ce71876b7d3e, type: 3}
+  m_Name: P300 Settings
+  m_EditorClassIdentifier: 
+  numTrainingSelections:
+    name: training selection count
+    description: How many selections must be made during a p300 training window
+    defaultValue: 9
+    minimumValue: 6
+    maximumValue: 12
+    value: 9
+  numTrainWindows:
+    name: training window count
+    description: How many training windows must be completed to finish p300 training
+    defaultValue: 3
+    minimumValue: 2
+    maximumValue: 5
+    value: 3
+  trainTargetPersistant:
+    name: train target persistant
+    description: Should the p300 training target be persistant (might want to remove
+      this one)
+    defaultValue: 0
+    minimumValue: 0
+    maximumValue: 1
+    value: 0
+  pauseBeforeTraining:
+    name: pause before training
+    description: How long to pause before starting p300 training (seconds)
+    defaultValue: 2
+    minimumValue: 1
+    maximumValue: 5
+    value: 2
+  trainTargetPresentationTime:
+    name: training target presentation time
+    description: How long to present the desired training target before p300 training
+      starts (seconds)
+    defaultValue: 3
+    minimumValue: 2
+    maximumValue: 5
+    value: 3
+  trainBreak:
+    name: training break
+    description: Length of the rest period between p300 training windows (seconds)
+    defaultValue: 1
+    minimumValue: 0
+    maximumValue: 3
+    value: 1
+  trainTarget:
+    name: training target
+    description: The target number of p300 training selections for a responsive model
+    defaultValue: 99
+    minimumValue: 8
+    maximumValue: 99
+    value: 99
+  numFlashesLowerLimit:
+    name: flash count lower limit
+    description: The minimum amount of object flashes in a sequence before a selection
+      can be determinded
+    defaultValue: 9
+    minimumValue: 6
+    maximumValue: 12
+    value: 9
+  numFlashesUpperLimit:
+    name: flash count upper limit
+    description: The maximum number of object flashes possible in a sequence before
+      a selection will be determined
+    defaultValue: 12
+    minimumValue: 9
+    maximumValue: 15
+    value: 12
+  flashOnTime:
+    name: flash on time
+    description: How long an object will flash for (seconds)
+    defaultValue: 0.2
+    minimumValue: 0.1
+    maximumValue: 0.5
+    value: 0.2
+  flashOffTime:
+    name: flash off time
+    description: How long all objects will stay inert between flashes (seconds)
+    defaultValue: 0.3
+    minimumValue: 0.1
+    maximumValue: 0.5
+    value: 0.3
+  singleFlash:
+    name: single flash
+    description: Wether objects should be flashed one at a time
+    defaultValue: 1
+    minimumValue: 0
+    maximumValue: 1
+    value: 1
+  multiFlash:
+    name: multi-flash
+    description: Wether multiple objects should be flashed at once
+    defaultValue: 0
+    minimumValue: 0
+    maximumValue: 1
+    value: 0
+  rowColumn:
+    name: row-column
+    description: Wether objects should be flashed in a row-column sequence
+    defaultValue: 0
+    minimumValue: 0
+    maximumValue: 1
+    value: 0
+  checkerboard:
+    name: checkerboard
+    description: Wether objects should be flashed in a checkerboard pattern
+    defaultValue: 1
+    minimumValue: 0
+    maximumValue: 1
+    value: 1
+  trainBufferTime:
+    name: train buffer time
+    description: Amount of time given to the training buffer (might want to remove
+      this)
+    defaultValue: 0
+    minimumValue: 0
+    maximumValue: 1
+    value: 0

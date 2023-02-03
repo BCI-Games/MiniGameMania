@@ -1,16 +1,11 @@
+using BCIEssentials.Controllers;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-using KeyBindTarget = BCIKeyBindTarget.KeyBindTarget;
-
-
-// TODO: actually effect BCIController keybinds
-// TODO: display current keybinds
-// TODO: set up select object 0-9 as individual binds or it's own completely editable set of binds
-public class BCIKeybindsMenu : MonoBehaviour
+public class BCIKeybindsMenu : MonoBehaviour, IRequiresInit
 {
 
     public GameObject keybindEditPopup;
@@ -18,14 +13,17 @@ public class BCIKeybindsMenu : MonoBehaviour
     public string startingDisplayText;
     public Button applyKeybindEditButton;
 
-    KeyBindTarget target;
+    BCIKeyBindTarget target;
     KeyCode selectedCode;
 
     bool isEditing;
 
-    void Start()
+    public void Init()
     {
         keybindEditPopup.SetActive(false);
+
+        foreach (BCIKeyBindTarget keyBindTarget in GetComponentsInChildren<BCIKeyBindTarget>(true))
+            keyBindTarget.Init(this);
     }
 
     private void OnDisable()
@@ -49,7 +47,7 @@ public class BCIKeybindsMenu : MonoBehaviour
 
     public void StartEditingKeybind(BCIKeyBindTarget bindTarget)
     {
-        target = bindTarget.keyBindTarget;
+        target = bindTarget;
         keybindEditPopup.SetActive(true);
         keybindDisplay.text = startingDisplayText;
         applyKeybindEditButton.interactable = false;
@@ -58,9 +56,9 @@ public class BCIKeybindsMenu : MonoBehaviour
 
     public void ApplyKeybindEdit()
     {
-        // TODO: apply keybind to BCI controller
+        target.ApplyKeybindEdit(selectedCode);
+
         EndKeybindEdit();
-        throw new System.NotImplementedException();
     }
     public void EndKeybindEdit()
     {
