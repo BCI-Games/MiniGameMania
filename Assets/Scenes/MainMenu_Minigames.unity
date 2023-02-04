@@ -3726,6 +3726,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SwitchTo
       objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[5].gameTitle
+      value: Gardens of the Galaxy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[5].howToPlay
+      value: Fly through space to care for gardens all across the galaxy.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[5].previewClip
+      value: 
+      objectReference: {fileID: 32900000, guid: 7ccdfcd2aab0adf4b8a1de5284e082de, type: 3}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[5].targetScene
+      value: Home
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[5].previewStill
+      value: 
+      objectReference: {fileID: 2800000, guid: 291bd48d3f22ac2448010057b676a5e1, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
 --- !u!1 &1271508343 stripped
