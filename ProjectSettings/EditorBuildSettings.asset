@@ -65,4 +65,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Submissions/BrainBuddy/BrainBuddy/Scenes/BrainBuddyMain.unity
     guid: d4d4853e312ef73468708a7f22149aa4
+  - enabled: 1
+    path: Assets/Submissions/GardensOfTheGalaxy/Scenes/Main/Home.unity
+    guid: 94686e89dfb0de14a8ac2ae75f33e0bc
+  - enabled: 1
+    path: Assets/Submissions/GardensOfTheGalaxy/Scenes/Main/LevelSelection.unity
+    guid: 70399a3007e4141678426a9cf708bfc9
+  - enabled: 1
+    path: Assets/Submissions/GardensOfTheGalaxy/Scenes/Worlds/FishingWorld.unity
+    guid: e11d583a0cef0904d92e5b6e3d3de4bc
+  - enabled: 1
+    path: Assets/Submissions/GardensOfTheGalaxy/Scenes/Worlds/MazeWorld.unity
+    guid: 43f9c83a9a6c14b3bb21e7e0cce07987
+  - enabled: 1
+    path: Assets/Submissions/GardensOfTheGalaxy/Scenes/Worlds/RockPaperScissorsWorld.unity
+    guid: 27afa1eedd1e2431b82911d49ee42af4
   m_configObjects: {}
