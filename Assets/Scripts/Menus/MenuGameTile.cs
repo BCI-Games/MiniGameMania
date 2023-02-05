@@ -23,10 +23,13 @@ public class MenuGameTile : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     RenderTexture previewVideoTexture;
 
     System.Action onLoadGame;
+    System.Action<string, string> onClickInfo;
+    string gameTitle;
+    string gameInfo;
 
     public void Init(MenuGameTileAttributes attributes,
         int renderTextureWidth, int renderTextureHeight,int renderTextureDepth,
-        System.Action loadAction)
+        System.Action loadAction, System.Action<string, string> infoClickAction)
     {
         titleText.text = attributes.gameTitle;
 
@@ -45,6 +48,10 @@ public class MenuGameTile : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         previewVideoPlayer.targetTexture = previewVideoTexture;
         previewVideoPlayer.clip = attributes.previewClip;
 
+        onClickInfo = infoClickAction;
+        gameTitle = attributes.gameTitle;
+        gameInfo = attributes.howToPlay;
+
         hoverIcon.SetActive(false);
     }
 
@@ -52,6 +59,11 @@ public class MenuGameTile : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     {
         onLoadGame();
         SceneManager.LoadScene(targetScene);
+    }
+
+    public void SendGameInfo()
+    {
+        onClickInfo(gameTitle, gameInfo);
     }
 
     private void OnDisable()
@@ -107,6 +119,8 @@ public struct MenuGameTileAttributes
 {
     public string gameTitle;
     public string targetScene;
+    [TextArea]
+    public string howToPlay;
 
     public Texture previewStill;
     public VideoClip previewClip;
