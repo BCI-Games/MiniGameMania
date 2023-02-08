@@ -27,7 +27,7 @@ public class PlayerInputManager : MonoBehaviour
     UnitSelector unitSelector;
     UnitPlacer unitPlacer;
 
-    P300Controller bciController;
+    P300ControllerBehavior bciController;
     BattleManager battleManager;
 
     float selectionDelay;
@@ -60,7 +60,7 @@ public class PlayerInputManager : MonoBehaviour
         playerColour = possibleColors[Random.Range(0, possibleColors.Length)];
 
         //This doesn't work on scene load!!!! Find object of type is broken on scene load. Maybe I will switch how the game manager/controller works....
-        bciController = FindObjectOfType<P300Controller>();
+        bciController = FindObjectOfType<P300ControllerBehavior>();
         battleManager = FindObjectOfType<BattleManager>();
 
         unitSelector = GetComponentInChildren<UnitSelector>();
