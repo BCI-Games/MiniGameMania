@@ -158,6 +158,7 @@ namespace BCIEssentials.Controllers
         public void OpenLSLMarkerStream()
         {
             //Todo
+            Debug.Log("Doing nothing right now");
         }
 
         public void CloseLSLMarkerStream()
@@ -176,7 +177,8 @@ namespace BCIEssentials.Controllers
 
         public void OpenLSLResponseStream()
         {
-
+            //Todo
+            Debug.Log("Doing nothing right now");
         }
 
         public void CloseLSLResponseStream()

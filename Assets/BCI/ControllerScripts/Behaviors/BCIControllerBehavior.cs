@@ -96,10 +96,14 @@ public class BCIControllerBehavior : MonoBehaviour
         Debug.Log("Response stream info: " + response.isActiveAndEnabled);
     }
 
+    /// <summary>
+    /// Clean up the available coroutines, and reset the response stream info to not receiving markers.
+    /// </summary>
     public void CleanUp()
     {
         setup.DestroyMatrix();
         StopAllCoroutines();
+        receivingMarkers = false;
     }
 
     // Populate a list of SPOs
