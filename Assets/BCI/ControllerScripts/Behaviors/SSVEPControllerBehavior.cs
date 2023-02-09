@@ -164,6 +164,9 @@ public class SSVEPControllerBehavior : BCIControllerBehavior
 
                     // If there are square brackets then remove them
                     responseString.Replace("[", "").Replace("]", "").Replace(".", "");
+                    responseString = responseString.Replace("[", "");
+                    responseString = responseString.Replace("]", "");
+                    responseString = responseString.Replace(".", "");
 
                     // If it is a single value then select that value
                     int n;
