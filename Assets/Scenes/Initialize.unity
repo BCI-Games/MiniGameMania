@@ -191,7 +191,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4036866691340009392, guid: afdd1b1e21854eb48b297e4da9267655, type: 3}
       propertyPath: setupRequired
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4036866691340009392, guid: afdd1b1e21854eb48b297e4da9267655, type: 3}
       propertyPath: setFreqFlash.Array.size
