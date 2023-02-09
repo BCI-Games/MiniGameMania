@@ -231,7 +231,7 @@ public class GameManagerLocal : MonoBehaviour
         timeRemaining = 0;
         mode = 3;
 
-        mainAudioSource.clip = MainAmbientClip;
+        mainAudioSource.clip = MainAmbientClip;   
         mainAudioSource.Play();
 
 

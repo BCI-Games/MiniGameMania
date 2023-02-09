@@ -11675,7 +11675,7 @@ MonoBehaviour:
   mode: 0
   currentHole: 1
   speedPerFrame: 0.2
-  mainAudioSource: {fileID: 0}
+  mainAudioSource: {fileID: 2010009634}
   TitleScreenClip: {fileID: 0}
   MainAmbientClip: {fileID: 0}
   ButtonClicked:
@@ -12505,6 +12505,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e51bd6546add1524593193b2c9f5ce75, type: 3}
+--- !u!82 &2010009634 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4851229051358831073, guid: e51bd6546add1524593193b2c9f5ce75, type: 3}
+  m_PrefabInstance: {fileID: 2010009633}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2016327084
 GameObject:
   m_ObjectHideFlags: 0
