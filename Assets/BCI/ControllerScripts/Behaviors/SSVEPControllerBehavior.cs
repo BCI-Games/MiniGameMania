@@ -13,6 +13,9 @@ public class SSVEPControllerBehavior : BCIControllerBehavior
     private float period;
     private int[] frame_off_count = new int[99];
     private int[] frame_on_count = new int[99];
+    
+    private bool voteOnWindows = true;
+
 
     public override void PopulateObjectList(SpoPopulationMethod populationMethod = SpoPopulationMethod.Tag)
     {
@@ -107,5 +110,121 @@ public class SSVEPControllerBehavior : BCIControllerBehavior
             // turn the cube off
             objectList[i].GetComponent<SPO>().TurnOff();
         }
+    }
+
+    public override IEnumerator ReceiveMarkers()
+    {
+        if (receivingMarkers == false)
+        {
+            //Get response stream from Python
+            print("Looking for a response stream");
+            int diditwork = response.ResolveResponse();
+            print(diditwork.ToString());
+            receivingMarkers = true;
+        }
+
+        //Set interval at which to receive markers
+        float receiveInterval = 1 / Application.targetFrameRate;
+        float responseTimeout = 0f;
+
+        //Ping count
+        int pingCount = 0;
+        // Receive markers continuously
+        // Receive markers continuously
+        while (receivingMarkers)
+        {
+            // Receive markers
+            // Initialize the default response string
+            string[] defaultResponseStrings = { "" };
+            string[] responseStrings = defaultResponseStrings;
+
+            // Pull the python response and add it to the responseStrings array
+            responseStrings = response.PullResponse(defaultResponseStrings, responseTimeout);
+
+            // Check if there is 
+            bool newResponse = !responseStrings[0].Equals(defaultResponseStrings[0]);
+
+
+            if (responseStrings[0] == "ping")
+            {
+                pingCount++;
+                if (pingCount % 100 == 0)
+                {
+                    Debug.Log("Ping Count: " + pingCount.ToString());
+                }
+            }
+
+            else if (responseStrings[0] != "")
+            {
+                for (int i = 0; i < responseStrings.Length; i++)
+                {
+                    string responseString = responseStrings[i];
+                    //print("WE GOT A RESPONSE");
+                    print("response : " + responseString);
+
+                    // If there are square brackets then remove them
+                    responseString.Replace("[", "").Replace("]", "").Replace(".", "");
+
+                    // If it is a single value then select that value
+                    int n;
+                    bool isNumeric = int.TryParse(responseString, out n);
+                    if (isNumeric && n < objectList.Count)
+                    {
+                        //Run on selection
+                        objectList[n].GetComponent<SPO>().OnSelection();
+                    }
+                    Debug.Log("vote on windows: " + voteOnWindows);
+
+                    if (voteOnWindows == true)
+                    {
+                        // Otherwise split 
+                        string[] responses = responseString.Split(" ");
+                        Debug.Log("!!!!!!!!!!!!!!! responseString: " + responseString);
+                        Debug.Log("!!!!!!!!!!!!!!! responses: " + responses);
+                        int[] objectVotes = new int[objectList.Count];
+
+                        foreach (string response in responses)
+                        {
+                            Debug.Log("!!!!!!!!!!!!!!!!!!!!!!! Current Response: " + response);
+
+                            isNumeric = int.TryParse(response, out n);
+                            Debug.Log("!!!!!!!!!!!!!!!!!!!!!!! Out n: " + n);
+                            if (isNumeric == true)
+                            {
+                                //Run the vote
+                                objectVotes[n] = objectVotes[n] + 1;
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        if (isNumeric == false)
+                        {
+                            continue;
+                        }
+
+                        // make a selection based on the vote
+                        int voteSelection = 0;
+                        for (int v = 1; v < objectList.Count; v++)
+                        {
+                            if (objectVotes[v] > objectVotes[voteSelection])
+                            {
+                                voteSelection = v;
+                            }
+                        }
+
+                        //Run on selection
+                        UnityEngine.Debug.Log("Voting selected object " + voteSelection.ToString());
+                        objectList[voteSelection].GetComponent<SPO>().OnSelection();
+                    }
+                }
+            }
+
+            // Wait for the next receive interval
+            yield return new WaitForSecondsRealtime(receiveInterval);
+        }
+
+        Debug.Log("Done receiving markers");
     }
 }

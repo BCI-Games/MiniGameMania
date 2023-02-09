@@ -84,7 +84,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _behaviorType: 0
   targetFrameRate: 60
-  setupRequired: 1
+  setupRequired: 0
   listExists: 0
   objectList: []
   windowLength: 2
