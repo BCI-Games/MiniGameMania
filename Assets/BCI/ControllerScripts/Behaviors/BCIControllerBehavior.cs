@@ -536,7 +536,7 @@ public class BCIControllerBehavior : MonoBehaviour
     }
 
     // Coroutine to continuously receive markers
-    public IEnumerator ReceiveMarkers()
+    public virtual IEnumerator ReceiveMarkers()
     {
         if (receivingMarkers == false)
         {
@@ -583,8 +583,12 @@ public class BCIControllerBehavior : MonoBehaviour
                 for (int i = 0; i < responseStrings.Length; i++)
                 {
                     string responseString = responseStrings[i];
-                    //print("WE GOT A RESPONSE");
                     print("response : " + responseString);
+
+                    //remove the extra stuff
+                    responseString = responseString.Replace("[", "");
+                    responseString = responseString.Replace("]", "");
+                    responseString = responseString.Replace(".", "");
 
                     int n;
                     bool isNumeric = int.TryParse(responseString, out n);
@@ -595,6 +599,7 @@ public class BCIControllerBehavior : MonoBehaviour
                     }
                 }
             }
+
 
             // Wait for the next receive interval
             yield return new WaitForSecondsRealtime(receiveInterval);
