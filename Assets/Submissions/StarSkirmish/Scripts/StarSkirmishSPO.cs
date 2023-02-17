@@ -56,7 +56,7 @@ namespace Submissions.StarSkirmish
                 //Reload Case
                 case 1:
                     //Just doing a full reload. Can make this flow better later. EKL FIX- Might actually break it if it always thinks it is on...
-                    //myShip.SetReloading(true); //This could be let-up early, but we aren't going to do that right now...for future work...what happens if it always thinks its on.
+                    myShip.SetReloading(true); //This could be let-up early, but we aren't going to do that right now...for future work...what happens if it always thinks its on.
                     Debug.Log("Made it to case 1");
                     break;
 
