@@ -1,7 +1,8 @@
 ﻿using UnityEditor;
-using UnityEditor.SceneManagement;
 using UnityEngine.SceneManagement;
-using BCIEssentials.Controllers;
+
+#if UNITY_EDITOR
+using UnityEditor.SceneManagement;
 
 [InitializeOnLoad]
 public class EnterPlayModeSceneLoader
@@ -22,7 +23,7 @@ public class EnterPlayModeSceneLoader
         {
             //This was broken not letting me move to the next scene due to how we are handling loading.
             SceneManager.LoadScene("Initialize");
-            //SceneManager.LoadScene("MainMenu_Minigames");
         }
     }
 }
+#endif
