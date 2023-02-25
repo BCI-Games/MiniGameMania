@@ -2,12 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Reflection;
 using BCIEssentials.Controllers;
 using UnityEngine.SceneManagement;
-using static UnityEditor.FilePathAttribute;
 
 namespace Submissions.StarDefense
 {
