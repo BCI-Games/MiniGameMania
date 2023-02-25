@@ -1,8 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using System;
 
 public class SignalSPOFactory : MonoBehaviour
 {
@@ -13,7 +11,7 @@ public class SignalSPOFactory : MonoBehaviour
     public UnityEvent<SPO> OnTrainTarget;
     public UnityEvent<SPO> OnStimulus;
 
-    List<SignalSPO> childSPOs;
+    protected List<SignalSPO> childSPOs;
 
     void Start()
     {
