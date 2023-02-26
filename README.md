@@ -13,3 +13,6 @@ To run on Apple silicon (ex: M1), the Lab Streaming Layer plugin library needs t
 
 2. Unzip the archive and copy the lib/*.dylib files into ./Assets/Plugins/lib
 
+### Other Submissions
+The other game submissions that were unable to be included in the Minigame Mania Collection can be downloaded here:
+https://drive.google.com/drive/folders/1IQIvwG_ZHBXXWVIEBunIhYxC_QxSXByb?usp=sharing
