@@ -1,6 +1,9 @@
 # BCI Game Jam 2022 - MiniGame Mania Collection.
 This is a collection of the compatible minigames from the BCI Game Jam 2022. A so-called "minigame megagame"!
 
+## Vote for your favorite game here!
+https://form.jotform.com/230565534460050
+
 ### This work uses BCIEssentials
 A Unity base environment for streamlined development of BCI applications.
 
