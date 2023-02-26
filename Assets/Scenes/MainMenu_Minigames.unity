@@ -560,6 +560,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 632234543}
     m_Modifications:
+    - target: {fileID: 5707145763734614411, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145763734614411, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145763767135008, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145763767135008, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145763767135008, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145763767135008, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145763767135008, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145763767135008, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -105
+      objectReference: {fileID: 0}
     - target: {fileID: 5707145764089099904, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -648,6 +680,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SSVEP Games
       objectReference: {fileID: 0}
+    - target: {fileID: 5707145764089099919, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5707145764131932775, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: targetMenu
       value: 
@@ -664,6 +700,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SwitchTo
       objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529426, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -199.99997
+      objectReference: {fileID: 0}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: prototype
       value: 
@@ -678,7 +718,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[0].gameTitle
@@ -691,12 +731,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[1].gameTitle
-      value: The Prophecy
+      value: Star Defense
       objectReference: {fileID: 0}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[1].howToPlay
-      value: Adventure through a distant land by selecting which direction to travel
-        in.
+      value: Choose your item to counter your opponent and destroy their castle before
+        yours falls.
       objectReference: {fileID: 0}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[2].gameTitle
@@ -709,10 +749,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[3].gameTitle
-      value: BCI Burgers
+      value: The Prophecy
       objectReference: {fileID: 0}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[3].howToPlay
+      value: Adventure through a distant land by selecting which direction to travel
+        in.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[4].gameTitle
+      value: BCI Burgers
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[4].howToPlay
       value: Select the right produce to create a delicous burger.
       objectReference: {fileID: 0}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
@@ -726,10 +775,10 @@ PrefabInstance:
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[1].previewClip
       value: 
-      objectReference: {fileID: 32900000, guid: 690ddc53015af2d47ac226e37efff29b, type: 3}
+      objectReference: {fileID: 32900000, guid: 89a37a786ddf5cc43b8d104aed256a2a, type: 3}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[1].targetScene
-      value: TheProphecy
+      value: StarDefMenuScene
       objectReference: {fileID: 0}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[2].previewClip
@@ -742,9 +791,17 @@ PrefabInstance:
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[3].previewClip
       value: 
-      objectReference: {fileID: 32900000, guid: 014586db0f5e26f4d8657084d1ace5df, type: 3}
+      objectReference: {fileID: 32900000, guid: 690ddc53015af2d47ac226e37efff29b, type: 3}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[3].targetScene
+      value: TheProphecy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[4].previewClip
+      value: 
+      objectReference: {fileID: 32900000, guid: 014586db0f5e26f4d8657084d1ace5df, type: 3}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[4].targetScene
       value: BCIBurgers
       objectReference: {fileID: 0}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
@@ -754,7 +811,7 @@ PrefabInstance:
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[1].previewStill
       value: 
-      objectReference: {fileID: 2800000, guid: 7fd540215258cc04f9acfa9eb0171cba, type: 3}
+      objectReference: {fileID: 2800000, guid: 4bdbb4226658ae34e84d45d8e4bad1ad, type: 3}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[2].previewStill
       value: 
@@ -762,7 +819,19 @@ PrefabInstance:
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[3].previewStill
       value: 
+      objectReference: {fileID: 2800000, guid: 7fd540215258cc04f9acfa9eb0171cba, type: 3}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[4].previewStill
+      value: 
       objectReference: {fileID: 2800000, guid: d6d676c91d95ba5419c87ac296212d9d, type: 3}
+    - target: {fileID: 5707145764568917183, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764568917183, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
 --- !u!1 &143852310 stripped
@@ -3675,6 +3744,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 632234543}
     m_Modifications:
+    - target: {fileID: 5707145763734614411, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145763734614411, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145763767135008, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145763767135008, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145763767135008, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145763767135008, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145763767135008, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145763767135008, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -105
+      objectReference: {fileID: 0}
     - target: {fileID: 5707145764089099904, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3763,6 +3864,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P300 Games
       objectReference: {fileID: 0}
+    - target: {fileID: 5707145764089099919, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5707145764131932775, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: targetMenu
       value: 
@@ -3775,9 +3880,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SwitchTo
       objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529426, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -199.99997
+      objectReference: {fileID: 0}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.size
-      value: 6
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[3].gameTitle
+      value: Brain Buddy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[3].howToPlay
+      value: Guide your partner through the course by selecting objects to open and
+        close gates.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[4].gameTitle
+      value: Gardens of the Galaxy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[4].howToPlay
+      value: Fly through space to care for gardens all across the galaxy.
       objectReference: {fileID: 0}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[5].gameTitle
@@ -3788,6 +3914,22 @@ PrefabInstance:
       value: Fly through space to care for gardens all across the galaxy.
       objectReference: {fileID: 0}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[3].previewClip
+      value: 
+      objectReference: {fileID: 32900000, guid: 4ddd171f932c17d43b4f8eb5b7ba054f, type: 3}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[3].targetScene
+      value: BrainBuddyMain
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[4].previewClip
+      value: 
+      objectReference: {fileID: 32900000, guid: 7ccdfcd2aab0adf4b8a1de5284e082de, type: 3}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[4].targetScene
+      value: Home
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[5].previewClip
       value: 
       objectReference: {fileID: 32900000, guid: 7ccdfcd2aab0adf4b8a1de5284e082de, type: 3}
@@ -3796,9 +3938,25 @@ PrefabInstance:
       value: Home
       objectReference: {fileID: 0}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[3].previewStill
+      value: 
+      objectReference: {fileID: 2800000, guid: 04635ffcc9013f341bdb92a0ddbd5030, type: 3}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[4].previewStill
+      value: 
+      objectReference: {fileID: 2800000, guid: 291bd48d3f22ac2448010057b676a5e1, type: 3}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[5].previewStill
       value: 
       objectReference: {fileID: 2800000, guid: 291bd48d3f22ac2448010057b676a5e1, type: 3}
+    - target: {fileID: 5707145764568917183, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764568917183, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
 --- !u!1 &1271508343 stripped
@@ -4939,7 +5097,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -30, y: -30}
-  m_SizeDelta: {x: -100.954956, y: -89.99997}
+  m_SizeDelta: {x: -100.99994, y: -89.99997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1723957968
 MonoBehaviour:
