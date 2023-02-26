@@ -250,7 +250,8 @@ namespace BCIEssentials.Controllers
 
         public void StartIterativeTraining()
         {
-            if (Instance.ActiveBehavior == null || Instance.ActiveBehavior.BehaviorType == BehaviorType.MI)
+            //EKL Edit - I think this is causing an issue with iterative training with MI
+            if (Instance.ActiveBehavior == null || Instance.ActiveBehavior.BehaviorType != BehaviorType.MI)
             {
                 return;
             }
