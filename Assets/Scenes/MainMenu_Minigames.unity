@@ -727,7 +727,7 @@ PrefabInstance:
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[0].howToPlay
       value: Fry up some goodness by preparing ingredients together at the right
-        stations.
+        stations. Play on your own or with a friend!
       objectReference: {fileID: 0}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[1].gameTitle
@@ -744,8 +744,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[2].howToPlay
-      value: Strategize through the stars by choosing the most advantagous option
-        for the current situation.
+      value: Become the next great Starship Captain in this ship battle! Choose whether
+        to reload your starships weapons or protect yourself with a shield, before
+        selecting where on the enemy ship you want to fire.
       objectReference: {fileID: 0}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[3].gameTitle
@@ -753,8 +754,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[3].howToPlay
-      value: Adventure through a distant land by selecting which direction to travel
-        in.
+      value: Welcome new wizard! Stroll through a distant land and village by selecting
+        which direction to travel in.
       objectReference: {fileID: 0}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[4].gameTitle
@@ -1242,16 +1243,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.size
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[0].gameTitle
-      value: BCII4Kids + Hardeep
+      value: Food Punch
       objectReference: {fileID: 0}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[0].howToPlay
-      value: Put together a delicous burger by collecting all three of the special
-        ingredients.
+      value: Put your boxing and table services to the test! Punch together fantastic
+        meals that cater to the tastes and demands of the audience. Play against
+        your friend.
       objectReference: {fileID: 0}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[1].gameTitle
@@ -1259,8 +1261,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[1].howToPlay
-      value: Put together a delicous burger by collecting all three of the special
-        ingredients.
+      value: Select the right produce to create a delicous burger.
       objectReference: {fileID: 0}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[2].gameTitle
@@ -1282,10 +1283,10 @@ PrefabInstance:
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[0].previewClip
       value: 
-      objectReference: {fileID: 32900000, guid: d26f4bd1ef951fe47b3dc392bec71adf, type: 3}
+      objectReference: {fileID: 32900000, guid: 553902aba641aad48a86357138d03d32, type: 3}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[0].targetScene
-      value: Bci4kids_main
+      value: FoodPUNCH
       objectReference: {fileID: 0}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[1].previewClip
@@ -1314,7 +1315,7 @@ PrefabInstance:
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[0].previewStill
       value: 
-      objectReference: {fileID: 2800000, guid: ba09a59cdf848f349ba0df58146c634a, type: 3}
+      objectReference: {fileID: 2800000, guid: 88e1431e581fc8d44841376ffe5e38c3, type: 3}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[1].previewStill
       value: 
@@ -2176,6 +2177,7 @@ RectTransform:
   - {fileID: 1271508344}
   - {fileID: 143852311}
   - {fileID: 312675254}
+  - {fileID: 1704424900}
   - {fileID: 1914395362}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -3889,13 +3891,32 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[0].howToPlay
+      value: Navigate the waters by selecting one of the four directions in the bottom
+        left. Each direction will send you all the way until you hit a wall, you
+        must use this to your advatage to rescue your target.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[1].howToPlay
+      value: Find Willy in the crowd! First look for him, then, if you've found him,
+        select the area he is hiding. The game consists of two stages, which will
+        reapeat until the Willy is found.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[2].howToPlay
+      value: Send wacky dudes to the other side to score points. First select the
+        character, then select where they will be placed. Each mutant has a different
+        cost that will be added to the timer before you can place the next.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[3].gameTitle
       value: Brain Buddy
       objectReference: {fileID: 0}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[3].howToPlay
-      value: Guide your partner through the course by selecting objects to open and
-        close gates.
+      value: Guide your partner through the course by focusing on the rotating target
+        to change the environment. Use your brain to open and close gates, while
+        your partner moves and jumps.
       objectReference: {fileID: 0}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[4].gameTitle
@@ -3903,7 +3924,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[4].howToPlay
-      value: Fly through space to care for gardens all across the galaxy.
+      value: Fly through space to a world of mini-games across the galaxy. Currently
+        only Rock-Paper-Scissors is accepting visitors!
       objectReference: {fileID: 0}
     - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
       propertyPath: tileInfo.Array.data[5].gameTitle
@@ -5055,6 +5077,226 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetMenu: {fileID: 1271508343}
   direction: {x: 1, y: -1}
+--- !u!1001 &1704424899
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 632234543}
+    m_Modifications:
+    - target: {fileID: 5707145764089099904, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764089099904, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764089099904, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764089099904, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764089099904, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764089099904, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764089099904, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764089099904, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764089099904, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764089099904, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764089099904, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764089099904, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764089099904, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764089099904, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764089099904, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764089099904, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764089099904, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764089099904, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764089099904, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764089099904, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764089099904, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764089099919, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_Name
+      value: Other Games
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764131932775, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: targetMenu
+      value: 
+      objectReference: {fileID: 2010917082}
+    - target: {fileID: 5707145764131932775, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: direction.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764131932792, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 632234544}
+    - target: {fileID: 5707145764131932792, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SwitchTo
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: categoryName
+      value: Motor Imagery game tile order
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: bciBehaviorType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[0].gameTitle
+      value: BCII4Kids + Hardeep
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[0].howToPlay
+      value: Put together a delicous burger by collecting all three of the special
+        ingredients. Play collaboratively together where one player clicks on the
+        food to drop from the top and the other selects with a BCI.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[1].gameTitle
+      value: Purr for the Course
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[1].howToPlay
+      value: Putt your way through a virtual minigolf course using just one button
+        at a time. Play on your own or with a friend.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[2].gameTitle
+      value: Food Punch
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[2].howToPlay
+      value: Punch together a great show and fantastic meal by catering to the tastes
+        of the audience.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[3].gameTitle
+      value: Food Punch
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[3].howToPlay
+      value: Punch together a great show and fantastic meal by catering to the tastes
+        of the audience.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[0].previewClip
+      value: 
+      objectReference: {fileID: 32900000, guid: d26f4bd1ef951fe47b3dc392bec71adf, type: 3}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[0].targetScene
+      value: Bci4kids_main
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[1].previewClip
+      value: 
+      objectReference: {fileID: 32900000, guid: 0ea91c54ae8397646a360613d3439723, type: 3}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[1].targetScene
+      value: PurrForTheCourse
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[2].previewClip
+      value: 
+      objectReference: {fileID: 32900000, guid: 553902aba641aad48a86357138d03d32, type: 3}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[2].targetScene
+      value: FoodPUNCH
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[3].previewClip
+      value: 
+      objectReference: {fileID: 32900000, guid: 553902aba641aad48a86357138d03d32, type: 3}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[3].targetScene
+      value: FoodPUNCH
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[0].previewStill
+      value: 
+      objectReference: {fileID: 2800000, guid: ba09a59cdf848f349ba0df58146c634a, type: 3}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[1].previewStill
+      value: 
+      objectReference: {fileID: 2800000, guid: d2bbd02cc23dd984195f44b77f5e5cb7, type: 3}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[2].previewStill
+      value: 
+      objectReference: {fileID: 2800000, guid: 88e1431e581fc8d44841376ffe5e38c3, type: 3}
+    - target: {fileID: 5707145764254529428, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+      propertyPath: tileInfo.Array.data[3].previewStill
+      value: 
+      objectReference: {fileID: 2800000, guid: 88e1431e581fc8d44841376ffe5e38c3, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+--- !u!224 &1704424900 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5707145764089099904, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+  m_PrefabInstance: {fileID: 1704424899}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1704424901 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5707145764089099919, guid: b477fea3b5c20a64f989a4df01597736, type: 3}
+  m_PrefabInstance: {fileID: 1704424899}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1723957966
 GameObject:
   m_ObjectHideFlags: 0
@@ -5800,17 +6042,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914395361}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 632234543}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -233.33331, y: -131.25}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1914395363
@@ -6410,7 +6652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4efaa66e2f8d4114789aa790e2738cfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMenu: {fileID: 312675253}
+  targetMenu: {fileID: 1704424901}
   direction: {x: 1, y: 0}
 --- !u!1 &2010917082
 GameObject:
@@ -11944,7 +12186,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 390, y: -19.999998}
+  m_AnchoredPosition: {x: 390, y: -20}
   m_SizeDelta: {x: -470, y: -40}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &5605604222549511626
