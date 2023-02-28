@@ -1,8 +1,22 @@
 # BCI Game Jam 2022 - MiniGame Mania Collection.
-This is a collection of the compatible minigames from the BCI Game Jam 2022. A so-called "minigame megagame"!
+This is a collection of the compatible minigames from the BCI Game Jam 2022. A so-called minigame megagame! The goal is to have all of the jam submissions in a single place.
 
-## Vote for your favorite game here!
-https://form.jotform.com/230565534460050
+## VOTING NOW OPEN: Vote for your favorite game here!
+Voting is now open for developers and general public. This will be done on version Minigame-Mania-v1.0.0, as a "frozen" representation of all the games at the submission time (48 hours of development).
+You can vote here: https://form.jotform.com/230565534460050
+
+## Controls
+Every game in the collection is playable with keyboard and mouse (in addition to BCI). 
+### Visual Stimulus Games P300/SSVEP: To play the P300 or SSVEP games with keyboard and mouse, you will need to input 0-9 on your keyboard while the visual stimulus is happening. Some games initiate visual stimulus automatically, giving you the opportunity to select a game object using 0-9 on the keypad, while others will require you to hit "s" (or your chosen keybind) to start or stop the visual stimulus (StartStopStimulus option in the "Options" menu). 
+
+**P300 games have a set period of time for stimulus flashing, while SSVEP will require you to manually stop the stimulus before selection feedback is given**.
+
+In summary: Selection will only occur if (1) Visual stimulus (e.g. flashing) is happening, (2) you press an input, (3) the visual stimulus stops. If you think it isn't work, try hitting "s" again to
+
+### Games with no visual stimuls - MI/Other: For these games there is no visual feedback for "when" the BCI would be on. Traditionally these BCI systems are always monitoring for feedback. You can again hit "s" (or your keybind) to start the feedback collection followed by your input selection, but remember there may be no visual feedback provided. Most of these games can also be played with keyboard inputs.
+
+### Game-specific Controls:
+- BCI4Kids
 
 ### This work uses BCIEssentials
 A Unity base environment for streamlined development of BCI applications.
