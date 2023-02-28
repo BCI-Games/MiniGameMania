@@ -78,4 +78,9 @@ public class MenuController : MonoBehaviour
         _canvas.gameObject.SetActive(false);
         SceneManager.LoadScene(sceneName);
     }
+
+    public void QuitApp()
+    {
+        Application.Quit();
+    }
 }
