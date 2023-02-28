@@ -176,13 +176,13 @@ public class PosNodeScript: MonoBehaviour
         
         return;
         
-        enableEmissionFlickering = true;
-        // Modify material to allow flickering (for SSVEP feedback)
-        foreach (GameObject arrow in list_arrows)
-        {
-            Material material = arrow.GetComponent<Renderer>().material;
-            material.EnableKeyword("_EMISSION");
-        }
+        //enableEmissionFlickering = true;
+        //// Modify material to allow flickering (for SSVEP feedback)
+        //foreach (GameObject arrow in list_arrows)
+        //{
+        //    Material material = arrow.GetComponent<Renderer>().material;
+        //    material.EnableKeyword("_EMISSION");
+        //}
     }
 
     public void DesactivateFlickering()
@@ -191,12 +191,12 @@ public class PosNodeScript: MonoBehaviour
         Debug.Log($"<color=red><b>{gameObject.name}</b>: Arrow flickering disabled</color>");
         return;
         
-        enableEmissionFlickering = false;
-        foreach (GameObject arrow in list_arrows)
-        {
-            Material material = arrow.GetComponent<Renderer>().material;
-            material.SetColor("_EmissionColor", emissionColor * 0);
-        }
+        //enableEmissionFlickering = false;
+        //foreach (GameObject arrow in list_arrows)
+        //{
+        //    Material material = arrow.GetComponent<Renderer>().material;
+        //    material.SetColor("_EmissionColor", emissionColor * 0);
+        //}
     }
 
     public void SetColorHSLEmission(float hue, float sat = 1f, float lum = 1f)
@@ -222,18 +222,18 @@ public class PosNodeScript: MonoBehaviour
         //Disabled in favor of BCI Essentials workflow
         return;
         
-        // Change emission intensity
-        if (enableEmissionFlickering)
-        {
-            foreach (GameObject arrow in list_arrows)
-            {
-                Material material = arrow.GetComponent<Renderer>().material;
-                float emssionRangeIntensity = emissionMaxIntensity - emissionMinIntensity;
-                float intensity = Mathf.PingPong(Time.time * emssionRangeIntensity * emissionFrequency,
-                                                 emssionRangeIntensity) + emissionMinIntensity;
-                material.SetColor("_EmissionColor", emissionColor * intensity);
-            }
-        }
+        //// Change emission intensity
+        //if (enableEmissionFlickering)
+        //{
+        //    foreach (GameObject arrow in list_arrows)
+        //    {
+        //        Material material = arrow.GetComponent<Renderer>().material;
+        //        float emssionRangeIntensity = emissionMaxIntensity - emissionMinIntensity;
+        //        float intensity = Mathf.PingPong(Time.time * emssionRangeIntensity * emissionFrequency,
+        //                                         emssionRangeIntensity) + emissionMinIntensity;
+        //        material.SetColor("_EmissionColor", emissionColor * intensity);
+        //    }
+        //}
     }
 }
 
