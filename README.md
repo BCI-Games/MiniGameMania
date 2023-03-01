@@ -42,7 +42,7 @@ Other
 Outside the collection
 - A-maze-ing - Need to simulate a BCI stream with BCI-Essentials python. (Game not included in collection).
 - Feels Like Magic - Use "Spacebar" to move forward. (Game not included in collection).
-- The Saviors - Uses Neurosity simulation. (Game not included in collection).
+- The Saviors - Uses Neurosity simulation, and keyboard for selections. (Game not included in collection).
 
 ### This work uses BCIEssentials
 A Unity base environment for streamlined development of BCI applications.
