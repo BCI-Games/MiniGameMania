@@ -1,9 +1,7 @@
 # BCI Game Jam 2022 - MiniGame Mania Collection.
 This is a collection of the compatible minigames from the BCI Game Jam 2022. A so-called minigame megagame! The goal is to have all of the jam submissions in a single place.
 
-## VOTING NOW OPEN: Vote for your favorite game here!
-Voting is now open for developers and general public. This will be done on version Minigame-Mania-v1.0.0, as a "frozen" representation of all the games at the submission time (48 hours of development).
-You can vote here: https://form.jotform.com/230565534460050
+## VOTING NOW CLOSED: Thanks to everyone who voted for their favorite games from this year's jam!
 
 ## Controls
 Every game in the collection is playable with keyboard and mouse (in addition to BCI). 
